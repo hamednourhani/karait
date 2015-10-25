@@ -1,0 +1,72 @@
+/* ------------susy-------- */
+$total-columns : 12;
+$column-width : 4.5em;
+$gutter-width : 1em;
+$grid-padding : $gutter-width;
+$from-direction: right;
+$omega-float : left;
+
+$default-transition-delay    : 0s;
+@include border-box-sizing;
+
+$small : 30em;
+$xmedium : 34em;
+$medium : 45em;
+$larg : 75em;
+
+.fullwidth{
+	@include span-columns(12,12);
+}
+.oneSecond{
+	@include span-columns(6,12);
+	&:nth-child(2n){
+		@include span-columns(6 omega,12);
+	}
+		
+}
+
+.oneThird{
+	@include span-columns(4,12);
+	&:nth-child(3n){
+		@include span-columns(4 omega,12);
+	}
+		
+}
+
+.oneFourth{
+	@include span-columns(3,12);
+	&:nth-child(4n){
+		@include span-columns(3 omega,12);
+	}
+		
+}
+.Fifth{
+	@include span-columns(5,12);
+			
+}
+.lastGrid{
+	@include omega;
+}
+
+/*------ colors -----------*/
+
+
+$red : #BC3154;
+
+$orang : #ff7302;
+$orangHover : #ffa902;
+
+$grey3: #4E4E4E;
+$grey2 : #CCCCCC;
+$grey1 : #F8F8F8;
+
+$black2 : #282828;
+$black1 : #111;
+
+
+$white : #fff;
+$white2 : #F8F8F8;
+$glassyBlack : rgba(44, 35, 40, 0.85);
+$glassyWhite : rgba(255, 255, 255, 0.85);
+
+

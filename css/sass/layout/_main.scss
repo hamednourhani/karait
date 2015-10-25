@@ -1,0 +1,617 @@
+/* main style */
+
+.layout{
+	@include container;
+	position : relative;
+}
+body{
+	max-width : 1400px;
+	background-color : $grey2;
+	margin : auto;
+	
+	z-index : 1;
+	// &.body-wrapper {
+	//   display: none;
+	// }
+	// &.pg-loaded > .body-wrapper {
+	//   display: block;
+	// }
+}
+.body-wrapper{
+	width : 100%;
+	background-color : $white;
+	margin:auto;
+	overflow : hidden;
+
+	
+
+	//display : none;
+
+	
+}
+.site-main{
+	z-index : 10;
+	@include clearfix;
+	.single-cat-title{
+		margin-top : 50px;
+
+		h1{
+			display : inline-block;
+			border-bottom : 3px solid $red;
+			margin : 0 auto;
+			font-size : 150%;
+		}
+	}
+}
+.banner-wrapper{
+	width : 100%;
+	//max-height : 500px;
+	.banner-inner{
+		max-height : 460px;
+		overflow: hidden;
+	}
+	.banner-space{
+		
+		display : block;
+		min-height :50px;
+
+	}
+	.banner-inner{
+		max-height : 460px;
+		overflow : hidden;
+	}
+	img.page-banner{
+		width : 100%;
+		height : auto;
+	}
+}
+
+
+//-------------site-content-------------------
+.primary{
+ 	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(8,12);
+ 	}
+ 	padding:{
+		top :20px;
+		bottom : 20px;
+	}
+	ul.projects-list{
+		li {
+			width : 100%;
+			padding : 8px 20px;
+			background-color: $white2;
+			border : 1px solid $grey2;
+			border-bottom : 0px;
+			&:nth-of-type(2n){
+				background-color: darken($grey1,5%);
+			}
+			&.project-link:hover{
+				background-color: darken($grey1, 10%);
+			}
+			&:last-child{
+				border-bottom : 1px solid $grey2;
+			}
+		}
+	}
+
+}
+.without-sidebar{
+	.primary{
+		@include span-columns(12,12);
+		margin : auto;
+		article .featured-image{
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(5,12);
+		 	}
+			img{
+				max-width : 100%;
+				height : auto;
+				margin-top : 15px;
+			}
+		}
+		article .article-body{
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(7 omega,12);
+		 	}
+			p{
+				padding : 5px;
+				text-align: justify;
+			}
+		}
+
+	}
+	
+}
+article,.hentry{
+
+	.featured-image.single-image{
+		float : left;
+		padding-right : 10px;
+	}
+	
+	padding : 20px;
+	.article-title{
+		font-size : 100%;
+		position : relative;
+		display : inline-block;
+		border-bottom : 1px solid $grey2;
+		margin-bottom : 20px;
+		width : 100%;
+		h3{
+			margin : 0;
+			padding : 10px 0;
+			display : inline-block;
+			&::after{
+				@include single-transition(all 0.2s ease-out);
+				display : block;
+				content : "";
+				width : 30px;
+				height : 3px;
+				background-color : $red;
+				position : absolute;
+				bottom : 0px;
+				left : 0;
+			}
+						
+		}
+	}
+	// &:hover .article-title h3::after{
+	// 	width : 40%;
+	// }
+	p{
+		margin : 5px;
+	}
+	.product-features,.project-features{
+		margin-top : 40px;
+		h4.feature-header{
+			margin : 5px auto;
+		}
+		ul.feature-images{
+			@include clearfix;
+			li{
+				display : inline-block;
+				img{
+					margin :3px;
+					border : 1px solid $grey2;
+				}
+			}
+		}
+	}
+	.project-meta{
+		width : 90%;
+		display: block;
+		margin : auto auto 30px;
+		ul{
+			width : 100%;
+		}
+		li{
+			
+			display : inline-block;
+			width : 100%;
+			padding : 0;
+			margin : 0;
+			
+			span{
+				border : 1px solid $grey2;
+				padding : 5px 15px;
+				display : inline-block;
+				background-color: $white2;
+				&.meta-name{
+					max-width :100%;
+					width : 100%;
+					@include at-breakpoint($medium){
+						width : 38%;
+					}
+				}
+				&.meta-value{
+					max-width : 100%;
+					width : 100%;
+					@include at-breakpoint($medium){
+						width : 60%;
+					}
+				}
+			}
+			&:nth-of-type(2n){
+				span{
+					background-color: darken($grey1 , 5%);
+				}
+
+			}
+		}
+	}
+	&.page404{
+		text-align : center;
+		.article-body,p,div{
+			text-align : center;
+		}
+	}
+	.avatar-container{
+		float : left;
+	}
+	.profile-container {
+		padding-left : 30px;
+		padding-bottom : 30px;
+		display : block;
+		overflow : hidden; 
+	}
+	.viraid{
+		background-color: $grey1;
+		padding : 3px 10px;
+	}
+	.vira_logout{
+		background-color: $black1;
+		//@include border-radius(4px);
+		padding : 10px;
+	}
+	.forms_buttons{
+		text-align : center;
+		margin : 35px 10px;
+		.login-show{
+			padding : 12px 10px;
+			margin : 10px;
+			color : $white;
+			background-color : $grey3;
+			//@include border-radius(3px);
+			opacity : 0.85;
+			&:hover{
+				opacity : 1;
+			}
+			&:before{
+				@extend .fa;
+				content : "\f13e";
+				margin-right : 10px;
+			}
+
+		}
+		.register-show{
+			padding : 12px 10px;
+			margin :10px; 
+			color : $white;
+			background-color: $red;
+			//@include border-radius(3px);
+			opacity : 0.85;
+			&:hover{
+				opacity : 1;
+			}
+			&:before{
+				@extend .fa;
+				content : "\f0c0";
+				margin-right : 10px;
+			}
+
+		}
+	}
+	.login-container{
+		display : none;
+		&.form-display{
+			display : block;
+		}
+		#loginform{
+			.login-username,.login-password{
+				label{
+					width: 50px;
+    				display: inline-block;
+    			}
+			}
+			input{
+				padding : 5px 10px;
+			}
+		}
+	}
+	.register-container{
+		display : none;
+		
+		&.form-display{
+			display : block;
+		}
+		label.form_error{
+			padding : 10px;
+			color : $red;
+		}
+		form.register_form{
+			padding : 10px;
+			table{
+				th{
+
+				    padding: 5px;
+				    width: 104px;
+				    text-align: left;
+
+				}
+			}
+			input{
+				outline : none;
+				padding: 2px 10px;
+				border-color : $grey2;
+				&[type="submit"]{
+					padding : 5px 10px;
+				}
+			}
+		}
+	}
+
+}
+body.archive{
+	article {
+		@include span-columns(12,12);
+	 	@include at-breakpoint($medium){
+	 		@include span-columns(6,12);
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+	 	}
+
+	}
+}
+
+.secondary{
+	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(4 omega,12);
+ 	}
+	display : block;
+	
+	padding:{
+		top :20px;
+		bottom : 20px;
+	}
+	
+
+}
+.widget{
+	font-size : 90%;
+	padding:20px;
+	background-color : $grey1;
+	margin-bottom : 20px;
+	h4.widgettitle{
+		width : 100%;
+		position : relative;
+		display : inline-block;
+		border-bottom : 1px solid $grey2;
+		margin : 0;
+		margin-bottom : 20px;
+		padding : 10px 0;
+		&:after{
+			@include single-transition(all 0.2s ease-out);
+			display : block;
+			content : "";
+			width : 30px;
+			height : 3px;
+			background-color : $red;
+			position : absolute;
+			bottom : 0px;
+			left : 0;
+		}
+		
+	}
+	// &:hover .widgettitle h4::after{
+	// 	width : 40%;
+	// }
+	p{
+		margin : 5px;
+	}
+	i.fa:before{
+		padding-right : 10px;
+		color : $grey3;
+		font-size : 120%;
+		vertical-align: middle;
+	}
+	dl, menu, ol, ul{
+		   margin: 0px;
+		   padding : 0px;
+	}
+	li{
+	 	line-height: 180%;
+	 }
+	 &.widget_social_widget{
+	 	background-color: $white;
+	 	li:hover{
+	 		@include single-transition(all , 0.2s , ease-in-out);
+	 		background-color: $grey1;
+	 	}
+	 }
+
+}
+
+.products-area{
+	background-color : $grey1;
+}
+	
+ul.widget-list{
+	li{
+		display: list-item;
+		img{
+			margin : 5px 12px 5px 5px;
+			vertical-align: middle;
+		}
+		
+	}
+}
+ul.social-links{
+	li{
+		padding : 5px;
+		a.sicon{
+			    display: block;
+    			width: 100%;
+			&:before{
+				text-align: center;
+				margin : 0px 12px 0px 3px;
+				width : 35px;
+				height : 36px;
+				content : "";
+				display : inline-block;
+				background-image : image-url('social-icons.png');
+				vertical-align: middle;
+				
+			}
+			&.google-plus:before{
+				background-position : 0 0;
+			}
+			&.facebook:before{
+				background-position : -35.7px 0;
+			}
+			&.linkedin:before{
+				background-position : -71px 0;
+			}
+			&.instagram:before{
+				background-position : -106px 0;
+			}
+			&.catalog:before{
+				background-position : -141px 0;
+			}
+			&.envelope:before{
+				background-position : -177px 0;
+			}
+			&.unlock:before{
+				background-position : -213px 0;
+			}
+		}
+		
+
+	}
+}
+.all-products{
+	article {
+		@include span-columns(12,12);
+	 	@include at-breakpoint($medium){
+	 		@include span-columns(6,12);
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+	 	}
+
+	}
+	.single-cat-title{
+		@include clearfix;
+		position : relative;
+		display : block;
+		border-bottom : 1px solid $grey2;
+		margin-bottom : 20px;
+		width : 100%;
+		h3,h4,h2{
+			margin : 0;
+			padding : 10px 0;
+			display : inline-block;
+			&::after{
+				@include single-transition(all 0.2s ease-out);
+				display : block;
+				content : "";
+				width : 30px;
+				height : 3px;
+				background-color : $red;
+				position : absolute;
+				bottom : 0px;
+				left : 0;
+			}
+						
+		}
+	}
+	
+}
+.contact-area{
+	aside{
+		background-color : $white;
+	}
+}
+.contact-odd, .contact-even {
+  padding: 15px; }
+  /* line 432, sass/layout/_main.scss */
+  .contact-odd h4, .contact-even h4 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    margin: 0px auto; }
+.contact-odd{
+	background-color: $grey1;
+	border : {
+		top : 1px solid $grey2;
+		bottom : 1px solid $grey2;
+	}
+}
+div.panel-grid {
+    margin-bottom: 5px !important;
+}
+.comment-area{
+	img.avatar{
+		@include border-radius(50%);
+	}
+	.bypostauthor .fn{
+		color : $red;
+		padding : 5px;
+	}
+	.comment-metadata{
+		font-size : smaller;
+		float : right;
+
+		.edit-link{
+			padding : 5px;
+			color : $red;
+			&:before{
+				@extend .fa;
+				content : "\f040";
+				padding : 5px;
+				vertical-align: middle;
+			}
+		}
+	}
+	.reply{
+		float : right;
+		&:before{
+			@extend .fa;
+			content : "\f112";
+			padding : 5px;
+			vertical-align: middle;
+			color : $red;
+		}
+		//margin-bottom :15px;
+	}
+	.comment{
+		display : block;
+		overflow : hidden;
+		.comment-body{
+			
+			overflow : hidden;
+		}
+	}
+	.comment-content{
+		padding : 20px;
+	}
+	.depth-1{
+		@include at-breakpoint($medium) {
+		   margin-left : 0;
+		}
+	}
+	.depth-2{
+		@include at-breakpoint($medium) {
+		   margin-left : 20px;
+		}
+	}
+	.depth-3{
+		@include at-breakpoint($medium) {
+		   margin-left : 40px;
+		}
+	}
+	.depth-4{
+		@include at-breakpoint($medium) {
+		   margin-left : 60px;
+		}
+	}
+	.even>article{ 
+		background-color: $grey1;
+	}
+}
+#commentform{
+	label{
+		float: left;
+    	padding: 0 10px;
+    	display: inline-block;
+    	width: 40%;
+	}
+
+}

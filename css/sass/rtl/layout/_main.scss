@@ -1,0 +1,286 @@
+/* main style */
+
+.layout{
+	@include container;
+	position : relative;
+}
+
+//-------------site-content-------------------
+.primary{
+ 	@include span-columns(12,12);
+ 	@include at-breakpoint($medium){
+ 		@include span-columns(8,12);
+ 		margin-right : auto;
+ 	}
+ 	
+ 	padding:{
+		top :20px;
+		bottom : 20px;
+	}
+	
+}
+.without-sidebar{
+	.primary{
+		@include span-columns(12,12);
+		margin-right : auto;
+		margin : auto;
+		article .featured-image{
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(5,12);
+		 		margin-right : auto;
+		 	}
+			
+		}
+		article .article-body{
+			@include span-columns(12,12);
+		 	@include at-breakpoint($medium){
+		 		@include span-columns(7 omega,12);
+		 		margin-right : auto;
+		 	}
+			p{
+				padding : 5px;
+				text-align: justify;
+			}
+		}
+
+	}
+	
+}
+article,.hentry{
+	.featured-image.single-image{
+		float : right;
+		padding-right : 10px;
+	}
+	
+	.article-title{
+		font-size : 100%;
+		position : relative;
+		h3{
+			&::after{
+				position : absolute;
+				bottom : 0px;
+				right : 0;
+				left : auto;
+			}
+						
+		}
+	}
+	.avatar-container{
+		float : right;
+	}
+	.profile-container {
+		padding-left : auto;
+		padding-right : 30px;
+		 
+	}
+	
+	.forms_buttons{
+		
+		.login-show{
+			
+			&:before{
+				
+				margin-left : 10px;
+				margin-right : auto;
+			}
+
+		}
+		.register-show{
+			
+			&:before{
+				
+				margin-left : 10px;
+				margin-right : auto;
+			}
+
+		}
+	}
+	.login-container{
+		
+	}
+	.register-container{
+		
+		form.register_form{
+			
+			table{
+				th{
+				    text-align: right;
+				}
+			}
+			
+		}
+	}
+	
+	
+	
+}
+body.archive{
+	article {
+			
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(6,12);
+			margin-right : auto;
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+		}
+		.article-title h3{
+			font-family : "open-sans";
+		}
+	}
+}
+
+.secondary{
+	@include span-columns(12,12);
+	@include at-breakpoint($medium){
+		@include span-columns(4 omega,12);
+		margin-right : auto;
+		
+	}
+	display : block;
+	
+	padding:{
+		top :20px;
+		bottom : 20px;
+	}
+}
+.widget{
+	font-size : 100%;
+	
+	h4.widgettitle{
+		
+		position : relative;
+		
+		&:after{
+			position : absolute;
+			bottom : 0px;
+			right : 0;
+			left : auto;
+		}
+		
+	}
+	// &:hover .widgettitle h4::after{
+	// 	width : 40%;
+	// }
+	
+	i.fa:before{
+		padding-left : 10px;
+		padding-right : auto;
+		
+	}
+	&.widget_last_products_widget li a{
+		font-family : "open-sans";
+		font-size : 14px;
+	
+	}
+	
+}
+
+
+	
+ul.widget-list{
+	li{
+		
+		img{
+			margin : 5px 5px 5px 12px;
+			
+		}
+		
+	}
+}
+ul.social-links{
+	li{
+	
+		a.sicon{
+			&:before{
+				
+				margin : 0px 3px 0px 12px;
+				
+				
+			}
+		}
+		
+
+	}
+}
+.all-products{
+	article {
+		@include span-columns(12,12);
+	 	@include at-breakpoint($medium){
+	 		@include span-columns(6,12);
+	 		margin-right : 0px;
+			&:nth-of-type(2n){
+				@include span-columns(6 omega ,12);
+			}
+	 	}
+	 	.article-title h3{
+	 		font-family : "open-sans";
+	 	}
+
+	}
+	.single-cat-title{
+		
+		h3,h4,h2{
+			
+			&::after{
+				right : 0;
+				left : auto;
+			}
+
+						
+		}
+	}
+	
+}
+.comment-area{
+		
+	.comment-metadata{
+		
+		float : left;
+
+	}
+	.reply{
+		float : left;
+		
+		//margin-bottom :15px;
+	}
+	
+	.depth-1{
+		@include at-breakpoint($medium) {
+		   margin-right : 0;
+		   margin-left : auto;
+		}
+	}
+	.depth-2{
+		@include at-breakpoint($medium) {
+		   margin-right : 20px;
+		   margin-left : auto;
+		}
+	}
+	.depth-3{
+		@include at-breakpoint($medium) {
+		   margin-right : 40px;
+		   margin-left : auto;
+		}
+	}
+	.depth-4{
+		@include at-breakpoint($medium) {
+		   margin-left : auto;
+		   margin-right : 60px;
+		}
+	}
+	.even>article{ 
+		background-color: $grey1;
+	}
+}
+
+#commentform{
+	label{
+		float: right;
+		width : 33%;
+    	
+	}
+
+}
