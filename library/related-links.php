@@ -7,24 +7,24 @@
   );
 
 	$related_links = get_posts($args);
-	$show_related = get_post_meta(get_the_ID() , '_viradeco_related_links');
+	$show_related = get_post_meta(get_the_ID() , '_karait_related_links');
 	
 
-	// _viradeco_link_url
+	// _karait_link_url
 if($show_related == true && !empty($related_links)){
 ?>
 
 <div class="important-links">
 	<section class="layout">
 		<div class="virtual-border"> 
-			<h4 class="related-links"><?php echo __('related sites','viradeco'); ?></h4>
+			<h4 class="related-links"><?php echo __('related sites','karait'); ?></h4>
 		</div>
 	</section>
 	<section class="layout">
 		<div id="owl-carousel" class="owl-carousel owl-theme">
 		  <?php
 		  		foreach($related_links as $related_link){ 
-					  $link = get_post_meta($related_link->ID,'_viradeco_link_url');
+					  $link = get_post_meta($related_link->ID,'_karait_link_url');
 					  $thumb = get_the_post_thumbnail($related_link->ID,'carousel');
 					  
 					  ?>

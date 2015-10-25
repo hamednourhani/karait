@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Viradeco\n"
+"Project-Id-Version: karait\n"
 "POT-Creation-Date: 2015-08-31 00:34+0430\n"
 "PO-Revision-Date: 2015-08-31 13:54+0430\n"
 "Last-Translator: \n"
@@ -1132,24 +1132,24 @@ msgstr ""
 msgid "related sites"
 msgstr ""
 
-#: library/viradeco.php:87
+#: library/karait.php:87
 #, php-format
 msgid "Page %s"
 msgstr "pagina %s"
 
-#: library/viradeco.php:248
+#: library/karait.php:248
 msgid "The Main Menu"
 msgstr ""
 
-#: library/viradeco.php:279
+#: library/karait.php:279
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: library/viradeco.php:324
+#: library/karait.php:324
 msgid "Read "
 msgstr "leggere"
 
-#: library/viradeco.php:324
+#: library/karait.php:324
 msgid "Read more &raquo;"
 msgstr "Per saperne di più &raquo;"
 

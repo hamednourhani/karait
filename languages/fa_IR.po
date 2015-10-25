@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Viradeco\n"
+"Project-Id-Version: karait\n"
 "POT-Creation-Date: 2015-10-10 21:53+0330\n"
 "PO-Revision-Date: 2015-10-10 21:54+0330\n"
 "Last-Translator: \n"
@@ -474,7 +474,7 @@ msgstr "جستجو برای : "
 msgid "Create Your Own Ideas"
 msgstr "خالق ایده های خود باشید"
 
-#: header.php:96 library/viradeco.php:251
+#: header.php:96 library/karait.php:251
 msgid "The Main Menu"
 msgstr "فهرست اصلی"
 
@@ -967,24 +967,24 @@ msgstr "برچسب ها : "
 msgid "related sites"
 msgstr "سایت های مرتبط"
 
-#: library/viradeco.php:87
+#: library/karait.php:87
 #, php-format
 msgid "Page %s"
 msgstr "صفحه %s"
 
-#: library/viradeco.php:252
+#: library/karait.php:252
 msgid "Responsive Menu"
 msgstr "فهرست موبایل"
 
-#: library/viradeco.php:283
+#: library/karait.php:283
 msgid "No Related Posts Yet!"
 msgstr "هنوز مطلب مرتبطی منتشر نشده است"
 
-#: library/viradeco.php:328
+#: library/karait.php:328
 msgid "Read "
 msgstr "ادامه"
 
-#: library/viradeco.php:328
+#: library/karait.php:328
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب"
 

@@ -17,8 +17,8 @@
 							<article class="hentry page404">
 								
 								<main class="article-body">
-									<p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'viradeco' ); ?></p>
-									<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'viradeco' ); ?></p>
+									<p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'karait' ); ?></p>
+									<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'karait' ); ?></p>
 									<div><?php get_search_form( true ); ?></div>
 								</main>
 							</article>

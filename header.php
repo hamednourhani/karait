@@ -72,10 +72,10 @@
 						</a>
 
 						<a href="<?php echo get_bloginfo('url'); ?>">
-							<img src="<?php echo get_template_directory_uri();?>/images/viradeco-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+							<img src="<?php echo get_template_directory_uri();?>/images/karait-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 						</a>
 					</div>
-					<span class="site-desc"><?php echo __('Create Your Own Ideas','viradeco'); ?></span>
+					<span class="site-desc"><?php echo __('Create Your Own Ideas','karait'); ?></span>
 				</section>
 			
 
@@ -88,12 +88,12 @@
 							</a>
 
 							<a class="responsive-logo" href="<?php echo get_bloginfo('url'); ?>">
-								<img src="<?php echo get_template_directory_uri();?>/images/viradeco-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+								<img src="<?php echo get_template_directory_uri();?>/images/karait-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 							</a>
 							<?php wp_nav_menu(array(
 				    					         'container' => false,                           // remove nav container
 				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-				    					         'menu' => __( 'The Main Menu', 'viradeco' ),  // nav name
+				    					         'menu' => __( 'The Main Menu', 'karait' ),  // nav name
 				    					         'menu_class' => 'nav responsive-nav cf',               // adding custom nav class
 				    					         'theme_location' => 'responsive-nav',                 // where it's located in the theme
 				    					         'before' => '',                                 // before the menu
@@ -109,7 +109,7 @@
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'Main Menu', 'viradeco' ),  // nav name
+    					         'menu' => __( 'Main Menu', 'karait' ),  // nav name
     					         'menu_class' => 'nav main-nav cf', 
     					         'walker' => $walker,             // adding custom nav class
     					         'theme_location' => 'main-menu',                 // where it's located in the theme

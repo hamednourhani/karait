@@ -19,7 +19,7 @@
 					<main class="widgetbody">
 						<p><i class="fa fa-phone"></i>تلفن های تماس : <br />021-22259571 - 021-22259884</p>
 						<p><i class="fa fa-fax"></i>فکس : 22259884-021  </p>
-						<p><i class="fa fa-envelope"></i>ایمیل :  info@viradeco.com</p>
+						<p><i class="fa fa-envelope"></i>ایمیل :  info@karait.com</p>
 						
 					</main>
 				</aside>
@@ -27,7 +27,7 @@
 				<aside class="widget oneFourth lastGrid">
 					
 					<main class="widgetbody">
-						<img style="width:150px;margin-top:15px;" src="images/viradeco-logo.png"  />
+						<img style="width:150px;margin-top:15px;" src="images/karait-logo.png"  />
 					</main>
 				</aside> -->
 			</section>

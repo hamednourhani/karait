@@ -36,7 +36,7 @@
 						<?php } ?>
 					<?php } ?>		
 					<nav class="pagination">
-						<?php viradeco_pagination(); ?>
+						<?php karait_pagination(); ?>
 					</nav>		
 				</div><!-- primary -->
 

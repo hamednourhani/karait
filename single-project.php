@@ -24,12 +24,12 @@
 								</header>
 								<main class="article-body">
 									<div class="project-features">
-										<?php $project_date = get_post_meta(get_the_ID(),'_viradeco_project_date',1); ?>
-										<?php $project_meta = get_post_meta(get_the_ID(),'_viradeco_group_feature'); ?>
+										<?php $project_date = get_post_meta(get_the_ID(),'_karait_project_date',1); ?>
+										<?php $project_meta = get_post_meta(get_the_ID(),'_karait_group_feature'); ?>
 										<div class="project-meta">
 											<ul class="project-features-list">
 												<li >
-													<span class="meta-name"><?php echo __('Date ','viradeco'); ?></span>
+													<span class="meta-name"><?php echo __('Date ','karait'); ?></span>
 													<span class="meta-value"><?php echo $project_date; ?></span>
 												</li>
 											<?php if(!empty($project_meta[0])){ ?>
@@ -49,12 +49,12 @@
 
 										<?php the_content(); ?>
 
-										<?php $project_images = get_post_meta(get_the_ID(),'_viradeco_image_list'); ?>
+										<?php $project_images = get_post_meta(get_the_ID(),'_karait_image_list'); ?>
 										<ul class="feature-images">
 											<?php $counter = 1; ?>
 											<?php if(!empty($project_images)){ ?>
 												 <?php foreach($project_images[0] as $image_src){?>
-														<?php $img_thumb_src = viradeco_get_image_src($image_src,'130x130'); ?>													
+														<?php $img_thumb_src = karait_get_image_src($image_src,'130x130'); ?>													
 															<li>
 																<a href="<?php echo $image_src; ?>" rel="prettyPhoto" >
 																	<img src="<?php echo $img_thumb_src; ?>" width="130" height="130" alt="" />

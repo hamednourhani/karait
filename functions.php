@@ -1,15 +1,15 @@
 <?php
 /*
 Author: Eddie Machado
-URL: http://themble.com/viradeco/
+URL: http://themble.com/karait/
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
-// LOAD viradeco CORE (if you remove this, the theme will break)
-require_once( 'library/viradeco.php' );
+// LOAD karait CORE (if you remove this, the theme will break)
+require_once( 'library/karait.php' );
 require_once( 'library/notifications.php' );
 
 //Include and setup custom metaboxes and fields.
@@ -22,53 +22,53 @@ require_once( 'library/cmb-functions.php' );
  //require_once( 'library/admin.php' );
 
 /*********************
-LAUNCH viradeco
+LAUNCH karait
 Let's get everything up and running.
 *********************/
 
-function viradeco_ahoy() {
+function karait_ahoy() {
 
   //Allow editor style.
   //add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
 
   // let's get language support going, if you need it
-  load_theme_textdomain( 'viradeco', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'karait', get_template_directory() . '/languages' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
   require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
-  add_action( 'init', 'viradeco_head_cleanup' );
+  add_action( 'init', 'karait_head_cleanup' );
   // A better title
   add_filter( 'wp_title', 'rw_title', 10, 3 );
   // remove WP version from RSS
-  add_filter( 'the_generator', 'viradeco_rss_version' );
+  add_filter( 'the_generator', 'karait_rss_version' );
   // remove pesky injected css for recent comments widget
-  add_filter( 'wp_head', 'viradeco_remove_wp_widget_recent_comments_style', 1 );
+  add_filter( 'wp_head', 'karait_remove_wp_widget_recent_comments_style', 1 );
   // clean up comment styles in the head
-  add_action( 'wp_head', 'viradeco_remove_recent_comments_style', 1 );
+  add_action( 'wp_head', 'karait_remove_recent_comments_style', 1 );
   // clean up gallery output in wp
-  add_filter( 'gallery_style', 'viradeco_gallery_style' );
+  add_filter( 'gallery_style', 'karait_gallery_style' );
 
   // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'viradeco_scripts_and_styles', 999 );
+  add_action( 'wp_enqueue_scripts', 'karait_scripts_and_styles', 999 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup
-  viradeco_theme_support();
+  karait_theme_support();
 
   // adding sidebars to Wordpress (these are created in functions.php)
-  add_action( 'widgets_init', 'viradeco_register_sidebars' );
+  add_action( 'widgets_init', 'karait_register_sidebars' );
 
   // cleaning up random code around images
-  add_filter( 'the_content', 'viradeco_filter_ptags_on_images' );
+  add_filter( 'the_content', 'karait_filter_ptags_on_images' );
   // cleaning up excerpt
-  add_filter( 'excerpt_more', 'viradeco_excerpt_more' );
+  add_filter( 'excerpt_more', 'karait_excerpt_more' );
 
-} /* end viradeco ahoy */
+} /* end karait ahoy */
 
 // let's get this party started
-add_action( 'after_setup_theme', 'viradeco_ahoy' );
+add_action( 'after_setup_theme', 'karait_ahoy' );
 
 
 /************* OEMBED SIZE OPTIONS *************/
@@ -85,9 +85,9 @@ add_image_size( 'product-thumb', 30, 30, array( 'center', 'center' ) );
 add_image_size( 'detail-thumb', 53, 53, array( 'center', 'center' ) );
 add_image_size( 'project-thumb', 130, 130, array( 'center', 'center' ) );
 
-add_filter( 'image_size_names_choose', 'viradeco_custom_sizes' );
+add_filter( 'image_size_names_choose', 'karait_custom_sizes' );
  
-function viradeco_custom_sizes( $sizes ) {
+function karait_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'slider' => __( 'Slider Size' ),
         'slider-thumb' => __( 'Slider Thumb' ),
@@ -106,17 +106,17 @@ inside the thumbnail function.
 
 For example, to call the 300 x 100 sized image,
 we would use the function:
-<?php the_post_thumbnail( 'viradeco-thumb-300' ); ?>
+<?php the_post_thumbnail( 'karait-thumb-300' ); ?>
 for the 600 x 150 image:
-<?php the_post_thumbnail( 'viradeco-thumb-600' ); ?>
+<?php the_post_thumbnail( 'karait-thumb-600' ); ?>
 
 You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
-add_filter( 'image_size_names_choose', 'viradeco_custom_image_sizes' );
+add_filter( 'image_size_names_choose', 'karait_custom_image_sizes' );
 
-function viradeco_custom_image_sizes( $sizes ) {
+function karait_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'banner' => __('1200px by 500px'),
         'product-thumb' => __('30px by 30px'),
@@ -149,7 +149,7 @@ new image size.
   - Create some boilerplate Sections, Controls and Settings
 */
 
-function viradeco_theme_customizer($wp_customize) {
+function karait_theme_customizer($wp_customize) {
   // $wp_customize calls go here.
   //
   // Uncomment the below lines to remove the default customize sections 
@@ -168,16 +168,16 @@ function viradeco_theme_customizer($wp_customize) {
   // $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
-add_action( 'customize_register', 'viradeco_theme_customizer' );
+add_action( 'customize_register', 'karait_theme_customizer' );
 
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
-function viradeco_register_sidebars() {
+function karait_register_sidebars() {
   register_sidebar(array(
     'id' => 'sidebar',
-    'name' => __( 'Sidebar', 'viradeco' ),
-    'description' => __( 'The first (primary) sidebar.', 'viradeco' ),
+    'name' => __( 'Sidebar', 'karait' ),
+    'description' => __( 'The first (primary) sidebar.', 'karait' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h4 class="widgettitle">',
@@ -185,8 +185,8 @@ function viradeco_register_sidebars() {
   ));
   register_sidebar(array(
     'id' => 'footer-first',
-    'name' => __( 'Footer First', 'viradeco' ),
-    'description' => __( 'The first footer widget area', 'viradeco' ),
+    'name' => __( 'Footer First', 'karait' ),
+    'description' => __( 'The first footer widget area', 'karait' ),
     'before_widget' => '<aside id="%1$s" class="footer-first widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h4 class="widgettitle">',
@@ -194,8 +194,8 @@ function viradeco_register_sidebars() {
   ));
   register_sidebar(array(
     'id' => 'footer-second',
-    'name' => __( 'Footer Second', 'viradeco' ),
-    'description' => __( 'The second footer widget area', 'viradeco' ),
+    'name' => __( 'Footer Second', 'karait' ),
+    'description' => __( 'The second footer widget area', 'karait' ),
     'before_widget' => '<aside id="%1$s" class="footer-second widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h4 class="widgettitle">',
@@ -212,8 +212,8 @@ function viradeco_register_sidebars() {
 
   register_sidebar(array(
     'id' => 'sidebar2',
-    'name' => __( 'Sidebar 2', 'viradeco' ),
-    'description' => __( 'The second (secondary) sidebar.', 'viradeco' ),
+    'name' => __( 'Sidebar 2', 'karait' ),
+    'description' => __( 'The second (secondary) sidebar.', 'karait' ),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widgettitle">',
@@ -232,7 +232,7 @@ function viradeco_register_sidebars() {
 /************* COMMENT LAYOUT *********************/
 
 // Comment Layout
-function viradeco_comments( $comment, $args, $depth ) {
+function karait_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
   <div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
     <article  class="cf">
@@ -250,13 +250,13 @@ function viradeco_comments( $comment, $args, $depth ) {
         ?>
         <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
         <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'viradeco' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'viradeco' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'viradeco' )); ?> </a></time>
+        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'karait' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'karait' ),'  ','') ) ?>
+        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'karait' )); ?> </a></time>
 
       </header>
       <?php if ($comment->comment_approved == '0') : ?>
         <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'viradeco' ) ?></p>
+          <p><?php _e( 'Your comment is awaiting moderation.', 'karait' ) ?></p>
         </div>
       <?php endif; ?>
       <section class="comment_content cf">
@@ -269,40 +269,40 @@ function viradeco_comments( $comment, $args, $depth ) {
 } // don't remove this bracket!
 
 
-function viradeco_pagination(){
+function karait_pagination(){
   global $wp_query;
 
     if($wp_query->max_num_pages > 1){
         $big = 999999999; 
-        echo /*__('Page : ','viradeco').*/paginate_links( array(
+        echo /*__('Page : ','karait').*/paginate_links( array(
           'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
           'format' => '?paged=%#%',
           'current' => max( 1, get_query_var('paged') ),
           'total' => $wp_query->max_num_pages,
-          'prev_text'    => __('<i class="fa fa-angle-double-left"></i>','viradeco'),
-          'next_text'    => __('<i class="fa fa-angle-double-right"></i>','viradeco')
+          'prev_text'    => __('<i class="fa fa-angle-double-left"></i>','karait'),
+          'next_text'    => __('<i class="fa fa-angle-double-right"></i>','karait')
         ) );
       }
 }
 
 
-function viradeco_SearchFilter($query) {
+function karait_SearchFilter($query) {
     if ($query->is_search) {
       $query->set('post_type', array('product','project'));
     }
     return $query;
     }
 
-add_filter('pre_get_posts','viradeco_SearchFilter');
+add_filter('pre_get_posts','karait_SearchFilter');
 
-function viradeco_add_query_vars_filter( $vars ){
+function karait_add_query_vars_filter( $vars ){
   $vars[] = "sub_id";
   return $vars;
 }
-add_filter( 'query_vars', 'viradeco_add_query_vars_filter' );
+add_filter( 'query_vars', 'karait_add_query_vars_filter' );
 
-// add_filter( 'the_content', 'viradeco_remove_br_gallery', 11, 2);
-// function viradeco_remove_br_gallery($output) {
+// add_filter( 'the_content', 'karait_remove_br_gallery', 11, 2);
+// function karait_remove_br_gallery($output) {
 //     return preg_replace('/<br style=(.*)>/mi','',$output);
 // }
 /*
@@ -312,11 +312,11 @@ external fonts. If you're using Google Fonts, you
 can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
-// function viradeco_fonts() {
+// function karait_fonts() {
 //   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 // }
 
-//add_action('wp_enqueue_scripts', 'viradeco_fonts');
+//add_action('wp_enqueue_scripts', 'karait_fonts');
 
 // Enable support for HTML5 markup.
   add_theme_support( 'html5', array(
@@ -339,10 +339,10 @@ class last_products_widget extends WP_Widget {
         'last_products_widget', 
 
         // Widget name will appear in UI
-        __('Last Products Widget', 'viradeco'), 
+        __('Last Products Widget', 'karait'), 
 
         // Widget description
-        array( 'description' => __( 'Display Last Products', 'viradeco' ), ) 
+        array( 'description' => __( 'Display Last Products', 'karait' ), ) 
         );
     }
 
@@ -391,7 +391,7 @@ class last_products_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Last Products', 'viradeco' );
+            $title = __( 'Last Products', 'karait' );
         }
         if ( isset( $instance[ 'number' ] ) ) {
             $number = $instance[ 'number' ];
@@ -410,11 +410,11 @@ class last_products_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'product Numbers :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'product Numbers :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Product Category :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Product Category :','karait' ); ?></label> 
            <?php wp_dropdown_categories(array(
                   'name'               => $this->get_field_name( 'cat' ),
                   'id'                 => $this->get_field_id( 'cat' ),
@@ -449,10 +449,10 @@ class last_projects_widget extends WP_Widget {
         'last_projects_widget', 
 
         // Widget name will appear in UI
-        __('Last Projects Widget', 'viradeco'), 
+        __('Last Projects Widget', 'karait'), 
 
         // Widget description
-        array( 'description' => __( 'Display Last Projects', 'viradeco' ), ) 
+        array( 'description' => __( 'Display Last Projects', 'karait' ), ) 
         );
     }
 
@@ -500,7 +500,7 @@ class last_projects_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Last Projects', 'viradeco' );
+            $title = __( 'Last Projects', 'karait' );
         }
         if ( isset( $instance[ 'number' ] ) ) {
             $number = $instance[ 'number' ];
@@ -519,11 +519,11 @@ class last_projects_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Project Numbers :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Project Numbers :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Project Category :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Project Category :','karait' ); ?></label> 
            <?php wp_dropdown_categories(array(
                   'name'               => $this->get_field_name( 'cat' ),
                   'id'                 => $this->get_field_id( 'cat' ),
@@ -555,10 +555,10 @@ class last_posts_by_cat_widget extends WP_Widget {
         'last_posts_by_cat_widget', 
 
         // Widget name will appear in UI
-        __('Last Posts By Category Widget', 'viradeco'), 
+        __('Last Posts By Category Widget', 'karait'), 
 
         // Widget description
-        array( 'description' => __( 'Display Last Posts in Category', 'viradeco' ), ) 
+        array( 'description' => __( 'Display Last Posts in Category', 'karait' ), ) 
         );
     }
 
@@ -608,7 +608,7 @@ class last_posts_by_cat_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Last Posts', 'viradeco' );
+            $title = __( 'Last Posts', 'karait' );
         }
         if ( isset( $instance[ 'number' ] ) ) {
             $number = $instance[ 'number' ];
@@ -627,11 +627,11 @@ class last_posts_by_cat_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Post Numbers :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Post Numbers :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
         <p>
-        <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Post Category :','viradeco' ); ?></label> 
+        <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Post Category :','karait' ); ?></label> 
         <?php wp_dropdown_categories(array(
                   'name'               => $this->get_field_name( 'cat' ),
                   'id'                 => $this->get_field_id( 'cat' ),
@@ -662,10 +662,10 @@ class contact_info_widget extends WP_Widget {
         'contact_info_widget', 
 
         // Widget name will appear in UI
-        __('Contact Informaion Widget', 'viradeco'), 
+        __('Contact Informaion Widget', 'karait'), 
 
         // Widget description
-        array( 'description' => __( 'Display Contact Information', 'viradeco' ), ) 
+        array( 'description' => __( 'Display Contact Information', 'karait' ), ) 
         );
     }
 
@@ -682,10 +682,10 @@ class contact_info_widget extends WP_Widget {
         
                 
         $content = '<main class="widgetbody">';
-        $content .='<p><i class="fa fa-map-marker"></i>'.__('Address : ','viradeco').$address.'</p>';
-        $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','viradeco').$phone.'</p>';
-        $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','viradeco').$fax.'</p>';
-        $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','viradeco').$email.'</p>';
+        $content .='<p><i class="fa fa-map-marker"></i>'.__('Address : ','karait').$address.'</p>';
+        $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','karait').$phone.'</p>';
+        $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','karait').$fax.'</p>';
+        $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','karait').$email.'</p>';
         $content .= '</main>';
       
         // before and after widget arguments are defined by themes
@@ -703,7 +703,7 @@ class contact_info_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Last Posts', 'viradeco' );
+            $title = __( 'Last Posts', 'karait' );
         }
 
         if ( isset( $instance[ 'address' ] ) ) {
@@ -737,21 +737,21 @@ class contact_info_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Address :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Address :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $address ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone Number :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone Number :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $phone ); ?>" />
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e( 'Fax Number :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e( 'Fax Number :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" type="text" value="<?php echo esc_attr( $fax ); ?>" />
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email Address :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email Address :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>" />
         </p>
         
@@ -778,10 +778,10 @@ class social_widget extends WP_Widget {
         'social_widget', 
 
         // Widget name will appear in UI
-        __('Social Networks Widget', 'viradeco'), 
+        __('Social Networks Widget', 'karait'), 
 
         // Widget description
-        array( 'description' => __( 'Social Networks and Important links', 'viradeco' ), ) 
+        array( 'description' => __( 'Social Networks and Important links', 'karait' ), ) 
         );
     }
 
@@ -806,9 +806,9 @@ class social_widget extends WP_Widget {
         $content .='<li><a class="sicon facebook" href="'.esc_url($facebook).'">Facebook</a></li>';
         $content .='<li><a class="sicon linkedin" href="'.esc_url($linkedin).'">Linkedin</a></li>';
         $content .='<li><a class="sicon instagram" href="'.esc_url($instagram).'">Instagram</a></li>';
-        $content .='<li><a class="sicon catalog" href="'.esc_url($catalog).'">'.__('Download Cataloge','viradeco').'</a></li>';
-        $content .='<li><a class="sicon envelope" href="'.esc_url($email).'">'.__('Send Email','viradeco').'</a></li>';
-        $content .='<li><a class="sicon unlock" href="'.esc_url($login).'">'.__('Login','viradeco').'</li>';
+        $content .='<li><a class="sicon catalog" href="'.esc_url($catalog).'">'.__('Download Cataloge','karait').'</a></li>';
+        $content .='<li><a class="sicon envelope" href="'.esc_url($email).'">'.__('Send Email','karait').'</a></li>';
+        $content .='<li><a class="sicon unlock" href="'.esc_url($login).'">'.__('Login','karait').'</li>';
         $content .= '</ul>';
       
         // before and after widget arguments are defined by themes
@@ -826,7 +826,7 @@ class social_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Social Links', 'viradeco' );
+            $title = __( 'Social Links', 'karait' );
         }
 
         
@@ -874,31 +874,31 @@ class social_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'google' ); ?>"><?php _e( 'Google Plus Url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'google' ); ?>"><?php _e( 'Google Plus Url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'google' ); ?>" name="<?php echo $this->get_field_name( 'google' ); ?>" type="text" value="<?php echo esc_attr( $google ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook Url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook Url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'linkedin' ); ?>"><?php _e( 'Linkedin Url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'linkedin' ); ?>"><?php _e( 'Linkedin Url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'linkedin' ); ?>" name="<?php echo $this->get_field_name( 'linkedin' ); ?>" type="text" value="<?php echo esc_attr( $linkedin ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram Url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram Url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'catalog' ); ?>"><?php _e( 'Catalog Download url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'catalog' ); ?>"><?php _e( 'Catalog Download url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'catalog' ); ?>" name="<?php echo $this->get_field_name( 'catalog' ); ?>" type="text" value="<?php echo esc_attr( $catalog ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Send Email Url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Send Email Url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'login' ); ?>"><?php _e( 'Login Url :','viradeco' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'login' ); ?>"><?php _e( 'Login Url :','karait' ); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id( 'login' ); ?>" name="<?php echo $this->get_field_name( 'login' ); ?>" type="text" value="<?php echo esc_attr( $login ); ?>" />
         </p>
 
@@ -926,16 +926,16 @@ class social_widget extends WP_Widget {
 
 
 // Register and load the widget
-function viradeco_widget() {
+function karait_widget() {
   register_widget( 'last_products_widget' );
   register_widget( 'last_projects_widget' );
   register_widget( 'last_posts_by_cat_widget' );
   register_widget( 'contact_info_widget' );
   register_widget( 'social_widget' );
 }
-add_action( 'widgets_init', 'viradeco_widget' );
+add_action( 'widgets_init', 'karait_widget' );
 
-function viradeco_get_image_src($src="" , $size=""){
+function karait_get_image_src($src="" , $size=""){
     $path_info = pathinfo($src);
     return $path_info['dirname'].'/'.$path_info['filename'].'-'.$size.'.'.$path_info['extension'];
 }
@@ -1037,18 +1037,18 @@ class Menu_With_Image extends Walker_Nav_Menu {
 
 }
 
-function viradeco_filter_search($query) {
+function karait_filter_search($query) {
     if ($query->is_search) {
   $query->set('post_type', array('product','project'));
     };
     return $query;
 };
-add_filter('pre_get_posts', 'viradeco_filter_search');
+add_filter('pre_get_posts', 'karait_filter_search');
 
 // vira club id
 
 
-function viradeco_create_account(){
+function karait_create_account(){
     //You may need some data validation here
     
       global $wpdb;
@@ -1076,22 +1076,22 @@ function viradeco_create_account(){
         if($email && $pass && $user){
 
           // if( $birthday && (!is_int($birthday) || $birthday < 1 || $birthday > 31)){
-          //   $user_errors->add( 'birthday',__('Birth Day must be a number between 1 & 31','viradeco'),$birthday );         
+          //   $user_errors->add( 'birthday',__('Birth Day must be a number between 1 & 31','karait'),$birthday );         
           //   var_dump(is_int($birthday));
              
           // }
           // if($birthmonth && (!is_int($birthmonth) || $birthmonth < 1 || $birthmonth > 12)){
-          //   $user_errors->add( 'birthmonth',__('Birth Month must be a number between 1 & 31','viradeco'),$birthmonth );         
+          //   $user_errors->add( 'birthmonth',__('Birth Month must be a number between 1 & 31','karait'),$birthmonth );         
           //   var_dump(is_int($birthmonth));
              
           // }
           // if($birthyear && !is_int($birthyear)){
-          //   $user_errors->add( 'birthyear',__('Birth Year must be Number','viradeco'),$birthyear );         
+          //   $user_errors->add( 'birthyear',__('Birth Year must be Number','karait'),$birthyear );         
           //  var_dump(is_int($birthyear));
              
           // }
           // if($phone && !is_int($phone)){
-          //   $user_errors->add( 'phone',__('Phone must be a Number','viradeco'),$phone );         
+          //   $user_errors->add( 'phone',__('Phone must be a Number','karait'),$phone );         
           //    var_dump(is_int($phone));
           // }
          
@@ -1128,8 +1128,8 @@ function viradeco_create_account(){
                          //exit;
                          
 
-                        viradeco_send_registration_admin_email($user_id);
-                        viradeco_user_registration_welcome_email($user_id);
+                        karait_send_registration_admin_email($user_id);
+                        karait_user_registration_welcome_email($user_id);
 
                         log_me_the_f_in( $user_id );
                      } else {
@@ -1137,24 +1137,24 @@ function viradeco_create_account(){
                          var_dump($user_id->get_error_message());
                      }
               } else {
-                 $user_errors->add( 'userexists',__('Another user have been registered by this User Name or Email','viradeco') );
+                 $user_errors->add( 'userexists',__('Another user have been registered by this User Name or Email','karait') );
 
               }
             } else {
-                $user_errors->add( 'aspam',__('Anti Spam is Not correct!','viradeco') );         
+                $user_errors->add( 'aspam',__('Anti Spam is Not correct!','karait') );         
             }
 
           } elseif($submited == "true") {
-            $user_errors->add( 'requiredfields',__('Please fill the required fields : User Name - Email - Password','viradeco') );         
+            $user_errors->add( 'requiredfields',__('Please fill the required fields : User Name - Email - Password','karait') );         
         }
     
 
 }
-add_action('init','viradeco_create_account');
+add_action('init','karait_create_account');
 
 
 // registration and login form shortcode
-function viradeco_user_register( $atts, $content = null ) {
+function karait_user_register( $atts, $content = null ) {
     $a = shortcode_atts( array(
         'attr_1' => 'attribute 1 default',
         'attr_2' => 'attribute 2 default',
@@ -1191,32 +1191,32 @@ function viradeco_user_register( $atts, $content = null ) {
 
     
     $register_form = '';
-    $register_form .= '<div class="forms_buttons"><a href="#" id="register-show" class="register-show">'.__('Vira Club Registeration','viradeco').'</a>';
-    $register_form .= '<a href="#" id="login-show" class="login-show">'.__('Login to Site','viradeco').'</a></div>';
+    $register_form .= '<div class="forms_buttons"><a href="#" id="register-show" class="register-show">'.__('Vira Club Registeration','karait').'</a>';
+    $register_form .= '<a href="#" id="login-show" class="login-show">'.__('Login to Site','karait').'</a></div>';
     $register_form .= '<div class="register-container '.$form_display.' ">';
         $register_form .= '<label class="form_error">'.$required[0].'</label>';
         $register_form .= '<label class="form_error">'.$spam_error[0].'</label>';
         $register_form .= '<label class="form_error">'.$userexists[0].'</label>';
         $register_form .= '<form method="post" class="register_form" name="registerForm">';
            $register_form .='<table>';
-               $register_form .= '<tr><th>'.__('First Name','viradeco').'</th><td>'.'<input id="fname" type="text"  name="fname" />'.'</td></tr>';
-                $register_form .='<tr><th>'. __('Last Name','viradeco').'</th><td>'. '<input id="lname" type="text" name="lname" />'.'</td></tr>';
-                $register_form .= '<tr><th>'.__('UserName','viradeco').'</th><td>'. '<input id="uname" type="text" name="uname" />'.'</td></tr>';
-                $register_form .= '<tr><th>'.__('Birthday','viradeco').'</th><td>'. '<input id="birthday" type="number" name="birthday" min="1" max="31"/>'.'</td></tr>';
+               $register_form .= '<tr><th>'.__('First Name','karait').'</th><td>'.'<input id="fname" type="text"  name="fname" />'.'</td></tr>';
+                $register_form .='<tr><th>'. __('Last Name','karait').'</th><td>'. '<input id="lname" type="text" name="lname" />'.'</td></tr>';
+                $register_form .= '<tr><th>'.__('UserName','karait').'</th><td>'. '<input id="uname" type="text" name="uname" />'.'</td></tr>';
+                $register_form .= '<tr><th>'.__('Birthday','karait').'</th><td>'. '<input id="birthday" type="number" name="birthday" min="1" max="31"/>'.'</td></tr>';
                     
-                $register_form .= '<tr><th>'.__('Birth Month','viradeco').'</th><td>'. '<input id="birthmonth" type="number" name="birthmonth" min="1" max="12"/>'.'</td></tr>';
+                $register_form .= '<tr><th>'.__('Birth Month','karait').'</th><td>'. '<input id="birthmonth" type="number" name="birthmonth" min="1" max="12"/>'.'</td></tr>';
                    
-                $register_form .='<tr><th>'. __('Birth Year','viradeco').'</th><td>'. '<input id="birthyear" type="number" name="birthyear" min="1300"/>'.'</td></tr>';
+                $register_form .='<tr><th>'. __('Birth Year','karait').'</th><td>'. '<input id="birthyear" type="number" name="birthyear" min="1300"/>'.'</td></tr>';
                     
-                $register_form .= '<tr><th>'.__('Job','viradeco').'</th><td>'. '<input id="job" type="text" name="job" />'.'</td></tr>';
-                $register_form .= '<tr><th>'.__('Phone','viradeco').'</th><td>'. '<input id="phone" type="number" min="1111"  name="phone" />'.'</td></tr>';
+                $register_form .= '<tr><th>'.__('Job','karait').'</th><td>'. '<input id="job" type="text" name="job" />'.'</td></tr>';
+                $register_form .= '<tr><th>'.__('Phone','karait').'</th><td>'. '<input id="phone" type="number" min="1111"  name="phone" />'.'</td></tr>';
                     
-                $register_form .= '<tr><th>'.__('Email','viradeco').'</th><td>'. '<input id="email" type="text" name="uemail" />'.'</td></tr>';
-                $register_form .= '<tr><th>'.__('Password','viradeco').'</th><td>'.'<input type="password" pattern=".{6,}"  name="upass" />'.'</td></tr>';
-                $register_form .= '<tr><th></th><td><small>'.__('At least 6 character.','viradeco').'</small></td></tr>';
+                $register_form .= '<tr><th>'.__('Email','karait').'</th><td>'. '<input id="email" type="text" name="uemail" />'.'</td></tr>';
+                $register_form .= '<tr><th>'.__('Password','karait').'</th><td>'.'<input type="password" pattern=".{6,}"  name="upass" />'.'</td></tr>';
+                $register_form .= '<tr><th></th><td><small>'.__('At least 6 character.','karait').'</small></td></tr>';
                 $register_form .= '<tr><th>Anti Spam</th><td>'.$anti_no1 .' + '. $anti_no2.' = '.'<input id="anti_spam" type="number" min="1" max="40" name="aspam" />'.'<input value="'.$anti_spam.'" type="hidden"  name="aspam_result" />'.'</td></tr>';
                 $register_form .= '<tr><input value="true" type="hidden"  name="submited" /></tr>';
-                $register_form .= '<tr><td>'.'<input type="submit" value="'.__('Submit','viradeco').'" />'.'</td></tr>';
+                $register_form .= '<tr><td>'.'<input type="submit" value="'.__('Submit','karait').'" />'.'</td></tr>';
             $register_form .= '</table>';
         $register_form .= '</form>';
     $register_form .= '</div>';
@@ -1224,20 +1224,20 @@ function viradeco_user_register( $atts, $content = null ) {
         return $register_form;
     }
 }
-add_shortcode( 'vira_register', 'viradeco_user_register' );
+add_shortcode( 'vira_register', 'karait_user_register' );
 
 //user login shortcode
-function viradeco_user_login(){
+function karait_user_login(){
   $args = array('echo'=>false);
   if ( !is_user_logged_in() ) {
       return '<div class="login-container">'.wp_login_form( $args ).'</div>';
   }
 }
-add_shortcode( 'vira_login', 'viradeco_user_login' );
+add_shortcode( 'vira_login', 'karait_user_login' );
 
 
 // user profile shortcode
-function viradeco_user_profile( $atts, $content = null ) {
+function karait_user_profile( $atts, $content = null ) {
     // $a = shortcode_atts( array(
     //     'attr_1' => 'attribute 1 default',
     //     'attr_2' => 'attribute 2 default',
@@ -1251,23 +1251,23 @@ function viradeco_user_profile( $atts, $content = null ) {
      * if ( !($current_user instanceof WP_User) )
      *     return;
      */
-      $user_profile .= '<div  class="article-title"><h3>'.__('User Profile','viradeco').'</h3></div>';
+      $user_profile .= '<div  class="article-title"><h3>'.__('User Profile','karait').'</h3></div>';
        $user_profile .=  '<div class="avatar-container">'.get_avatar($current_user->ID).'</div>';
        $user_profile .=  '<div class="profile-container">';
        
-      $user_profile .= '<strong>'.__('first name: ','viradeco') .'</strong>'. $current_user->user_firstname . '<br />';
-       $user_profile .= '<strong>'.__('last name: ','viradeco') .'</strong>'. $current_user->user_lastname . '<br />';
-       $user_profile .= '<strong>'.__('Username: ','viradeco') .'</strong>'. $current_user->user_login . '<br />';
+      $user_profile .= '<strong>'.__('first name: ','karait') .'</strong>'. $current_user->user_firstname . '<br />';
+       $user_profile .= '<strong>'.__('last name: ','karait') .'</strong>'. $current_user->user_lastname . '<br />';
+       $user_profile .= '<strong>'.__('Username: ','karait') .'</strong>'. $current_user->user_login . '<br />';
       
-        $user_profile .= '<strong>'.__('Birthday: ','viradeco') .'</strong>'.get_user_meta($current_user->ID , 'birthday',true).' - '.get_user_meta($current_user->ID , 'birthmonth',true) .' - '.get_user_meta($current_user->ID , 'birthyear',true). '<br />';
-        $user_profile .= '<strong>'.__('Phone: ','viradeco') .'</strong>'.get_user_meta($current_user->ID , 'phone',true) . '<br />';
-         $user_profile .= '<strong>'.__('Email: ','viradeco') .'</strong>'. $current_user->user_email . '<br />';
-        $user_profile .= '<strong>'.__('Job: ','viradeco') .'</strong>'.get_user_meta($current_user->ID , 'job',true) . '<br />';
+        $user_profile .= '<strong>'.__('Birthday: ','karait') .'</strong>'.get_user_meta($current_user->ID , 'birthday',true).' - '.get_user_meta($current_user->ID , 'birthmonth',true) .' - '.get_user_meta($current_user->ID , 'birthyear',true). '<br />';
+        $user_profile .= '<strong>'.__('Phone: ','karait') .'</strong>'.get_user_meta($current_user->ID , 'phone',true) . '<br />';
+         $user_profile .= '<strong>'.__('Email: ','karait') .'</strong>'. $current_user->user_email . '<br />';
+        $user_profile .= '<strong>'.__('Job: ','karait') .'</strong>'.get_user_meta($current_user->ID , 'job',true) . '<br />';
        if(!current_user_can('edit_posts')){
-           $user_profile .= '<strong>'.__('Vira Club ID: ','viradeco') .'</strong>'.'<span class="viraid">V'.get_user_meta($current_user->ID , 'viraclub',true) . '</span><br />';
+           $user_profile .= '<strong>'.__('Vira Club ID: ','karait') .'</strong>'.'<span class="viraid">V'.get_user_meta($current_user->ID , 'viraclub',true) . '</span><br />';
           
       }
-       $user_profile .= '<br />'.'<a class="vira_logout" href="'.wp_logout_url( get_permalink() ).'">'.__('Logout','viradeco').'</a>';
+       $user_profile .= '<br />'.'<a class="vira_logout" href="'.wp_logout_url( get_permalink() ).'">'.__('Logout','karait').'</a>';
        $user_profile .=  '</div>';
 
 
@@ -1277,9 +1277,9 @@ function viradeco_user_profile( $atts, $content = null ) {
 
     return $user_profile;
 }
-add_shortcode( 'vira_profile', 'viradeco_user_profile' );
+add_shortcode( 'vira_profile', 'karait_user_profile' );
 
-function viradeco_projects_in_cat( $atts, $content = null ) {
+function karait_projects_in_cat( $atts, $content = null ) {
    global $wp_query;
     $a = shortcode_atts( array(
         'cat' => '',
@@ -1298,10 +1298,10 @@ $projects = get_posts(array(
   if(!empty($projects)){ ?>
     
     <ul class="projects-list">
-      <li><span><?php echo __('Title','viradeco'); ?></span></li>
+      <li><span><?php echo __('Title','karait'); ?></span></li>
      <?php foreach($projects as $project){
         setup_postdata( $project ) ;
-        $project_date = get_post_meta($project->ID,'_viradeco_project_date',1);?>
+        $project_date = get_post_meta($project->ID,'_karait_project_date',1);?>
         
         <li class="project-link">
           <a href="<?php echo get_the_permalink($project->ID); ?>">
@@ -1315,11 +1315,11 @@ $projects = get_posts(array(
   <?php } 
   wp_reset_postdata();
 }
-add_shortcode( 'projects', 'viradeco_projects_in_cat' );
+add_shortcode( 'projects', 'karait_projects_in_cat' );
 
 
 /*-----------Vira Products in Cat-------------------------------*/
-function viradeco_products_in_cat( $atts, $content = null ) {
+function karait_products_in_cat( $atts, $content = null ) {
    global $wp_query;
     $a = shortcode_atts( array(
         'cat' => '',
@@ -1379,56 +1379,56 @@ $products = get_posts(array(
   <?php } 
   wp_reset_postdata();
 }
-add_shortcode( 'products', 'viradeco_products_in_cat' );
+add_shortcode( 'products', 'karait_products_in_cat' );
 //--------------------- user extra fields ----------------------
-add_action( 'show_user_profile', 'viradeco_extra_user_profile_fields' );
-add_action( 'edit_user_profile', 'viradeco_extra_user_profile_fields' );
-function viradeco_extra_user_profile_fields( $user ) {
+add_action( 'show_user_profile', 'karait_extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'karait_extra_user_profile_fields' );
+function karait_extra_user_profile_fields( $user ) {
 ?>
-  <h3><?php _e("Extra profile information", "viradeco"); ?></h3>
+  <h3><?php _e("Extra profile information", "karait"); ?></h3>
   <table class="form-table">
     <tr>
-      <th><label for="birthday"><?php echo __("birthday",'viradeco'); ?></label></th>
+      <th><label for="birthday"><?php echo __("birthday",'karait'); ?></label></th>
       <td>
         <input type="text" name="birthday" id="Birth Day" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID,'birthday' ,true) ); ?>" /><br />
-        <span class="description"><?php echo __("Please enter your Birthday.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Birthday.","karait"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="birthmonth"><?php echo __("Birth Month",'viradeco'); ?></label></th>
+      <th><label for="birthmonth"><?php echo __("Birth Month",'karait'); ?></label></th>
       <td>
         <input type="text" name="birthmonth" id="birthmonth" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID,'birthmonth' ,true) ); ?>" /><br />
-        <span class="description"><?php echo __("Please enter your Birth Month.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Birth Month.","karait"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="birthyear"><?php echo __("Birth Year",'viradeco'); ?></label></th>
+      <th><label for="birthyear"><?php echo __("Birth Year",'karait'); ?></label></th>
       <td>
         <input type="text" name="birthyear" id="birthyear" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID,'birthyear' ,true) ); ?>" /><br />
-        <span class="description"><?php echo __("Please enter your Birth Year.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Birth Year.","karait"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="phone"><?php echo __("Phone",'viradeco'); ?></label></th>
+      <th><label for="phone"><?php echo __("Phone",'karait'); ?></label></th>
       <td>
         <input type="text" name="phone" id="phone" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta(  $user->ID ,'phone',true) ); ?>" /><br />
-        <span class="description"><?php echo __("Please enter your phone.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your phone.","karait"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="job"><?php echo __("Job",'viradeco'); ?></label></th>
+      <th><label for="job"><?php echo __("Job",'karait'); ?></label></th>
       <td>
         <input type="text" name="job" id="job" class="regular-text" 
             value="<?php echo esc_attr( get_user_meta( $user->ID ,'job',true) ); ?>" /><br />
-        <span class="description"><?php echo __("Please enter your Job.","viradeco"); ?></span>
+        <span class="description"><?php echo __("Please enter your Job.","karait"); ?></span>
     </td>
     </tr>
     <tr>
-      <th><label for="viraclub"><?php __("Vira club ID",'viradeco'); ?></label></th>
+      <th><label for="viraclub"><?php __("Vira club ID",'karait'); ?></label></th>
       <td>
         <input type="text" disabled name="viraclub" id="viraclub" class="regular-text" 
             value="<?php echo 'V'.esc_attr( get_user_meta( $user->ID,'viraclub' ,true) ); ?>" /><br />
@@ -1439,9 +1439,9 @@ function viradeco_extra_user_profile_fields( $user ) {
 <?php
 }
 
-add_action( 'personal_options_update', 'viradeco_save_extra_user_profile_fields' );
-add_action( 'edit_user_profile_update', 'viradeco_save_extra_user_profile_fields' );
-function viradeco_save_extra_user_profile_fields( $user_id ) {
+add_action( 'personal_options_update', 'karait_save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'karait_save_extra_user_profile_fields' );
+function karait_save_extra_user_profile_fields( $user_id ) {
   $saved = false;
   if ( current_user_can( 'edit_user', $user_id ) ) {
     update_user_meta( $user_id, 'birthday', $_POST['birthday'] );
@@ -1466,7 +1466,7 @@ function log_me_the_f_in( $user_id ) {
 }
 
 
-function viradeco_send_registration_admin_email($user_id){
+function karait_send_registration_admin_email($user_id){
   // $hash = md5( $random_number );
   // add_user_meta( $user_id, 'hash', $hash );
   
@@ -1479,24 +1479,24 @@ function viradeco_send_registration_admin_email($user_id){
   $pw = $user_info->user_pass;
   $viraclub_id = get_user_meta( $user_id, 'viraclub', 1);
 
-  $subject = __('New User Have Registered ','viradeco').get_option('blogname'); 
+  $subject = __('New User Have Registered ','karait').get_option('blogname'); 
   
-  $message .= __('Username: ','viradeco').$un;
+  $message .= __('Username: ','karait').$un;
   $message .= "\n";
-  $message .= __('Password: ','viradeco').$pw;
+  $message .= __('Password: ','karait').$pw;
   $message .= "\n\n";
-  $message .= __('ViraClub ID: ','viradeco').'V'.$viraclub_id;
+  $message .= __('ViraClub ID: ','karait').'V'.$viraclub_id;
 
     
   //$message .= 'Please click this link to activate your account:';
   // $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
-  $headers = 'From: <info@viradeco.com>' . "\r\n";           
+  $headers = 'From: <info@karait.com>' . "\r\n";           
   wp_mail($to, $subject, $message); 
 }
-add_action( 'user_register', 'viradeco_send_registration_admin_email' );
+add_action( 'user_register', 'karait_send_registration_admin_email' );
 
 
-function viradeco_user_registration_welcome_email($user_id){
+function karait_user_registration_welcome_email($user_id){
   // $hash = md5( $random_number );
   // add_user_meta( $user_id, 'hash', $hash );
   
@@ -1508,36 +1508,36 @@ function viradeco_user_registration_welcome_email($user_id){
   $pw = $user_info->user_pass;
   $viraclub_id = get_user_meta( $user_id, 'viraclub', 1);
 
-  $subject = __('Welcome to ','viradeco').get_option('blogname'); 
-  $message = __('Hello,','viradeco').$un;
+  $subject = __('Welcome to ','karait').get_option('blogname'); 
+  $message = __('Hello,','karait').$un;
   $message .= "\n\n";
-  $message .= __('Welcome to Our Site','viradeco');
+  $message .= __('Welcome to Our Site','karait');
   $message .= "\n\n";
-  $message .= __('Username: ','viradeco').$un;
+  $message .= __('Username: ','karait').$un;
   $message .= "\n";
-  $message .= __('Password: ','viradeco').$pw;
+  $message .= __('Password: ','karait').$pw;
   $message .= "\n\n";
-  $message .= __('ViraClub ID: ','viradeco').'V'.$viraclub_id;
+  $message .= __('ViraClub ID: ','karait').'V'.$viraclub_id;
   //$message .= 'Please click this link to activate your account:';
   // $message .= home_url('/').'activate?id='.$un.'&key='.$hash;
-  $headers = 'From: <info@viradeco.com>'."\r\n";           
+  $headers = 'From: <info@karait.com>'."\r\n";           
   wp_mail($to, $subject, $message); 
 }
-add_action( 'user_register', 'viradeco_user_registration_welcome_email' );
+add_action( 'user_register', 'karait_user_registration_welcome_email' );
 
 
 //add columns to User panel list page
-function Viradeco_add_user_columns($column) {
-    $column['viraclub'] = __('ViraClub ID','viradeco');
-    $column['phone'] = __('Phone','viradeco');
-    $column['email'] = __('Email','viradeco');
+function karait_add_user_columns($column) {
+    $column['viraclub'] = __('ViraClub ID','karait');
+    $column['phone'] = __('Phone','karait');
+    $column['email'] = __('Email','karait');
     
     return $column;
 }
-add_filter( 'manage_users_columns', 'viradeco_add_user_columns' );
+add_filter( 'manage_users_columns', 'karait_add_user_columns' );
 
 //add the data
-function viradeco_add_user_column_data( $val, $column_name, $user_id ) {
+function karait_add_user_column_data( $val, $column_name, $user_id ) {
     
 
     switch ($column_name) {
@@ -1554,9 +1554,9 @@ function viradeco_add_user_column_data( $val, $column_name, $user_id ) {
     }
     return;
 }
-add_filter( 'manage_users_custom_column', 'viradeco_add_user_column_data', 10, 3 );
+add_filter( 'manage_users_custom_column', 'karait_add_user_column_data', 10, 3 );
 
-function viradeco_viraclub_id($user_id){
+function karait_viraclub_id($user_id){
   global $wpdb;
 
   $user = new WP_User( $user_id );
@@ -1574,7 +1574,7 @@ function viradeco_viraclub_id($user_id){
   unset( $user );
 }
 
-//add_action( 'user_register', 'viradeco_viraclub_id' );
+//add_action( 'user_register', 'karait_viraclub_id' );
 function vira_login_redirect( $redirect_to, $request, $user ) {
   //is there a user to check?
   global $user;
@@ -1594,7 +1594,7 @@ function vira_login_redirect( $redirect_to, $request, $user ) {
 add_filter( 'login_redirect', 'vira_login_redirect', 10, 3 ); 
 
 
-function viradeco_search_form( $form ) {
+function karait_search_form( $form ) {
   global $post,$wp_query,$wpdb;
    
 
@@ -1616,7 +1616,7 @@ function viradeco_search_form( $form ) {
   return $form;
 }
 
-add_filter( 'get_search_form', 'viradeco_search_form' );
+add_filter( 'get_search_form', 'karait_search_form' );
 
 if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
   

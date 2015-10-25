@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: viradeco 1.0\n"
+"Project-Id-Version: karait 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
 "POT-Creation-Date: 2015-10-14 12:34:23+00:00\n"
 "MIME-Version: 1.0\n"
@@ -462,7 +462,7 @@ msgstr ""
 msgid "Create Your Own Ideas"
 msgstr ""
 
-#: header.php:96 library/viradeco.php:272
+#: header.php:96 library/karait.php:272
 msgid "The Main Menu"
 msgstr ""
 
@@ -1360,23 +1360,23 @@ msgstr ""
 msgid "related sites"
 msgstr ""
 
-#: library/viradeco.php:87
+#: library/karait.php:87
 msgid "Page %s"
 msgstr ""
 
-#: library/viradeco.php:273
+#: library/karait.php:273
 msgid "Responsive Menu"
 msgstr ""
 
-#: library/viradeco.php:304
+#: library/karait.php:304
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: library/viradeco.php:349
+#: library/karait.php:349
 msgid "Read "
 msgstr ""
 
-#: library/viradeco.php:349
+#: library/karait.php:349
 msgid "Read more &raquo;"
 msgstr ""
 
@@ -1389,15 +1389,15 @@ msgid "Date "
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "viradeco"
+msgid "karait"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://viradeco.com"
+msgid "http://karait.com"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "viradeco Portal Theme by iTstar."
+msgid "karait Portal Theme by iTstar."
 msgstr ""
 
 #. Author of the plugin/theme

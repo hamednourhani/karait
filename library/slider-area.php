@@ -7,7 +7,7 @@ $args = array (
 	);
 // The Query
 	$news_list = get_posts( $args );
-	$slider_show = get_post_meta(get_the_ID(),'_viradeco_slider_show');
+	$slider_show = get_post_meta(get_the_ID(),'_karait_slider_show');
 	
  ?>
 

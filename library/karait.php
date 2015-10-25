@@ -1,12 +1,12 @@
 <?php
-/* Welcome to viradeco :)
-This is the core viradeco file where most of the
+/* Welcome to karait :)
+This is the core karait file where most of the
 main functions & features reside. If you have
 any custom functions, it's best to put them
 in the functions.php file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/viradeco/
+URL: http://themble.com/karait/
 
   - head cleanup (remove rsd, uri links, junk css, ect)
   - enqueueing scripts & styles
@@ -29,7 +29,7 @@ removing all the junk we don't
 need.
 *********************/
 
-function viradeco_head_cleanup() {
+function karait_head_cleanup() {
 	// category feeds
 	// remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// post and comment feeds
@@ -47,11 +47,11 @@ function viradeco_head_cleanup() {
 	// WP version
 	remove_action( 'wp_head', 'wp_generator' );
 	// remove WP version from css
-	add_filter( 'style_loader_src', 'viradeco_remove_wp_ver_css_js', 9999 );
+	add_filter( 'style_loader_src', 'karait_remove_wp_ver_css_js', 9999 );
 	// remove Wp version from scripts
-	add_filter( 'script_loader_src', 'viradeco_remove_wp_ver_css_js', 9999 );
+	add_filter( 'script_loader_src', 'karait_remove_wp_ver_css_js', 9999 );
 
-} /* end viradeco head cleanup */
+} /* end karait head cleanup */
 
 //hide admin bar from front end
 function my_function_admin_bar(){ 
@@ -92,24 +92,24 @@ function rw_title( $title, $sep, $seplocation ) {
 } // end better title
 
 // remove WP version from RSS
-function viradeco_rss_version() { return ''; }
+function karait_rss_version() { return ''; }
 
 // remove WP version from scripts
-function viradeco_remove_wp_ver_css_js( $src ) {
+function karait_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
 		$src = remove_query_arg( 'ver', $src );
 	return $src;
 }
 
 // remove injected CSS for recent comments widget
-function viradeco_remove_wp_widget_recent_comments_style() {
+function karait_remove_wp_widget_recent_comments_style() {
 	if ( has_filter( 'wp_head', 'wp_widget_recent_comments_style' ) ) {
 		remove_filter( 'wp_head', 'wp_widget_recent_comments_style' );
 	}
 }
 
 // remove injected CSS from recent comments widget
-function viradeco_remove_recent_comments_style() {
+function karait_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
 		remove_action( 'wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style') );
@@ -117,7 +117,7 @@ function viradeco_remove_recent_comments_style() {
 }
 
 // remove injected CSS from gallery
-function viradeco_gallery_style($css) {
+function karait_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
@@ -127,7 +127,7 @@ SCRIPTS & ENQUEUEING
 *********************/
 
 // loading modernizr and jquery, and reply script
-function viradeco_scripts_and_styles() {
+function karait_scripts_and_styles() {
 
   global $wp_styles,$wp_scripts; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
@@ -146,14 +146,14 @@ function viradeco_scripts_and_styles() {
 
 
 
-		wp_register_script( 'viradeco-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'karait-modernizr', get_stylesheet_directory_uri() . '/js/lib/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
 		
 		wp_register_style( 'font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css', array(), '', 'all' );
-		wp_register_style( 'viradeco-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
-		wp_register_style( 'viradeco-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/rtl.css', array('viradeco-stylesheet'), '', 'all' );
-		wp_register_style( 'viradeco-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
+		wp_register_style( 'karait-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
+		wp_register_style( 'karait-rtl-stylesheet', get_stylesheet_directory_uri() . '/css/rtl.css', array('karait-stylesheet'), '', 'all' );
+		wp_register_style( 'karait-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -171,25 +171,25 @@ function viradeco_scripts_and_styles() {
 		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js/lib/flexie.js', array('jquery'), '', false );
 		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/js/lib/selectivizr-min.js', array(), '', false );
 		wp_register_script( 'cssfx', get_stylesheet_directory_uri() . '/js/lib/cssfx.js', array(), '', false );
-		wp_register_script( 'viradeco-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery','scrolltofixed','onscreen'), '', true );
+		wp_register_script( 'karait-js', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery','scrolltofixed','onscreen'), '', true );
 		
 		
 		// enqueue styles and scripts
 		//wp_enqueue_script( 'please-wait' );
 		//wp_enqueue_script( 'please-wait-custom' );
-		//wp_enqueue_script( 'viradeco-modernizr' );
+		//wp_enqueue_script( 'karait-modernizr' );
 	
-		wp_enqueue_script( 'modernizr-viradeco' );
+		wp_enqueue_script( 'modernizr-karait' );
 
 
 		wp_enqueue_style('font-awesome' );
-		wp_enqueue_style( 'viradeco-stylesheet' );
+		wp_enqueue_style( 'karait-stylesheet' );
 		if(is_rtl()){
-			wp_enqueue_style('viradeco-rtl-stylesheet');
+			wp_enqueue_style('karait-rtl-stylesheet');
 		}
-		wp_enqueue_style( 'viradeco-ie-only' );
+		wp_enqueue_style( 'karait-ie-only' );
 
-		$wp_styles->add_data( 'viradeco-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		$wp_styles->add_data( 'karait-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 		
 		
 
@@ -212,7 +212,7 @@ function viradeco_scripts_and_styles() {
 
 		wp_enqueue_script( 'onscreen' );
 		
-		wp_enqueue_script( 'viradeco-js' );
+		wp_enqueue_script( 'karait-js' );
 		
 
 			
@@ -224,7 +224,7 @@ THEME SUPPORT
 *********************/
 
 // Adding WP 3+ Functions & Theme Support
-function viradeco_theme_support() {
+function karait_theme_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
 	add_theme_support( 'post-thumbnails' );
@@ -269,21 +269,21 @@ function viradeco_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-menu' => __( 'The Main Menu', 'viradeco' ),   // main nav in header
-			'responsive-menu' => __( 'Responsive Menu', 'viradeco' ) // top menu  in footer
+			'main-menu' => __( 'The Main Menu', 'karait' ),   // main nav in header
+			'responsive-menu' => __( 'Responsive Menu', 'karait' ) // top menu  in footer
 		)
 	);
 
-} /* end viradeco theme support */
+} /* end karait theme support */
 
 
 /*********************
 RELATED POSTS FUNCTION
 *********************/
 
-// Related Posts Function (call using viradeco_related_posts(); )
-function viradeco_related_posts() {
-	echo '<ul id="viradeco-related-posts">';
+// Related Posts Function (call using karait_related_posts(); )
+function karait_related_posts() {
+	echo '<ul id="karait-related-posts">';
 	global $post;
 	$tags = wp_get_post_tags( $post->ID );
 	if($tags) {
@@ -301,19 +301,19 @@ function viradeco_related_posts() {
 				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'viradeco' ) . '</li>'; ?>
+			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'karait' ) . '</li>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
 	echo '</ul>';
-} /* end viradeco related posts function */
+} /* end karait related posts function */
 
 /*********************
 PAGE NAVI
 *********************/
 
 // Numeric Page Navi (built into the theme by default)
-function viradeco_page_navi() {
+function karait_page_navi() {
   global $wp_query;
   $bignum = 999999999;
   if ( $wp_query->max_num_pages <= 1 )
@@ -338,19 +338,19 @@ RANDOM CLEANUP ITEMS
 *********************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function viradeco_filter_ptags_on_images($content){
+function karait_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 // This removes the annoying […] to a Read More link
-function viradeco_excerpt_more($more) {
+function karait_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'viradeco' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'viradeco' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'karait' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'karait' ) .'</a>';
 }
 
-add_action('wp_head','viradeco_inline_style' );
-function viradeco_inline_style(){
+add_action('wp_head','karait_inline_style' );
+function karait_inline_style(){
 	
 }
 
