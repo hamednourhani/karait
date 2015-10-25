@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: karait 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-10-14 12:34:23+00:00\n"
+"POT-Creation-Date: 2015-10-25 20:11:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1320,6 +1320,26 @@ msgstr ""
 msgid "New Project Tag Name"
 msgstr ""
 
+#: library/karait.php:87
+msgid "Page %s"
+msgstr ""
+
+#: library/karait.php:273
+msgid "Responsive Menu"
+msgstr ""
+
+#: library/karait.php:304
+msgid "No Related Posts Yet!"
+msgstr ""
+
+#: library/karait.php:349
+msgid "Read "
+msgstr ""
+
+#: library/karait.php:349
+msgid "Read more &raquo;"
+msgstr ""
+
 #: library/notifications.php:15
 msgid "New user registration in %s:"
 msgstr ""
@@ -1358,26 +1378,6 @@ msgstr ""
 
 #: library/related-links.php:20
 msgid "related sites"
-msgstr ""
-
-#: library/karait.php:87
-msgid "Page %s"
-msgstr ""
-
-#: library/karait.php:273
-msgid "Responsive Menu"
-msgstr ""
-
-#: library/karait.php:304
-msgid "No Related Posts Yet!"
-msgstr ""
-
-#: library/karait.php:349
-msgid "Read "
-msgstr ""
-
-#: library/karait.php:349
-msgid "Read more &raquo;"
 msgstr ""
 
 #: searchform.php:6

@@ -1,5 +1,6 @@
 // compass ----------------------
 @import "compass";
+@import "compass/support";
 @import "compass/css3";
 @import "susyone";
 
@@ -9,6 +10,10 @@
 
 // fonts  -------------------------
 @import "rtl/fonts/fonts";
+
+
+// typography -------------------
+@import "rtl/fonts/typography";
 
 //font-awesome mixins -----------
 @import "rtl/font-awesome/variables";
