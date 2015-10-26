@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: karait 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-10-26 13:50:06+00:00\n"
+"POT-Creation-Date: 2015-10-26 14:48:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -323,8 +323,7 @@ msgstr ""
 msgid "Multiple Files"
 msgstr ""
 
-#: library/cmb/example-functions.php:330 library/cmb-functions.php:151
-#: library/cmb-functions.php:281
+#: library/cmb/example-functions.php:330
 msgid "Upload or add multiple images/attachments."
 msgstr ""
 
@@ -581,111 +580,39 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: library/cmb-functions.php:112
-msgid "Product Features"
-msgstr ""
-
 #: library/cmb-functions.php:120
-msgid "Add Product features"
-msgstr ""
-
-#: library/cmb-functions.php:122 library/cmb-functions.php:222
-msgid "feature {#}"
-msgstr ""
-
-#: library/cmb-functions.php:123 library/cmb-functions.php:223
-msgid "Add Another feature"
-msgstr ""
-
-#: library/cmb-functions.php:124 library/cmb-functions.php:224
-msgid "Remove feature"
-msgstr ""
-
-#: library/cmb-functions.php:132 library/cmb-functions.php:232
-msgid "Feature Name"
-msgstr ""
-
-#: library/cmb-functions.php:133 library/cmb-functions.php:233
-msgid "write the feature name "
-msgstr ""
-
-#: library/cmb-functions.php:141
-msgid "Feature Description "
-msgstr ""
-
-#: library/cmb-functions.php:142
-msgid "write the feature Description if needed"
-msgstr ""
-
-#: library/cmb-functions.php:150 library/cmb-functions.php:280
-msgid "Images"
-msgstr ""
-
-#: library/cmb-functions.php:177
-msgid "Project Date"
-msgstr ""
-
-#: library/cmb-functions.php:190
-msgid "Date"
-msgstr ""
-
-#: library/cmb-functions.php:191
-msgid "Enter Project Date"
-msgstr ""
-
-#: library/cmb-functions.php:212
-msgid "Project Features"
-msgstr ""
-
-#: library/cmb-functions.php:220
-msgid "Add Project features"
-msgstr ""
-
-#: library/cmb-functions.php:241
-msgid "Feature Value"
-msgstr ""
-
-#: library/cmb-functions.php:242
-msgid "write the feature Value "
-msgstr ""
-
-#: library/cmb-functions.php:267
-msgid "Project Images"
-msgstr ""
-
-#: library/cmb-functions.php:309
 msgid "Page Banner"
 msgstr ""
 
-#: library/cmb-functions.php:322
+#: library/cmb-functions.php:133
 msgid "Banner"
 msgstr ""
 
-#: library/cmb-functions.php:323
+#: library/cmb-functions.php:134
 msgid "Choose Banner Mod, SlideShow , Image Banner or Nothing"
 msgstr ""
 
-#: library/cmb-functions.php:328
+#: library/cmb-functions.php:139
 msgid "Slider"
 msgstr ""
 
-#: library/cmb-functions.php:329
+#: library/cmb-functions.php:140
 msgid "Image"
 msgstr ""
 
-#: library/cmb-functions.php:342
+#: library/cmb-functions.php:153
 msgid "Slider Shortcode"
 msgstr ""
 
-#: library/cmb-functions.php:343
+#: library/cmb-functions.php:154
 msgid "write this page Revolotion Slider shortcode with alis name here"
 msgstr ""
 
-#: library/cmb-functions.php:350
+#: library/cmb-functions.php:161
 msgid "Banner Image"
 msgstr ""
 
-#: library/cmb-functions.php:351
+#: library/cmb-functions.php:162
 msgid "Upload an image to show as the banner"
 msgstr ""
 
@@ -761,246 +688,6 @@ msgstr ""
 
 #: library/comment-form.php:64
 msgid "www.example.com"
-msgstr ""
-
-#: library/custom-post-type.php:31 library/custom-post-type.php:32
-msgid "Product"
-msgstr ""
-
-#: library/custom-post-type.php:33
-msgid "All Products"
-msgstr ""
-
-#: library/custom-post-type.php:34 library/custom-post-type.php:79
-msgid "Add New"
-msgstr ""
-
-#: library/custom-post-type.php:35
-msgid "Add New Products"
-msgstr ""
-
-#: library/custom-post-type.php:36 library/custom-post-type.php:81
-msgid "Edit"
-msgstr ""
-
-#: library/custom-post-type.php:37
-msgid "Edit Product"
-msgstr ""
-
-#: library/custom-post-type.php:38
-msgid "New Product"
-msgstr ""
-
-#: library/custom-post-type.php:39
-msgid "View Product"
-msgstr ""
-
-#: library/custom-post-type.php:40
-msgid "Search Products"
-msgstr ""
-
-#: library/custom-post-type.php:41 library/custom-post-type.php:86
-msgid "Nothing found in the Database."
-msgstr ""
-
-#: library/custom-post-type.php:42 library/custom-post-type.php:87
-msgid "Nothing found in Trash"
-msgstr ""
-
-#: library/custom-post-type.php:45
-msgid "This is a Product"
-msgstr ""
-
-#: library/custom-post-type.php:76 library/custom-post-type.php:77
-msgid "Project"
-msgstr ""
-
-#: library/custom-post-type.php:78
-msgid "All Projects"
-msgstr ""
-
-#: library/custom-post-type.php:80
-msgid "Add New Project"
-msgstr ""
-
-#: library/custom-post-type.php:82
-msgid "Edit Project"
-msgstr ""
-
-#: library/custom-post-type.php:83
-msgid "New Project"
-msgstr ""
-
-#: library/custom-post-type.php:84
-msgid "View Project"
-msgstr ""
-
-#: library/custom-post-type.php:85
-msgid "Search Projects"
-msgstr ""
-
-#: library/custom-post-type.php:90
-msgid "This is a Project"
-msgstr ""
-
-#: library/custom-post-type.php:135
-msgid "Product Categories"
-msgstr ""
-
-#: library/custom-post-type.php:136
-msgid "Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:137
-msgid "Search Product Categories"
-msgstr ""
-
-#: library/custom-post-type.php:138
-msgid "All Product Categories"
-msgstr ""
-
-#: library/custom-post-type.php:139
-msgid "Parent Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:140
-msgid "Parent Product Category:"
-msgstr ""
-
-#: library/custom-post-type.php:141
-msgid "Edit Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:142
-msgid "Update Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:143
-msgid "Add New Product Category"
-msgstr ""
-
-#: library/custom-post-type.php:144
-msgid "New Product Category Name"
-msgstr ""
-
-#: library/custom-post-type.php:160
-msgid "Product Tags"
-msgstr ""
-
-#: library/custom-post-type.php:161
-msgid "Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:162
-msgid "Search Product Tags"
-msgstr ""
-
-#: library/custom-post-type.php:163
-msgid "All Product Tags"
-msgstr ""
-
-#: library/custom-post-type.php:164
-msgid "Parent Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:165
-msgid "Parent Product Tag:"
-msgstr ""
-
-#: library/custom-post-type.php:166
-msgid "Edit Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:167
-msgid "Update Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:168
-msgid "Add New Product Tag"
-msgstr ""
-
-#: library/custom-post-type.php:169
-msgid "New Product Tag Name"
-msgstr ""
-
-#: library/custom-post-type.php:182
-msgid "Project Categories"
-msgstr ""
-
-#: library/custom-post-type.php:183
-msgid "Project Category"
-msgstr ""
-
-#: library/custom-post-type.php:184
-msgid "Search Project Categories"
-msgstr ""
-
-#: library/custom-post-type.php:185
-msgid "All Project Categories"
-msgstr ""
-
-#: library/custom-post-type.php:186
-msgid "Parent Project Category"
-msgstr ""
-
-#: library/custom-post-type.php:187
-msgid "Parent Project Category:"
-msgstr ""
-
-#: library/custom-post-type.php:188
-msgid "Edit Project Category"
-msgstr ""
-
-#: library/custom-post-type.php:189
-msgid "Update Project Category"
-msgstr ""
-
-#: library/custom-post-type.php:190
-msgid "Add New Project Category"
-msgstr ""
-
-#: library/custom-post-type.php:191
-msgid "New Project Category Name"
-msgstr ""
-
-#: library/custom-post-type.php:207
-msgid "Project Tags"
-msgstr ""
-
-#: library/custom-post-type.php:208
-msgid "Project Tag"
-msgstr ""
-
-#: library/custom-post-type.php:209
-msgid "Search Project Tags"
-msgstr ""
-
-#: library/custom-post-type.php:210
-msgid "All Project Tags"
-msgstr ""
-
-#: library/custom-post-type.php:211
-msgid "Parent Project Tag"
-msgstr ""
-
-#: library/custom-post-type.php:212
-msgid "Parent Project Tag:"
-msgstr ""
-
-#: library/custom-post-type.php:213
-msgid "Edit Project Tag"
-msgstr ""
-
-#: library/custom-post-type.php:214
-msgid "Update Project Tag"
-msgstr ""
-
-#: library/custom-post-type.php:215
-msgid "Add New Project Tag"
-msgstr ""
-
-#: library/custom-post-type.php:216
-msgid "New Project Tag Name"
 msgstr ""
 
 #: library/karait.php:87
