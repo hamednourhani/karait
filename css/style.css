@@ -658,10 +658,10 @@ body {
 /* line 35, sass/base/_base.scss */
 a {
   text-decoration: none;
-  color: gray; }
+  color: #989c9c; }
   /* line 38, sass/base/_base.scss */
   a:hover {
-    color: #BC3154; }
+    color: #B5DB18; }
 
 /* line 45, sass/base/_base.scss */
 img, video, audio, iframe {

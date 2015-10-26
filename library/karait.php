@@ -133,16 +133,16 @@ function karait_scripts_and_styles() {
 
   if (!is_admin()) {
 
-		$please_wait = array(
-			'theme_dir' => get_template_directory_uri(),
+		// $please_wait = array(
+		// 	'theme_dir' => get_template_directory_uri(),
 			
-		);
+		// );
 		
 		// modernizr (without media query polyfill)
-		wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
-		wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
+		// wp_register_script( 'please-wait', get_stylesheet_directory_uri() . '/js/lib/please-wait.min.js', array(), '', false );
+		// wp_register_script( 'please-wait-custom', get_stylesheet_directory_uri() . '/js/please-wait-custom.js', array('please-wait'), '', false );
 
-		wp_localize_script( 'please-wait-custom', 'theme_info', $please_wait );
+		// /wp_localize_script( 'please-wait-custom', 'theme_info', $please_wait );
 
 
 
@@ -165,7 +165,7 @@ function karait_scripts_and_styles() {
 		
 		
 		wp_register_script( 'scrolltofixed', get_stylesheet_directory_uri() . '/js/lib/jquery-scrolltofixed-min.js', array('jquery'), '', true );
-		wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
+		// wp_register_script( 'onscreen', get_stylesheet_directory_uri() . '/js/lib/jquery.onscreen.min.js', array('jquery'), '', true );
 		wp_register_script( 'respond-js', get_stylesheet_directory_uri() . '/js/lib/respond.js', array(), '', false );
 		wp_register_script( 'pie', get_stylesheet_directory_uri() . '/js/lib/PIE.js', array('jquery'), '', false );
 		wp_register_script( 'flexie', get_stylesheet_directory_uri() . '/js/lib/flexie.js', array('jquery'), '', false );
@@ -210,7 +210,7 @@ function karait_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'scrolltofixed' );
 
-		wp_enqueue_script( 'onscreen' );
+		// wp_enqueue_script( 'onscreen' );
 		
 		wp_enqueue_script( 'karait-js' );
 		
@@ -230,7 +230,7 @@ function karait_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// default thumb size
-	set_post_thumbnail_size(200,200 , true);
+	set_post_thumbnail_size(700,300 , true);
 	
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
@@ -270,6 +270,7 @@ function karait_theme_support() {
 	register_nav_menus(
 		array(
 			'main-menu' => __( 'The Main Menu', 'karait' ),   // main nav in header
+			'top-menu' => __( 'The Top Menu', 'karait' ),   // main nav in header
 			'responsive-menu' => __( 'Responsive Menu', 'karait' ) // top menu  in footer
 		)
 	);
