@@ -42,29 +42,36 @@
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
-	<noscript>
-		<style>
-			.body-wrapper{
-				display : block;
-			}
-		</style>
-	</noscript>
+	
 	<div class="body-wrapper">
 	<!-- ********************************************************************* -->
 	<!--****************** Site header ***************************************-->
 	<!-- ********************************************************************* -->
 
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-			<div class="top-bar">
-				<section class="layout">
-					<!-- <img src="<?php echo get_template_directory_uri();?>/images/ir.png" alt="Persian" class="lang-icon"/>
-					<img src="<?php echo get_template_directory_uri();?>/images/en.png" alt="English" class="lang-icon"/>
-					<img src="<?php echo get_template_directory_uri();?>/images/it.png" alt="Italian" class="lang-icon"/> -->
-					<?php do_action('icl_language_selector'); ?>
-				</section>
-			</div>
+			
 			<div class="hero">
 				<section class="layout">
+					<div class="header-right-area">
+						
+						<div class="user-links">
+							<?php echo '<a href="http://market.karait.com/clientarea.php "class="user-account-link">'.__('My Account','karait').'</a>'.__('OR','karait').'<a href="http://market.karait.com/register.php" class="user-register-link">'.__('Create Acount','karait').'</a>'; ?>
+						</div>
+						<?php wp_nav_menu(array(
+    					         'container' => false,                           // remove nav container
+    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+    					         'menu' => __( 'Top Menu', 'karait' ),  // nav name
+    					         'menu_class' => 'nav top-nav cf', 
+    					         // 'walker' => $walker,             // adding custom nav class
+    					         'theme_location' => 'top-menu',                 // where it's located in the theme
+    					         'before' => '',                                 // before the menu
+        			               'after' => '',                                  // after the menu
+        			               'link_before' => '',                            // before each link
+        			               'link_after' => '',                             // after each link
+        			               'depth' => 3,                                   // limit the depth of the nav
+    					         'fallback_cb' => ''                             // fallback function (if there is one)
+						)); ?>
+					</div>
 					<div class="logo-wrapper">
 						<!-- menu-toggler -->
 						<a id="menu-toggler" class="menu-toggler" >
@@ -72,10 +79,14 @@
 						</a>
 
 						<a href="<?php echo get_bloginfo('url'); ?>">
-							<img src="<?php echo get_template_directory_uri();?>/images/karait-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+							<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 						</a>
 					</div>
-					<span class="site-desc"><?php echo __('Create Your Own Ideas','karait'); ?></span>
+					<div class="header-left-area">
+						<div class="contact-info-links"><span>(+98)23087</span><a class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
+						<span class="livezilla-links"><a href=""><img src="<?php echo get_template_directory_uri().'/images/image.png';?>" /></a></span>
+					</div>
+					
 				</section>
 			
 
@@ -87,9 +98,7 @@
 								<i class="fa fa-close"></i>
 							</a>
 
-							<a class="responsive-logo" href="<?php echo get_bloginfo('url'); ?>">
-								<img src="<?php echo get_template_directory_uri();?>/images/karait-white-logo-140.png" alt="<?php echo get_bloginfo('name'); ?>"/>
-							</a>
+							
 							<?php wp_nav_menu(array(
 				    					         'container' => false,                           // remove nav container
 				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -105,13 +114,13 @@
 							)); ?>
 						</div>
 
-						<?php $walker = new Menu_With_Image; ?>
+						
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
     					         'menu' => __( 'Main Menu', 'karait' ),  // nav name
     					         'menu_class' => 'nav main-nav cf', 
-    					         'walker' => $walker,             // adding custom nav class
+    					         // 'walker' => $walker,             // adding custom nav class
     					         'theme_location' => 'main-menu',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu
