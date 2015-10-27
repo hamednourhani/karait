@@ -579,7 +579,7 @@ div.related-companies {
     /* line 62, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.twitter-link {
       background-image: url('../images/twitter.png?1445943393');
-      background-position: 0 -1px; }
+      background-position: 0 -3px; }
       /* line 65, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.twitter-link:hover {
         background-position: 0 -67px; }
