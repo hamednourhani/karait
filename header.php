@@ -52,7 +52,7 @@
 			
 			<div class="hero">
 				<section class="layout">
-					<div class="header-right-area">
+					<div class="header-right-area ">
 						
 						<div class="user-links">
 							<?php echo '<a href="http://market.karait.com/clientarea.php "class="user-account-link">'.__('My Account','karait').'</a>'.__('OR','karait').'<a href="http://market.karait.com/register.php" class="user-register-link">'.__('Create Acount','karait').'</a>'; ?>
@@ -83,8 +83,8 @@
 						</a>
 					</div>
 					<div class="header-left-area">
-						<div class="contact-info-links"><span>(+98)23087</span><a class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
-						<span class="livezilla-links"><a href=""><img src="<?php echo get_template_directory_uri().'/images/image.png';?>" /></a></span>
+						<div class="contact-info-links"><span>(+98) 21 23087</span><a class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
+						<div class="livezilla-links"><a href=""><img src="<?php echo get_template_directory_uri().'/images/image.png';?>" /></a></div>
 					</div>
 					
 				</section>
@@ -92,51 +92,24 @@
 
 				<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 					<section class="layout">
-						
-						<div id="responsive-menu" class="responsive-menu">
-							<a id="close-responsive" class="close-responsive">
-								<i class="fa fa-close"></i>
-							</a>
-
-							
+																	
 							<?php wp_nav_menu(array(
-				    					         'container' => false,                           // remove nav container
-				    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-				    					         'menu' => __( 'The Main Menu', 'karait' ),  // nav name
-				    					         'menu_class' => 'nav responsive-nav cf',               // adding custom nav class
-				    					         'theme_location' => 'responsive-nav',                 // where it's located in the theme
-				    					         'before' => '',                                 // before the menu
-				        			               'after' => '',                                  // after the menu
-				        			               'link_before' => '',                            // before each link
-				        			               'link_after' => '',                             // after each link
-				        			               'depth' => 3,                                   // limit the depth of the nav
-				    					         'fallback_cb' => ''                             // fallback function (if there is one)
+	    					         'container' => false,                           // remove nav container
+	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					         'menu' => __( 'Main Menu', 'karait' ),  // nav name
+	    					         'menu_class' => 'nav main-nav cf', 
+	    					         // 'walker' => $walker,             // adding custom nav class
+	    					         'theme_location' => 'main-menu',                 // where it's located in the theme
+	    					         'before' => '',                                 // before the menu
+	        			               'after' => '',                                  // after the menu
+	        			               'link_before' => '',                            // before each link
+	        			               'link_after' => '',                             // after each link
+	        			               'depth' => 3,                                   // limit the depth of the nav
+	    					         'fallback_cb' => ''                             // fallback function (if there is one)
 							)); ?>
-						</div>
-
-						
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'Main Menu', 'karait' ),  // nav name
-    					         'menu_class' => 'nav main-nav cf', 
-    					         // 'walker' => $walker,             // adding custom nav class
-    					         'theme_location' => 'main-menu',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 3,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-						
-						<div class="search-area">
-							<?php get_search_form( true ); ?>
-						</div>
-
-
+											
 					</section>
-					
+		
 				</nav>
 			</div>
 		</header>	

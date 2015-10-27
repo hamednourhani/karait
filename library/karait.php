@@ -271,7 +271,6 @@ function karait_theme_support() {
 		array(
 			'main-menu' => __( 'The Main Menu', 'karait' ),   // main nav in header
 			'top-menu' => __( 'The Top Menu', 'karait' ),   // main nav in header
-			'responsive-menu' => __( 'Responsive Menu', 'karait' ) // top menu  in footer
 		)
 	);
 

@@ -34,7 +34,7 @@ body {
 }
 a{
 	text-decoration : none;
-	color : darken($grey2,30%);
+	color : $black2;
 	&:hover{
 		color : $orangHover;
 	}
@@ -65,9 +65,7 @@ dl, menu, ol, ul,dir {
  	@include single-transition(opacity 2s ease-in-out);
  	opacity : 1;
 }
-article,aside{
-	opacity : 0.3;
-}
+
 
 
 .gallery:after{
