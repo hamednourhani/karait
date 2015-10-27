@@ -110,7 +110,7 @@ nav.main-menu{
 	width : 100%;
 	text-align: center;
 	background-color: $grey2;
-	border-bottom : 4px solid $green;
+	border-bottom : 4px solid $green2;
 	ul.main-nav{
 
 		li{
@@ -139,25 +139,43 @@ nav.main-menu{
 				}
 			}
 			ul.sub-menu{
-				display : none;
-				width : 200px;
-				background-color: $grey2;
+				@include display-none;
+				border : 1px solid $grey2;
+				padding : 0;
+
+				border-top : 0px;
+				z-index : 99999;
+				position : absolute;
+				top : 100%;
+				right : 0;
+				width : 240px;
 				li{
-					width : 100%
+					width : 100%;
+					text-align : right;
 				}
 				a{
+					
 					width : 100%;
+					@include single-transition(all, 0s, ease-in);
+					background-color : $grey1;
+					border-bottom : 1px solid $grey2;
+					color : $grey3;
+					padding : 5px 20px 5px 10px;
+					&:hover{
+						color : black;
+
+					}
 				}
 
 			}
 
-			&:hover{
-				ul.sub-menu{
-					display : inline-block;
-					position : absolute;
-					top : 95%;
-					right : 0;
-				}
+			&:hover>ul.sub-menu{
+				opacity: 1;
+				visibility: visible;
+		  		transition-delay:0s;
+		  		
+
+				
 			}
 		}
 	}

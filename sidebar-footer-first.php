@@ -1,6 +1,6 @@
 <?php if ( is_active_sidebar( 'footer-col1' ) || is_active_sidebar( 'footer-col2' ) || is_active_sidebar( 'footer-col3' ) || is_active_sidebar( 'footer-col4' )) : ?>
 		
-		<div class="products-area">
+		<div class="footer-widget-area">
 			<section class="layout">
 				<?php dynamic_sidebar( 'footer-col1' ); ?>
 				<?php dynamic_sidebar( 'footer-col2' ); ?>

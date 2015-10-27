@@ -1,0 +1,48 @@
+.footer-widget-area{
+	padding : {
+		top : 20px;
+		bottom : 20px;
+	}
+	
+	background-color: $grey2;
+	aside.footer-first.widget{
+		text-align: center;
+		@include span-columns(12,12);
+		@include at-breakpoint($medium){
+			@include span-columns(3,12);
+		}
+		&:nth-of-type(4n){
+			@include at-breakpoint($medium){
+				@include omega;
+			}
+		}
+	}
+
+}
+div.related-companies{
+	text-align : center;
+	background-color: $grey2;
+	padding : {
+		top : 30px;
+		bottom : 30px;
+	}
+	div.co-container{
+		text-align : center;
+		display: none;
+		@include at-breakpoint($larg){
+			display : inline-block;
+			width : 12.5%;
+		}
+		
+	}
+}
+.site-footer{
+	.social-links{
+		text-align: center;
+		a.facebook-link{
+			background : url(image-url(facbook.png));
+		}
+		
+
+	}
+}
