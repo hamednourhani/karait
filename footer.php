@@ -40,7 +40,7 @@
 
 			<footer class="site-footer">
 				<section class="layout">
-					<div social-links>
+					<div class="social-links">
 						<a class="facebook-link" href="http://www.facebook.com/karait.sitedesign"></a>
 						<a class="twitter-link" href="http://www.twitter.com/kara_sitedesign"></a>
 						<a class="gplus-link" href="http://google.com/+Karaitsitedesign"></a>
