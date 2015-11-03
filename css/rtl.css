@@ -383,16 +383,17 @@ body {
 nav.main-menu {
   margin-top: 10px;
   width: 100%;
+  padding: 0px;
   text-align: center;
   background-color: #E6E7E7;
   border-bottom: 4px solid #9aca3c; }
-  /* line 116, sass/rtl/layout/_header.scss */
+  /* line 117, sass/rtl/layout/_header.scss */
   nav.main-menu ul.main-nav li {
     display: inline-block;
     padding: 0px;
     margin: 0px;
     position: relative; }
-    /* line 121, sass/rtl/layout/_header.scss */
+    /* line 122, sass/rtl/layout/_header.scss */
     nav.main-menu ul.main-nav li a {
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
@@ -405,18 +406,18 @@ nav.main-menu {
       padding: 15px 22px;
       background-color: #E6E7E7;
       color: #111; }
-      /* line 129, sass/rtl/layout/_header.scss */
+      /* line 130, sass/rtl/layout/_header.scss */
       nav.main-menu ul.main-nav li a:hover {
         background-color: #F2F2F2;
         color: #111; }
-    /* line 134, sass/rtl/layout/_header.scss */
+    /* line 135, sass/rtl/layout/_header.scss */
     nav.main-menu ul.main-nav li.featured-menu a {
       background-color: #87BD05;
       color: #FFFFFF; }
-      /* line 137, sass/rtl/layout/_header.scss */
+      /* line 138, sass/rtl/layout/_header.scss */
       nav.main-menu ul.main-nav li.featured-menu a:hover {
         background-color: #B5DB18; }
-    /* line 141, sass/rtl/layout/_header.scss */
+    /* line 142, sass/rtl/layout/_header.scss */
     nav.main-menu ul.main-nav li ul.sub-menu {
       -moz-transition: opacity .45s linear, visibility .2s linear .2s;
       -webkit-transition: opacity .45s linear, visibility .2s linear .2s;
@@ -431,11 +432,11 @@ nav.main-menu {
       top: 100%;
       right: 0;
       width: 240px; }
-      /* line 152, sass/rtl/layout/_header.scss */
+      /* line 153, sass/rtl/layout/_header.scss */
       nav.main-menu ul.main-nav li ul.sub-menu li {
         width: 100%;
         text-align: right; }
-      /* line 156, sass/rtl/layout/_header.scss */
+      /* line 157, sass/rtl/layout/_header.scss */
       nav.main-menu ul.main-nav li ul.sub-menu a {
         width: 100%;
         -moz-transition: all 0s ease-in 0s;
@@ -447,10 +448,10 @@ nav.main-menu {
         border-bottom: 1px solid #E6E7E7;
         color: #4E4E4E;
         padding: 5px 20px 5px 10px; }
-        /* line 164, sass/rtl/layout/_header.scss */
+        /* line 165, sass/rtl/layout/_header.scss */
         nav.main-menu ul.main-nav li ul.sub-menu a:hover {
           color: black; }
-    /* line 172, sass/rtl/layout/_header.scss */
+    /* line 173, sass/rtl/layout/_header.scss */
     nav.main-menu ul.main-nav li:hover > ul.sub-menu {
       opacity: 1;
       visibility: visible;
@@ -529,31 +530,41 @@ nav.main-menu {
       .footer-widget-area aside.footer-first.widget:nth-of-type(4n) {
         float: left;
         margin-left: 0; } }
+    /* line 19, sass/rtl/layout/_footer.scss */
+    .footer-widget-area aside.footer-first.widget .widgettitle {
+      text-align: right;
+      border-bottom: 1px solid #cccece; }
+    /* line 23, sass/rtl/layout/_footer.scss */
+    .footer-widget-area aside.footer-first.widget ul.footer-widget-list {
+      padding: 0px; }
+      /* line 25, sass/rtl/layout/_footer.scss */
+      .footer-widget-area aside.footer-first.widget ul.footer-widget-list li {
+        border-bottom: 1px dashed #cccece; }
 
-/* line 22, sass/rtl/layout/_footer.scss */
+/* line 34, sass/rtl/layout/_footer.scss */
 div.related-companies {
   text-align: center;
   background-color: #E6E7E7;
   padding-top: 30px;
   padding-bottom: 30px; }
-  /* line 29, sass/rtl/layout/_footer.scss */
+  /* line 41, sass/rtl/layout/_footer.scss */
   div.related-companies div.co-container {
     text-align: center;
     display: none; }
     @media (min-width: 65em) {
-      /* line 29, sass/rtl/layout/_footer.scss */
+      /* line 41, sass/rtl/layout/_footer.scss */
       div.related-companies div.co-container {
         display: inline-block;
         width: 12.5%; } }
 
-/* line 39, sass/rtl/layout/_footer.scss */
+/* line 51, sass/rtl/layout/_footer.scss */
 .site-footer {
   display: block;
   background-color: #E6E7E7; }
-  /* line 42, sass/rtl/layout/_footer.scss */
+  /* line 54, sass/rtl/layout/_footer.scss */
   .site-footer .social-links {
     text-align: center; }
-    /* line 44, sass/rtl/layout/_footer.scss */
+    /* line 56, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.facebook-link,
     .site-footer .social-links a.twitter-link,
     .site-footer .social-links a.gplus-link,
@@ -567,30 +578,30 @@ div.related-companies {
       width: 30px;
       height: 30px;
       background-position: 0 0; }
-      /* line 53, sass/rtl/layout/_footer.scss */
+      /* line 65, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.facebook-link:hover,
       .site-footer .social-links a.twitter-link:hover,
       .site-footer .social-links a.gplus-link:hover,
       .site-footer .social-links a.linkedin-link:hover {
         background-position: 0 -66px; }
-    /* line 58, sass/rtl/layout/_footer.scss */
+    /* line 70, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.facebook-link {
       background-image: url('../images/facebook.png?1445943424'); }
-    /* line 62, sass/rtl/layout/_footer.scss */
+    /* line 74, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.twitter-link {
       background-image: url('../images/twitter.png?1445943393');
       background-position: 0 -3px; }
-      /* line 65, sass/rtl/layout/_footer.scss */
+      /* line 77, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.twitter-link:hover {
         background-position: 0 -67px; }
-    /* line 70, sass/rtl/layout/_footer.scss */
+    /* line 82, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.gplus-link {
       background-image: url('../images/gplus.png?1445943387');
       background-position: 0 1px; }
-    /* line 75, sass/rtl/layout/_footer.scss */
+    /* line 87, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.linkedin-link {
       background-image: url('../images/linkedin.png?1445943397'); }
-      /* line 77, sass/rtl/layout/_footer.scss */
+      /* line 89, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.linkedin-link:hover {
         background-position: 0 -68px; }
 

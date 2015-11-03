@@ -16,7 +16,19 @@
 				@include omega;
 			}
 		}
+		.widgettitle{
+			text-align : right;
+			border-bottom : 1px solid darken($grey2 , 10%);
+		}
+		ul.footer-widget-list{
+			padding : 0px;
+			li {
+				border-bottom : 1px dashed darken($grey2 , 10%);
+
+			}
+		}
 	}
+	
 
 }
 div.related-companies{
