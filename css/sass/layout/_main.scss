@@ -31,18 +31,14 @@ body{
 }
 
 //-------------site-content-------------------
+
 .primary{
- 	@include span-columns(12,12);
+	@include span-columns(12,12);
  	@include at-breakpoint($medium){
  		@include span-columns(8,12);
  	}
- 	
-}
-.without-sidebar{
-	.primary{
-		@include span-columns(12,12);
-		margin : auto;
-		article .featured-image{
+	article.hentry{
+		 .featured-image{
 			@include span-columns(12,12);
 		 	@include at-breakpoint($medium){
 		 		@include span-columns(5,12);
@@ -53,7 +49,7 @@ body{
 				margin-top : 15px;
 			}
 		}
-		article .article-body{
+		.article-body{
 			@include span-columns(12,12);
 		 	@include at-breakpoint($medium){
 		 		@include span-columns(7 omega,12);
@@ -63,6 +59,23 @@ body{
 				text-align: justify;
 			}
 		}
+		.article-title{
+			h3{
+				margin : 0px;
+				padding : 15px 0px;
+				border : {
+					top : 1px solid $grey1;
+					bottom : 1px solid $grey1;
+				}
+			}
+		}
+	}
+}
+.without-sidebar{
+	.primary{
+		@include span-columns(12,12);
+		margin : auto;
+
 
 	}
 	

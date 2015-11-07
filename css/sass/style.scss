@@ -23,15 +23,15 @@
 // // basic styles --------------
 
  @import "base/variables";
-// @import "base/functions";
-// @import "base/mixins";
+ @import "base/functions";
+ @import "base/mixins";
 @import "base/base";
 
 
 // // layout --------------------
-// @import "layout/header";
-// @import "layout/main";
-// @import "layout/footer";
+ @import "layout/header";
+ @import "layout/main";
+ @import "layout/footer";
 
 
 // // print layout --------------
@@ -39,12 +39,12 @@
 
 
 // // modules ------------------
-// @import "modules/btn";
-// @import "modules/dividers";
-// @import "modules/forms";
-// @import "modules/tables";
-// @import "modules/others";
-// @import "modules/tabs";
+@import "modules/btn";
+@import "modules/dividers";
+@import "modules/forms";
+@import "modules/tables";
+@import "modules/others";
+@import "modules/tabs";
 @import "modules/comments";
 // @import "modules/please-wait";
 // @import "modules/sk-wave";

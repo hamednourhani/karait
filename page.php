@@ -10,23 +10,24 @@
 						
 				</div><!-- banner-wrapper -->
 				
-				<div class="site-content">
+				<div class="site-content without-sidebar">
 					<section class="layout">
 						
 						<div class="primary">
 							
-								
-							<article class="hentry">
-								<header class="article-title">
-									<a href="<?php the_permalink(); ?>">
-										<h3><?php the_title(); ?></h3>
-									</a>
-								</header>
-								<main class="article-body">
-									<?php the_content(); ?>
-									
-								</main>
-							</article>
+							<?php if( get_post_meta(get_the_ID(),'_karait_title',1 ) !== 'no'){ ?>	
+								<article class="hentry">
+									<header class="article-title">
+										<a href="<?php the_permalink(); ?>">
+											<h3><?php the_title(); ?></h3>
+										</a>
+									</header>
+									<main class="article-body">
+										<?php the_content(); ?>
+										
+									</main>
+								</article>
+							<?php } ?>
 											
 						</div><!-- primary -->
 

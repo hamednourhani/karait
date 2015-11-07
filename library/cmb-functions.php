@@ -165,6 +165,20 @@ function karait_register_page_banner_metabox() {
 	
 	) );
 
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Page Title', 'karait' ),
+		'desc'       => __( 'show Page Title or Not?', 'karait' ),
+		'id'         => $prefix . 'title',
+		'type'       => 'radio_inline',
+		'options'          => array(
+			'yes' => __( 'Yes', 'karait' ),
+			'no' => __( 'No', 'karait' ),
+			
+		),
+		'default' => 'yes',
+	
+	) );
+
 	
 	
 }

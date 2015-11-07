@@ -614,6 +614,8 @@ th {
   display: inline; }
 
 /*------ colors -----------*/
+/* functions */
+/* mixins */
 /* base style */
 /* line 2, sass/base/_base.scss */
 body, html {
@@ -967,6 +969,237 @@ img.wp-smiley,
 .wp-caption.alignleft + ol {
   list-style-position: inside; }
 
+@-webkit-keyframes move-up {
+  0% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@-moz-keyframes move-up {
+  0% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@-o-keyframes move-up {
+  0% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@keyframes move-up {
+  0% {
+    opacity: 0;
+    display: none; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@-webkit-keyframes move-down {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 0;
+    display: none; } }
+@-moz-keyframes move-down {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 0;
+    display: none; } }
+@-o-keyframes move-down {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 0;
+    display: none; } }
+@keyframes move-down {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 0;
+    display: none; } }
+@-webkit-keyframes move-slow {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@-moz-keyframes move-slow {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@-o-keyframes move-slow {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+@keyframes move-slow {
+  0% {
+    opacity: 1;
+    display: inline-block; }
+  100% {
+    opacity: 1;
+    display: inline-block; } }
+/* main style */
+/* line 3, sass/layout/_main.scss */
+.layout {
+  *zoom: 1;
+  max-width: 61em;
+  _width: 61em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  .layout:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 7, sass/layout/_main.scss */
+body {
+  max-width: 1400px;
+  background-color: #E6E7E7;
+  margin: auto;
+  z-index: 1; }
+
+/* line 20, sass/layout/_main.scss */
+.body-wrapper {
+  width: 100%;
+  background-color: #FFFFFF;
+  margin: auto;
+  overflow: hidden; }
+
+/* line 35, sass/layout/_main.scss */
+.primary {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  @media (min-width: 45em) {
+    /* line 35, sass/layout/_main.scss */
+    .primary {
+      width: 66.10169%;
+      float: left;
+      margin-right: 1.69492%; } }
+  /* line 41, sass/layout/_main.scss */
+  .primary article.hentry .featured-image {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline; }
+    @media (min-width: 45em) {
+      /* line 41, sass/layout/_main.scss */
+      .primary article.hentry .featured-image {
+        width: 40.67797%;
+        float: left;
+        margin-right: 1.69492%; } }
+    /* line 46, sass/layout/_main.scss */
+    .primary article.hentry .featured-image img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px; }
+  /* line 52, sass/layout/_main.scss */
+  .primary article.hentry .article-body {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline; }
+    @media (min-width: 45em) {
+      /* line 52, sass/layout/_main.scss */
+      .primary article.hentry .article-body {
+        width: 57.62712%;
+        float: right;
+        margin-right: 0; } }
+    /* line 57, sass/layout/_main.scss */
+    .primary article.hentry .article-body p {
+      padding: 5px;
+      text-align: justify; }
+  /* line 63, sass/layout/_main.scss */
+  .primary article.hentry .article-title h3 {
+    margin: 0px;
+    padding: 15px 0px;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2; }
+
+/* line 75, sass/layout/_main.scss */
+.without-sidebar .primary {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  margin: auto; }
+
+/* line 84, sass/layout/_main.scss */
+.secondary {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media (min-width: 45em) {
+    /* line 84, sass/layout/_main.scss */
+    .secondary {
+      width: 32.20339%;
+      float: right;
+      margin-right: 0; } }
+
+/* button style */
+/* line 2, sass/modules/_btn.scss */
+input[type=submit], button {
+  border: 0px;
+  padding: 10px 15px;
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+  background-color: #111;
+  color: #FFFFFF; }
+  /* line 10, sass/modules/_btn.scss */
+  input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
+    background-color: #7e8383; }
+  /* line 13, sass/modules/_btn.scss */
+  input[type=submit]#searchsubmit, button#searchsubmit {
+    padding: 8px 15px; }
+
+/* line 20, sass/modules/_btn.scss */
+.sidebar-widget input[type=submit]#searchsubmit, .sidebar-widget button#searchsubmit {
+  padding: 3px 15px; }
+
+/* dividers style */
+/* form style */
+/* line 2, sass/modules/_forms.scss */
+input#s {
+  outline: none;
+  border: 1px solid #E6E7E7;
+  background-color: #F8F8F8;
+  padding: 7px; }
+
+/* line 10, sass/modules/_forms.scss */
+.widget input#s {
+  max-width: 175px; }
+
+/* line 15, sass/modules/_forms.scss */
+.search-area input#s {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+/* table style */
+/* other style */
 /* line 3, sass/modules/_comments.scss */
 .comment-area img.avatar {
   -moz-border-radius: 50%;
