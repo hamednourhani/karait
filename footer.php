@@ -21,7 +21,7 @@
 					</div>
 					
 					<div class="co-container">
-						<iframe src="<?php echo get_template_directory_uri();?>/eNamadLogo.htm" frameborder="0" scrolling="no" allowtransparency="true" style="width: 115px; height:150px; float:left; display:inline-block;"></iframe>
+						<iframe src="<?php echo get_template_directory_uri();?>/eNamadLogo.htm" frameborder="0" scrolling="no" allowtransparency="true" style="width: 115px; height:150px; display:inline-block;"></iframe>
 					</div>
 
 					<div class="co-container">

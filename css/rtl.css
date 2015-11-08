@@ -657,29 +657,28 @@ nav.main-menu {
 div.related-companies {
   text-align: center;
   background-color: #E6E7E7;
-  padding-top: 30px;
   padding-bottom: 30px; }
-  /* line 41, sass/rtl/layout/_footer.scss */
+  /* line 40, sass/rtl/layout/_footer.scss */
   div.related-companies div.co-container {
     text-align: center;
     display: none; }
     @media (min-width: 65em) {
-      /* line 41, sass/rtl/layout/_footer.scss */
+      /* line 40, sass/rtl/layout/_footer.scss */
       div.related-companies div.co-container {
         display: inline-block;
         width: 12.5%; } }
 
-/* line 51, sass/rtl/layout/_footer.scss */
+/* line 50, sass/rtl/layout/_footer.scss */
 .site-footer {
   display: block;
   background-color: #E6E7E7; }
-  /* line 54, sass/rtl/layout/_footer.scss */
+  /* line 53, sass/rtl/layout/_footer.scss */
   .site-footer .nezam-logo {
     text-align: center; }
-  /* line 57, sass/rtl/layout/_footer.scss */
+  /* line 56, sass/rtl/layout/_footer.scss */
   .site-footer .social-links {
     text-align: center; }
-    /* line 59, sass/rtl/layout/_footer.scss */
+    /* line 58, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.facebook-link,
     .site-footer .social-links a.twitter-link,
     .site-footer .social-links a.gplus-link,
@@ -693,30 +692,30 @@ div.related-companies {
       width: 30px;
       height: 30px;
       background-position: 0 0; }
-      /* line 68, sass/rtl/layout/_footer.scss */
+      /* line 67, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.facebook-link:hover,
       .site-footer .social-links a.twitter-link:hover,
       .site-footer .social-links a.gplus-link:hover,
       .site-footer .social-links a.linkedin-link:hover {
         background-position: 0 -66px; }
-    /* line 73, sass/rtl/layout/_footer.scss */
+    /* line 72, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.facebook-link {
       background-image: url('../images/facebook.png?1445943424'); }
-    /* line 77, sass/rtl/layout/_footer.scss */
+    /* line 76, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.twitter-link {
       background-image: url('../images/twitter.png?1445943393');
       background-position: 0 -3px; }
-      /* line 80, sass/rtl/layout/_footer.scss */
+      /* line 79, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.twitter-link:hover {
         background-position: 0 -67px; }
-    /* line 85, sass/rtl/layout/_footer.scss */
+    /* line 84, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.gplus-link {
       background-image: url('../images/gplus.png?1445943387');
       background-position: 0 1px; }
-    /* line 90, sass/rtl/layout/_footer.scss */
+    /* line 89, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.linkedin-link {
       background-image: url('../images/linkedin.png?1445943397'); }
-      /* line 92, sass/rtl/layout/_footer.scss */
+      /* line 91, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.linkedin-link:hover {
         background-position: 0 -68px; }
 
