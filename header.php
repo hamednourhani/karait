@@ -78,19 +78,34 @@
 							<i class="fa fa-navicon"></i>
 						</a>
 
-						<a href="<?php echo get_bloginfo('url'); ?>">
-							<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+						<a class="logo-link" href="<?php echo get_bloginfo('url'); ?>">
+							<img class="desktop-logo"src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+							<img class="mobile-logo"src="<?php echo get_template_directory_uri();?>/images/logomob.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 						</a>
 					</div>
 					<div class="header-left-area">
-						<div class="contact-info-links"><span>(+98) 21 23087</span><a class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
-						<div class="livezilla-links"><a href=""><img src="<?php echo get_template_directory_uri().'/images/image.png';?>" /></a></div>
+						<div class="contact-info-links"><span><?php echo '23087'.' 21 '.'(98+)';?></span><a class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
+						<div class="livezilla-links">
+							 <!-- LiveZilla Chat Button Link Code (ALWAYS PLACE IN BODY ELEMENT) -->
+							 	<div class="livee" style="text-align:center;width:120px;">
+							 		<a href="javascript:void(window.open('http://www.karait.com/livezilla/chat.php','','width=590,height=610,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes'))"><img src="http://www.karait.com/livezilla/image.php?id=04&amp;type=inlay" width="120" height="30" border="0" alt="LiveZilla Live Help"></a>
+							 	</div><!-- http://www.LiveZilla.net Chat Button Link Code -->
+							 	<!-- LiveZilla Tracking Code (ALWAYS PLACE IN BODY ELEMENT) -->
+							 	<div id="livezilla_tracking" style="display:none"></div>
+							 	<script type="text/javascript">
+									var script = document.createElement("script");script.type="text/javascript";var src = "http://www.karait.com/livezilla/server.php?request=track&output=jcrpt&nse="+Math.random();setTimeout("script.src=src;document.getElementById('livezilla_tracking').appendChild(script)",1);
+								</script>
+								<noscript>
+									<img src="http://www.karait.com/livezilla/server.php?request=track&amp;output=nojcrpt" width="0" height="0" style="visibility:hidden;" alt="">
+								</noscript>
+								<!-- http://www.LiveZilla.net Tracking Code -->
+						</div>
 					</div>
 					
 				</section>
 			
 
-				<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+				<nav role="navigation" id="main-menu" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 					<section class="layout">
 																	
 							<?php wp_nav_menu(array(

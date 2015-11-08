@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: karait 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-11-07 08:37:25+00:00\n"
+"POT-Creation-Date: 2015-11-08 14:39:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -129,11 +129,11 @@ msgstr ""
 msgid "Top Menu"
 msgstr ""
 
-#: header.php:86
+#: header.php:87
 msgid "Contact Us"
 msgstr ""
 
-#: header.php:99
+#: header.php:114
 msgid "Main Menu"
 msgstr ""
 

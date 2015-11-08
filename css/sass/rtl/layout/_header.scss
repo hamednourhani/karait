@@ -1,18 +1,53 @@
 .site-header{
-
+	.hero{
+		background-color: darken($green,5%);
+		border-bottom : 5px solid $orang;
+		@include at-breakpoint($medium) {
+			background: none;
+			border-bottom : 0px;
+		}
+	}
 }
 .header-right-area,
 .header-left-area,
 .logo-wrapper{
+	padding-top : 0px;
+	a.logo-link{
+		max-height : 40px;
+		display: inline-block;
+		overflow: hidden;
+	}
 	@include span-columns(12,12);
+	img.mobile-logo{
+		display : inline-block;
+		max-width : 130px;
+		padding-top : 10px
+	}
+	img.desktop-logo{
+		display : none;
+	}
 	@include at-breakpoint($medium) {
 		@include span-columns(4,12);
-	  
+		padding-top : 10px;
+		a.logo-link{
+			max-height : 70px;
+		}
+		img.mobile-logo{
+		display : none;
+		}
+		img.desktop-logo{
+			display : inline-block;
+		}
+
 	}
 }
 .header-right-area{
 	text-align : right;
-	
+	display : none;
+	@include at-breakpoint($medium) {
+		display : block;
+	  
+	}
 	.user-links{
 		a{
 			@include single-transition(all, 0.3s, ease-in-out);
@@ -55,17 +90,36 @@
 	}
 }
 .logo-wrapper{
-	padding-top : 10px;
-	text-align : center;
+	
+	text-align : left;
 	.menu-toggler{
-		display: none;
+		display: inline-block;
+		float : right;
+		margin-top : 13px;
+		i:before{
+			cursor: pointer;
+			font-size : 120%;
+			padding : 10px;
+			border : 1px solid $grey2;
+			color : $grey3;
+			background-color:  $white;
+		}
+
+	}
+	@include at-breakpoint($medium) {
+		text-align: center;
+		.menu-toggler{
+			display: none;
+		}
 	}
 }
 
 .header-left-area{
 	text-align : left;
+	display : none;
 	@include at-breakpoint($medium) {
 		@include omega;
+		display : block;
 	  
 	}
 	.contact-info-links{
@@ -90,6 +144,10 @@
 	}
 	div.livezilla-links{
 		margin-top : 20px;
+		.livee{
+			float : left;
+			text-align : left;
+		}
 	}
 }
 // ---------- NAVIGATION---------------------------------
@@ -105,78 +163,111 @@
 
 /*------------- main menu--------------------*/
 nav.main-menu{
-	
+	display : none;
+	background-color: darken($green,5%);
+	@include at-breakpoint($medium) {
+		display: block;
+		background-color: $grey2;
+	}
 	margin-top : 10px;
 	width : 100%;
 	padding : 0px;
 	text-align: center;
-	background-color: $grey2;
+	
 	border-bottom : 4px solid $green2;
 	ul.main-nav{
-
-		li{
+		margin : 0px;
+		padding : 10px 5px;
+		
+		li,ul{
 			display : inline-block;
+			margin : 0;
 			padding : 0px;
-			margin : 0px;
-			position : relative;
+			text-align: center;
+			width : 100%;
 			a{
 				@include single-transition(all, 0.3s, ease-in-out);
-				font-size: 18px;
-				font-weight: normal;
-				display: block;
-				padding : 15px 22px;
-				background-color: $grey2;
 				color : $black1;
+				display: inline-block;
+				width : 100%;
+				border-bottom : 1px solid $white;
 				&:hover{
-					background-color: $grey1;
-					color : $black1;
+					color : $white;
+					background-color: $orang;
 				}
 			}
-			&.featured-menu a{
-				background-color: $green;
-				color : $white;
-				&:hover{
-					background-color: $greenHover;
-				}
-			}
-			ul.sub-menu{
-				@include display-none;
-				border : 1px solid $grey2;
-				padding : 0;
+		}
 
-				border-top : 0px;
-				z-index : 99999;
-				position : absolute;
-				top : 100%;
-				right : 0;
-				width : 240px;
-				li{
-					width : 100%;
-					text-align : right;
-				}
+		@include at-breakpoint($medium){
+			margin : 0px;
+			padding : 0px;
+			
+			li{
+				display : inline-block;
+				width : inherit;
+				padding : 0px;
+				margin : 0px;
+				position : relative;
 				a{
-					
-					width : 100%;
-					@include single-transition(all, 0s, ease-in);
-					background-color : $grey1;
-					border-bottom : 1px solid $grey2;
-					color : $grey3;
-					padding : 5px 20px 5px 10px;
+					@include single-transition(all, 0.3s, ease-in-out);
+					font-size: 18px;
+					font-weight: normal;
+					display: block;
+					padding : 15px 22px;
+					background-color: $grey2;
+					color : $black1;
+					border-bottom : 0px;
 					&:hover{
-						color : black;
-
+						background-color: $grey1;
+						color : $black1;
 					}
 				}
+				&.featured-menu a{
+					background-color: $green;
+					color : $white;
+					&:hover{
+						background-color: $greenHover;
+					}
+				}
+				ul.sub-menu{
+					@include display-none;
+					border : 1px solid $grey2;
+					padding : 0;
 
-			}
+					border-top : 0px;
+					z-index : 99999;
+					position : absolute;
+					top : 100%;
+					right : 0;
+					width : 240px;
+					li{
+						width : 100%;
+						text-align : right;
+					}
+					a{
+						
+						width : 100%;
+						@include single-transition(all, 0s, ease-in);
+						background-color : $grey1;
+						border-bottom : 1px solid $grey2;
+						color : $grey3;
+						padding : 5px 20px 5px 10px;
+						&:hover{
+							color : black;
 
-			&:hover>ul.sub-menu{
-				opacity: 1;
-				visibility: visible;
-		  		transition-delay:0s;
-		  		
+						}
+					}
 
-				
+				}
+
+				&:hover>ul.sub-menu{
+					opacity: 1;
+					visibility: visible;
+			  		transition-delay:0s;
+			  		
+
+					
+				}
 			}
 		}
 	}

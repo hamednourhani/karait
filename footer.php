@@ -21,7 +21,7 @@
 					</div>
 					
 					<div class="co-container">
-					
+						<iframe src="<?php echo get_template_directory_uri();?>/eNamadLogo.htm" frameborder="0" scrolling="no" allowtransparency="true" style="width: 115px; height:150px; float:left; display:inline-block;"></iframe>
 					</div>
 
 					<div class="co-container">
@@ -40,6 +40,9 @@
 
 			<footer class="site-footer">
 				<section class="layout">
+					<div class="nezam-logo">
+			        	<img style="margin:0 auto;" src="<?php echo get_template_directory_uri().'/images/nezam.png';?>">
+			        </div>
 					<div class="social-links">
 						<a class="facebook-link" href="http://www.facebook.com/karait.sitedesign"></a>
 						<a class="twitter-link" href="http://www.twitter.com/kara_sitedesign"></a>
