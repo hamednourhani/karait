@@ -488,18 +488,21 @@ nav.main-menu {
     nav.main-menu {
       display: block;
       background-color: #E6E7E7; } }
-  /* line 178, sass/rtl/layout/_header.scss */
+  /* line 173, sass/rtl/layout/_header.scss */
+  nav.main-menu.scroll-to-fixed-fixed {
+    margin-top: 0px; }
+  /* line 181, sass/rtl/layout/_header.scss */
   nav.main-menu ul.main-nav {
     margin: 0px;
     padding: 10px 5px; }
-    /* line 182, sass/rtl/layout/_header.scss */
+    /* line 185, sass/rtl/layout/_header.scss */
     nav.main-menu ul.main-nav li, nav.main-menu ul.main-nav ul {
       display: inline-block;
       margin: 0;
       padding: 0px;
       text-align: center;
       width: 100%; }
-      /* line 188, sass/rtl/layout/_header.scss */
+      /* line 191, sass/rtl/layout/_header.scss */
       nav.main-menu ul.main-nav li a, nav.main-menu ul.main-nav ul a {
         -moz-transition: all 0.3s ease-in-out 0s;
         -o-transition: all 0.3s ease-in-out 0s;
@@ -510,23 +513,23 @@ nav.main-menu {
         display: inline-block;
         width: 100%;
         border-bottom: 1px solid #FFFFFF; }
-        /* line 194, sass/rtl/layout/_header.scss */
+        /* line 197, sass/rtl/layout/_header.scss */
         nav.main-menu ul.main-nav li a:hover, nav.main-menu ul.main-nav ul a:hover {
           color: #FFFFFF;
           background-color: #FF910F; }
     @media (min-width: 45em) {
-      /* line 178, sass/rtl/layout/_header.scss */
+      /* line 181, sass/rtl/layout/_header.scss */
       nav.main-menu ul.main-nav {
         margin: 0px;
         padding: 0px; }
-        /* line 205, sass/rtl/layout/_header.scss */
+        /* line 208, sass/rtl/layout/_header.scss */
         nav.main-menu ul.main-nav li {
           display: inline-block;
           width: inherit;
           padding: 0px;
           margin: 0px;
           position: relative; }
-          /* line 211, sass/rtl/layout/_header.scss */
+          /* line 214, sass/rtl/layout/_header.scss */
           nav.main-menu ul.main-nav li a {
             -moz-transition: all 0.3s ease-in-out 0s;
             -o-transition: all 0.3s ease-in-out 0s;
@@ -540,18 +543,18 @@ nav.main-menu {
             background-color: #E6E7E7;
             color: #111;
             border-bottom: 0px; }
-            /* line 220, sass/rtl/layout/_header.scss */
+            /* line 223, sass/rtl/layout/_header.scss */
             nav.main-menu ul.main-nav li a:hover {
               background-color: #F2F2F2;
               color: #111; }
-          /* line 225, sass/rtl/layout/_header.scss */
+          /* line 228, sass/rtl/layout/_header.scss */
           nav.main-menu ul.main-nav li.featured-menu a {
             background-color: #87BD05;
             color: #FFFFFF; }
-            /* line 228, sass/rtl/layout/_header.scss */
+            /* line 231, sass/rtl/layout/_header.scss */
             nav.main-menu ul.main-nav li.featured-menu a:hover {
               background-color: #B5DB18; }
-          /* line 232, sass/rtl/layout/_header.scss */
+          /* line 235, sass/rtl/layout/_header.scss */
           nav.main-menu ul.main-nav li ul.sub-menu {
             -moz-transition: opacity .45s linear, visibility .2s linear .2s;
             -webkit-transition: opacity .45s linear, visibility .2s linear .2s;
@@ -566,11 +569,11 @@ nav.main-menu {
             top: 100%;
             right: 0;
             width: 240px; }
-            /* line 243, sass/rtl/layout/_header.scss */
+            /* line 246, sass/rtl/layout/_header.scss */
             nav.main-menu ul.main-nav li ul.sub-menu li {
               width: 100%;
               text-align: right; }
-            /* line 247, sass/rtl/layout/_header.scss */
+            /* line 250, sass/rtl/layout/_header.scss */
             nav.main-menu ul.main-nav li ul.sub-menu a {
               width: 100%;
               -moz-transition: all 0s ease-in 0s;
@@ -582,10 +585,10 @@ nav.main-menu {
               border-bottom: 1px solid #E6E7E7;
               color: #4E4E4E;
               padding: 5px 20px 5px 10px; }
-              /* line 255, sass/rtl/layout/_header.scss */
+              /* line 258, sass/rtl/layout/_header.scss */
               nav.main-menu ul.main-nav li ul.sub-menu a:hover {
                 color: black; }
-          /* line 263, sass/rtl/layout/_header.scss */
+          /* line 266, sass/rtl/layout/_header.scss */
           nav.main-menu ul.main-nav li:hover > ul.sub-menu {
             opacity: 1;
             visibility: visible;

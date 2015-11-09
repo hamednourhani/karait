@@ -170,6 +170,9 @@ nav.main-menu{
 		background-color: $grey2;
 	}
 	margin-top : 10px;
+	&.scroll-to-fixed-fixed{
+		margin-top : 0px;
+	}
 	width : 100%;
 	padding : 0px;
 	text-align: center;

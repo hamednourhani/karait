@@ -9,6 +9,10 @@ jQuery(document).ready(function($){
 		nav_container.slideToggle();
 		
 	});
+
+	$('nav.main-menu').scrollToFixed({
+		minWidth : '700',
+	});
 	
 });	
 		
