@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Karait.com\n"
-"POT-Creation-Date: 2015-10-26 18:19+0330\n"
-"PO-Revision-Date: 2015-10-26 19:08+0330\n"
+"POT-Creation-Date: 2015-11-09 18:12+0330\n"
+"PO-Revision-Date: 2015-11-09 18:13+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <itstarir@gmail.com>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -37,8 +37,8 @@ msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr "%1$s دیدگاه برای &ldquo;%2$s&rdquo;"
 
 #: comments.php:28
-msgid "Reply<i class=\" fa fa-mail-reply\"></i>"
-msgstr "پاسخ <i class=\" fa fa-mail-reply\"></i>"
+msgid "Reply"
+msgstr "پاسخ"
 
 #: comments.php:34
 msgid "<i class=\"icon-left-open\"></i> Older Comments"
@@ -52,88 +52,64 @@ msgstr "دیدگاه های جدید تر"
 msgid "Comments are closed."
 msgstr "سیستم نظر دهی بسته است"
 
-#: footer.php:19
-msgid "Farakaranet Co © 2015. All rights reserved."
-msgstr "فراکارانت © . تمامی حقوق محفوظ می باشد"
-
-#: footer.php:22
-msgid "Designed by "
-msgstr "طراحی شده توسط "
-
-#: footer.php:23
-msgid "Farakaranet "
-msgstr "فراکارانت"
-
 #: functions.php:90
 msgid "1200px by 500px"
 msgstr ""
 
-#: functions.php:91
-msgid "30px by 30px"
-msgstr ""
-
-#: functions.php:92
-msgid "53px by 53px"
-msgstr ""
-
-#: functions.php:93
-msgid "130px by 130px"
-msgstr ""
-
-#: functions.php:135
+#: functions.php:133
 msgid "Sidebar"
 msgstr "ستون کناری"
 
-#: functions.php:136
+#: functions.php:134
 msgid "The first (primary) sidebar."
 msgstr "ابزارک ستون کناری"
 
-#: functions.php:144
+#: functions.php:142
 msgid "Footer first col"
 msgstr "ستون اول پانوشت"
 
-#: functions.php:145 functions.php:154 functions.php:163 functions.php:172
+#: functions.php:143 functions.php:152 functions.php:161 functions.php:170
 msgid "The first footer widget area"
 msgstr "منطقه ابزارک پانوشت"
 
-#: functions.php:153
+#: functions.php:151
 msgid "Footer 2d col"
 msgstr "ستون دوم پانوشت"
 
-#: functions.php:162
+#: functions.php:160
 msgid "Footer 3rd col"
 msgstr "ستون سوم پانوشت"
 
-#: functions.php:171
+#: functions.php:169
 msgid "Footer 4th Col"
 msgstr "ستون چهارم پانوشت"
 
-#: functions.php:205
+#: functions.php:203
 #, php-format
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr ""
 
-#: functions.php:205
+#: functions.php:203
 msgid "(Edit)"
 msgstr "(ویرایش)"
 
-#: functions.php:206
+#: functions.php:204
 msgid "F jS, Y"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:209
 msgid "Your comment is awaiting moderation."
 msgstr "دیدگاه شما در دست بررسی است"
 
-#: functions.php:234
+#: functions.php:232
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:233
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
-#: functions.php:277 functions.php:284 searchform.php:3
+#: functions.php:275 functions.php:282 searchform.php:3
 msgid "Search for:"
 msgstr "جستجو برای :"
 
@@ -153,19 +129,15 @@ msgstr "ایجاد حساب کاربری"
 msgid "Top Menu"
 msgstr "منوی فوقانی"
 
-#: header.php:86
+#: header.php:87
 msgid "Contact Us"
 msgstr "تماس با ما"
 
-#: header.php:105 library/karait.php:272
-msgid "The Main Menu"
-msgstr "منوی اصلی"
-
-#: header.php:121
+#: header.php:114
 msgid "Main Menu"
 msgstr "منوی اصلی"
 
-#: library/banner-maker.php:26
+#: library/banner-maker.php:16
 #, php-format
 msgid "Search Results for: %s"
 msgstr "نتایج جستجو برای : %s"
@@ -206,11 +178,27 @@ msgstr "تصویر"
 msgid "Upload an image to show as the banner"
 msgstr "یک تصویر برای نمایش به عنوان بنر بارگذاری نمایید"
 
+#: library/cmb-functions.php:169
+msgid "Page Title"
+msgstr "عنوان صفحه"
+
+#: library/cmb-functions.php:170
+msgid "show Page Title or Not?"
+msgstr "عنوان صفحه نمایش داده شود؟"
+
+#: library/cmb-functions.php:174
+msgid "Yes"
+msgstr "بله"
+
+#: library/cmb-functions.php:175
+msgid "No"
+msgstr "خیر"
+
 #: library/comment-form.php:8
 msgid ""
 "<span class=\"required\">Please fill the fields marked by <i class=\"icon-"
 "star\"></i></span>"
-msgstr ""
+msgstr "لطفا فیلدها ضروری را تکمیل نمایید"
 
 #: library/comment-form.php:13
 msgid "Leave a Reply"
@@ -291,30 +279,65 @@ msgstr ""
 msgid "Page %s"
 msgstr "صفحه %s"
 
+#: library/karait.php:272
+msgid "The Main Menu"
+msgstr "منوی اصلی"
+
 #: library/karait.php:273
 msgid "The Top Menu"
 msgstr "منوی فوقانی"
 
-#: library/karait.php:274
-msgid "Responsive Menu"
-msgstr "منوی ریسپانسیو"
-
-#: library/karait.php:305
+#: library/karait.php:304
 msgid "No Related Posts Yet!"
 msgstr "هنوز مطلب مرتبطی منتشر نشده است"
 
-#: library/karait.php:350
+#: library/karait.php:349
 msgid "Read "
 msgstr "خواندن"
 
-#: library/karait.php:350
+#: library/karait.php:349
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب &raquo;"
 
-#: library/post-meta.php:11 library/post-meta.php:32 library/post-meta.php:48
+#: library/post-meta.php:11
 msgid "Tags :"
 msgstr "برچسب ها : "
+
+#: library/post-meta.php:12
+msgid "Category :"
+msgstr "دسته بندی : "
 
 #: searchform.php:6
 msgid "Search"
 msgstr "جستجو"
+
+#: single.php:25
+msgid " Posted On "
+msgstr "منتشر شده در "
+
+#: single.php:25
+msgid "d M Y"
+msgstr ""
+
+#: single.php:26
+msgid " Updated On "
+msgstr "بروز شده در "
+
+#: single.php:27
+msgid " By "
+msgstr "توسط "
+
+#~ msgid "Reply<i class=\" fa fa-mail-reply\"></i>"
+#~ msgstr "پاسخ <i class=\" fa fa-mail-reply\"></i>"
+
+#~ msgid "Farakaranet Co © 2015. All rights reserved."
+#~ msgstr "فراکارانت © . تمامی حقوق محفوظ می باشد"
+
+#~ msgid "Designed by "
+#~ msgstr "طراحی شده توسط "
+
+#~ msgid "Farakaranet "
+#~ msgstr "فراکارانت"
+
+#~ msgid "Responsive Menu"
+#~ msgstr "منوی ریسپانسیو"

@@ -633,13 +633,14 @@ nav.main-menu {
   /* line 25, sass/rtl/layout/_main.scss */
   .primary .article-body ul {
     list-style: disc;
-    margin-left: auto;
-    margin-right: 20px; }
-  /* line 30, sass/rtl/layout/_main.scss */
+    margin-left: auto !important;
+    margin-right: 20px;
+    padding-left: 0px; }
+  /* line 31, sass/rtl/layout/_main.scss */
   .primary .article-body ul {
     margin-left: auto;
     margin-right: 20px; }
-  /* line 34, sass/rtl/layout/_main.scss */
+  /* line 35, sass/rtl/layout/_main.scss */
   .primary .article-body .featured-image {
     display: inline-block;
     float: right;
@@ -647,7 +648,7 @@ nav.main-menu {
     margin-bottom: 10px;
     margin-top: 1.5em; }
 
-/* line 47, sass/rtl/layout/_main.scss */
+/* line 48, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -657,7 +658,7 @@ nav.main-menu {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 47, sass/rtl/layout/_main.scss */
+    /* line 48, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.20339%;
       float: right;
@@ -666,7 +667,7 @@ nav.main-menu {
 
 /*---------------Headers------------------------*/
 /*---------------Froms--------------------------*/
-/* line 70, sass/rtl/layout/_main.scss */
+/* line 71, sass/rtl/layout/_main.scss */
 form input, form select, form input[type=submit], form button {
   display: inline-block;
   float: right;
@@ -675,28 +676,28 @@ form input, form select, form input[type=submit], form button {
   max-height: 32px;
   font-size: 90%;
   max-width: 100%; }
-/* line 79, sass/rtl/layout/_main.scss */
+/* line 80, sass/rtl/layout/_main.scss */
 form.domain-search {
   direction: ltr; }
-  /* line 81, sass/rtl/layout/_main.scss */
+  /* line 82, sass/rtl/layout/_main.scss */
   form.domain-search input, form.domain-search select, form.domain-search input[type=submit], form.domain-search button {
     float: left; }
-  /* line 84, sass/rtl/layout/_main.scss */
+  /* line 85, sass/rtl/layout/_main.scss */
   form.domain-search .input-large {
     width: 200px; }
 
 /*---------------------fields-----------------*/
-/* line 90, sass/rtl/layout/_main.scss */
+/* line 91, sass/rtl/layout/_main.scss */
 a.ult-content-box-anchor {
   display: block; }
-  /* line 92, sass/rtl/layout/_main.scss */
+  /* line 93, sass/rtl/layout/_main.scss */
   a.ult-content-box-anchor:hover {
     opacity: 0.85; }
 
-/* line 96, sass/rtl/layout/_main.scss */
+/* line 97, sass/rtl/layout/_main.scss */
 .icon-wrapper {
   background: url('../images/back-line.png?1447059888') repeat-x 0 center; }
-  /* line 98, sass/rtl/layout/_main.scss */
+  /* line 99, sass/rtl/layout/_main.scss */
   .icon-wrapper img {
     border-right: 1px solid #E6E7E7;
     border-left: 1px solid #E6E7E7; }
