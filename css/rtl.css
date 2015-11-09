@@ -146,6 +146,28 @@ p {
   *margin-right: -1em;
   display: inline; }
 
+/* line 51, sass/rtl/base/_variables.scss */
+.oneFifth {
+  width: 100%;
+  float: none;
+  margin-right: 0;
+  margin-left: 0;
+  display: inline; }
+  @media (min-width: 45em) {
+    /* line 51, sass/rtl/base/_variables.scss */
+    .oneFifth {
+      width: 20%;
+      float: left; } }
+
+/* line 62, sass/rtl/base/_variables.scss */
+.lastFifth {
+  float: none; }
+  @media (min-width: 45em) {
+    /* line 62, sass/rtl/base/_variables.scss */
+    .lastFifth {
+      float: left;
+      display: inline; } }
+
 /*------ colors -----------*/
 /* base style */
 /* line 2, sass/rtl/base/_base.scss */
@@ -601,8 +623,12 @@ nav.main-menu {
       float: right;
       margin-left: 1.69492%;
       margin-right: auto; } }
+  /* line 21, sass/rtl/layout/_main.scss */
+  .primary .article-body h1, .primary .article-body h2, .primary .article-body h3, .primary .article-body h4, .primary .article-body h5, .primary .article-body h6 {
+    margin-top: 15px;
+    margin-bottom: 15px; }
 
-/* line 23, sass/rtl/layout/_main.scss */
+/* line 29, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -612,12 +638,49 @@ nav.main-menu {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 23, sass/rtl/layout/_main.scss */
+    /* line 29, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.20339%;
       float: left;
       margin-left: 0;
       margin-right: auto; } }
+
+/*---------------Headers------------------------*/
+/*---------------Froms--------------------------*/
+/* line 52, sass/rtl/layout/_main.scss */
+form input, form select, form input[type=submit], form button {
+  display: inline-block;
+  float: right;
+  padding: 4px 10px;
+  margin: 3px;
+  max-height: 32px;
+  font-size: 90%;
+  max-width: 100%; }
+/* line 61, sass/rtl/layout/_main.scss */
+form.domain-search {
+  direction: ltr; }
+  /* line 63, sass/rtl/layout/_main.scss */
+  form.domain-search input, form.domain-search select, form.domain-search input[type=submit], form.domain-search button {
+    float: left; }
+  /* line 66, sass/rtl/layout/_main.scss */
+  form.domain-search .input-large {
+    width: 200px; }
+
+/*---------------------fields-----------------*/
+/* line 72, sass/rtl/layout/_main.scss */
+a.ult-content-box-anchor {
+  display: block; }
+  /* line 74, sass/rtl/layout/_main.scss */
+  a.ult-content-box-anchor:hover {
+    opacity: 0.85; }
+
+/* line 78, sass/rtl/layout/_main.scss */
+.icon-wrapper {
+  background: url('../images/back-line.png?1447059888') repeat-x 0 center; }
+  /* line 80, sass/rtl/layout/_main.scss */
+  .icon-wrapper img {
+    border-right: 1px solid #E6E7E7;
+    border-left: 1px solid #E6E7E7; }
 
 /* line 1, sass/rtl/layout/_footer.scss */
 .footer-widget-area {
@@ -724,18 +787,16 @@ div.related-companies {
 input[type=submit], button {
   border: 0px;
   padding: 10px 15px;
-  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
-  background-color: #111;
+  background-color: #FF910F;
   color: #FFFFFF; }
-  /* line 10, sass/rtl/modules/_btn.scss */
+  /* line 8, sass/rtl/modules/_btn.scss */
   input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus {
-    background-color: #7e8383; }
-  /* line 13, sass/rtl/modules/_btn.scss */
+    background-color: #FF3300; }
+  /* line 11, sass/rtl/modules/_btn.scss */
   input[type=submit]#searchsubmit, button#searchsubmit {
     padding: 8px 15px; }
 
-/* line 20, sass/rtl/modules/_btn.scss */
+/* line 18, sass/rtl/modules/_btn.scss */
 .sidebar-widget input[type=submit]#searchsubmit, .sidebar-widget button#searchsubmit {
   padding: 3px 15px; }
 

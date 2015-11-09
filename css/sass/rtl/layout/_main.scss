@@ -17,6 +17,12 @@
 		top :20px;
 		bottom : 20px;
 	}
+	.article-body{
+		h1,h2,h3,h4,h5,h6{
+			margin-top: 15px;
+	    	margin-bottom: 15px;
+		}
+	}
 	
 }
 
@@ -32,5 +38,49 @@
 	padding:{
 		top :20px;
 		bottom : 20px;
+	}
+}
+/*---------------Headers------------------------*/
+// .custom-header{
+// 	h1,h2,h3,h4,h5,h6{
+// 		margin-top: 15px;
+// 	    margin-bottom: 15px;
+// 	}
+// }
+/*---------------Froms--------------------------*/
+form{
+	input,select,input[type=submit], button{
+		    display: inline-block;
+		    float: right;
+		    padding: 4px 10px;
+		    margin: 3px;
+		    max-height: 32px;
+		    font-size: 90%;
+		    max-width : 100%;
+	}
+	&.domain-search{
+		direction : ltr;
+		input,select,input[type=submit], button{
+			float : left;
+		}
+		.input-large{
+			width : 200px;
+		}
+	}
+}
+/*---------------------fields-----------------*/
+a.ult-content-box-anchor{
+	display : block;
+	&:hover{
+		opacity :0.85;
+	}
+}
+.icon-wrapper{
+	background: image-url("back-line.png") repeat-x 0 center;
+	img{
+		border : {
+			right : 1px solid $grey2;
+			left : 1px solid $grey2;
+		}
 	}
 }

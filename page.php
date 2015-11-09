@@ -15,19 +15,21 @@
 						
 						<div class="primary">
 							
-							<?php if( get_post_meta(get_the_ID(),'_karait_title',1 ) !== 'no'){ ?>	
 								<article class="hentry">
-									<header class="article-title">
-										<a href="<?php the_permalink(); ?>">
-											<h3><?php the_title(); ?></h3>
-										</a>
-									</header>
+									<?php if( get_post_meta(get_the_ID(),'_karait_title',1 ) !== 'no'){ ?>	
+								
+										<header class="article-title">
+											<a href="<?php the_permalink(); ?>">
+												<h3><?php the_title(); ?></h3>
+											</a>
+										</header>
+									<?php } ?>
 									<main class="article-body">
 										<?php the_content(); ?>
 										
 									</main>
 								</article>
-							<?php } ?>
+							
 											
 						</div><!-- primary -->
 

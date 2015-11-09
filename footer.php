@@ -21,7 +21,7 @@
 					</div>
 					
 					<div class="co-container">
-						<iframe src="<?php echo get_template_directory_uri();?>/eNamadLogo.htm" frameborder="0" scrolling="no" allowtransparency="true" style="width: 115px; height:150px; display:inline-block;"></iframe>
+						<iframe width="125" scrolling="no" height="140" frameborder="0" style="margin: 0;        padding: 0; border: 1px" temp_src="http://enamad.ir/trustseal/symbol.aspx" src="http://enamad.ir/trustseal/symbol.aspx"></iframe>
 					</div>
 
 					<div class="co-container">

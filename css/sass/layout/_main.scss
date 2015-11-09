@@ -40,10 +40,7 @@ body{
 	article.hentry{
 		 .featured-image{
 			@include span-columns(12,12);
-		 	@include at-breakpoint($medium){
-		 		@include span-columns(5,12);
-		 	}
-			img{
+		 	img{
 				max-width : 100%;
 				height : auto;
 				margin-top : 15px;
@@ -51,9 +48,7 @@ body{
 		}
 		.article-body{
 			@include span-columns(12,12);
-		 	@include at-breakpoint($medium){
-		 		@include span-columns(7 omega,12);
-		 	}
+		 	
 			p{
 				padding : 5px;
 				text-align: justify;

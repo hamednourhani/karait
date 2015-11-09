@@ -48,6 +48,25 @@ $larg : 65em;
 	@include omega;
 }
 
+.oneFifth{
+	width : 100%;
+	float : none;
+	margin-right: 0;
+	margin-left: 0;
+	display: inline;
+	@include at-breakpoint($medium) {
+	  width: 20%;
+		float: left;
+	}
+}
+.lastFifth{
+	float : none;
+	@include at-breakpoint($medium) {
+		float: left;
+		display: inline;
+	}
+}
+
 /*------ colors -----------*/
 
 
@@ -59,7 +78,11 @@ $greenHover : #B5DB18;
 $orang : #FF910F;
 $orangHover : #FFB257;
 
+$red : #FF3300;
+
+
 $grey3: #4E4E4E;
+$grey2-5 : #bcbcbc;
 $grey2 : #E6E7E7;
 $grey1 : #F2F2F2;
 
