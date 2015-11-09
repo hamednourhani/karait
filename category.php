@@ -15,10 +15,7 @@
 						<?php while(have_posts()) { the_post(); ?>
 						
 							<article class="hentry">
-								<div class="featured-image single-image">
-									<?php the_post_thumbnail(); ?>
-								</div>
-								<header class="article-title">
+								<header class="article-title  blog">
 									<a href="<?php the_permalink(); ?>">
 										<h3><?php the_title(); ?></h3>
 									</a>
@@ -30,7 +27,7 @@
 										</a>
 									</div>
 									<?php the_excerpt(); ?>
-									<?php get_template_part('library/post','meta'); ?>
+									
 								</main>
 							</article>
 						<?php } ?>

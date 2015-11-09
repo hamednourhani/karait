@@ -17,14 +17,31 @@
 							
 								
 							<article class="hentry">
-								<header class="article-title">
+								<header class="article-title blog">
 									<a href="<?php the_permalink(); ?>">
 										<h3><?php the_title(); ?></h3>
 									</a>
+									<div class="post-date">
+										<span><?php echo __(' Posted On ','karait');?></span><span class="orang-meta"><?php the_time(__('d M Y', 'karait')).' - '; ?></span>
+										<span><?php echo __(' Updated On ','karait');?></span><span class="orang-meta"><?php the_modified_time('d M Y', 'karait').' - ';?></span>
+										<span><?php echo __(' By ','karait');?></span><span class="orang-meta"><?php the_author() ?></span>
+									</div>
+									
 								</header>
 								<main class="article-body">
+									<div class="featured-image single-image">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail(); ?>
+										</a>
+									</div>
+
 									<?php the_content(); ?>
 									<?php get_template_part('library/post','meta'); ?>
+									
+									<ul>
+										<li><?php previous_post_link('%link')?></li>
+										<li><?php next_post_link('%link') ?></li>
+									</ul>
 									
 									<!-- comments template -->
 									

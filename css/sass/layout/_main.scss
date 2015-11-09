@@ -39,8 +39,7 @@ body{
  	}
 	article.hentry{
 		 .featured-image{
-			@include span-columns(12,12);
-		 	img{
+			img{
 				max-width : 100%;
 				height : auto;
 				margin-top : 15px;
@@ -53,6 +52,15 @@ body{
 				padding : 5px;
 				text-align: justify;
 			}
+			div.post-meta{
+				ul.post-meta-list{
+					li a{
+						color : $orang;
+					}
+				}
+				border-bottom : 1px solid $grey2;
+			}
+			
 		}
 		.article-title{
 			h3{
@@ -61,6 +69,22 @@ body{
 				border : {
 					top : 1px solid $grey1;
 					bottom : 1px solid $grey1;
+				}
+			}
+			&.blog {
+				h3 {
+					padding : 15px 0px 5px;
+					border : {
+						top : 0px;
+					}
+				}
+			}
+			.post-date{
+				span{
+					font-size : 90%;
+				}
+				span.orang-meta{
+					color : $orang;
 				}
 			}
 		}

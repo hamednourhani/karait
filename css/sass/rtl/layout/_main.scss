@@ -9,7 +9,7 @@
 .primary{
  	@include span-columns(12,12);
  	@include at-breakpoint($medium){
- 		@include span-columns(8,12);
+ 		@include span-columns(8 omega,12);
  		margin-right : auto;
  	}
  	
@@ -22,6 +22,15 @@
 			margin-top: 15px;
 	    	margin-bottom: 15px;
 		}
+		.featured-image{
+			display : inline-block;
+			float : right;
+			margin :{
+				left :  10px;
+				bottom : 10px;
+				top : 1.5em;
+			}
+		}
 	}
 	
 }
@@ -29,7 +38,7 @@
 .secondary{
 	@include span-columns(12,12);
 	@include at-breakpoint($medium){
-		@include span-columns(4 omega,12);
+		@include span-columns(4,12);
 		margin-right : auto;
 		
 	}

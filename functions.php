@@ -88,9 +88,7 @@ add_filter( 'image_size_names_choose', 'karait_custom_image_sizes' );
 function karait_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'banner' => __('1200px by 500px'),
-        'product-thumb' => __('30px by 30px'),
-        'detail-thumb' => __('53px by 53px'),
-        'project-thumb' => __('130px by 130px'),
+        
     ) );
 }
 
@@ -292,21 +290,21 @@ function karait_search_form( $form ) {
 
 add_filter( 'get_search_form', 'karait_search_form' );
 
-if ( ICL_LANGUAGE_CODE=='en'){ 
+// if ( ICL_LANGUAGE_CODE=='en'){ 
   
-        remove_filter('the_title', 'ztjalali_persian_num');
-        remove_filter('the_content', 'ztjalali_persian_num');
-        remove_filter('the_excerpt', 'ztjalali_persian_num');
-        remove_filter('comment_text', 'ztjalali_persian_num');
-    // change arabic characters
-        remove_filter('the_content', 'ztjalali_ch_arabic_to_persian');
-        remove_filter('the_title', 'ztjalali_ch_arabic_to_persian');
-        remove_filter('the_excerpt', 'ztjalali_ch_arabic_to_persian');
-        remove_filter('comment_text', 'ztjalali_ch_arabic_to_persian');
+//         remove_filter('the_title', 'ztjalali_persian_num');
+//         remove_filter('the_content', 'ztjalali_persian_num');
+//         remove_filter('the_excerpt', 'ztjalali_persian_num');
+//         remove_filter('comment_text', 'ztjalali_persian_num');
+//     // change arabic characters
+//         remove_filter('the_content', 'ztjalali_ch_arabic_to_persian');
+//         remove_filter('the_title', 'ztjalali_ch_arabic_to_persian');
+//         remove_filter('the_excerpt', 'ztjalali_ch_arabic_to_persian');
+//         remove_filter('comment_text', 'ztjalali_ch_arabic_to_persian');
     
 
 
-}
+// }
 
 
 

@@ -12,12 +12,12 @@ if ( post_password_required() )
 <div id="comments" class="comments-area">
 
   <?php if ( have_comments() ) : ?>
-    <h2 class="comments-title">
+    <h3 class="comments-title">
       <i class="icon-comment"></i>
       <?php
         printf( __( '%1$s thoughts on &ldquo;%2$s&rdquo;','naiau'), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
       ?>
-    </h2>
+    </h3>
 
     <ol class="comment-list">
       <?php
@@ -25,7 +25,7 @@ if ( post_password_required() )
           'style'       => 'ol',
           'short_ping'  => true,
           'avatar_size' => 74,
-          'reply_text' => __('Reply<i class=" fa fa-mail-reply"></i>','naiau')
+          'reply_text' => __('Reply','naiau')
         ) );
       ?>
     </ol><!-- .comment-list -->

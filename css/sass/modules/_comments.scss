@@ -1,12 +1,21 @@
 
 .comment-area{
-	img.avatar{
-		@include border-radius(50%);
+	
+	.comment-author{
+		    float: right;
+		    width: 100px;
+		    padding: 10px;
+		    text-align: center;
+		img.avatar{
+			@include border-radius(50%);
+		}
+		.bypostauthor .fn{
+			color : $orang;
+			padding : 5px;
+		}
+
 	}
-	.bypostauthor .fn{
-		color : $orang;
-		padding : 5px;
-	}
+	
 	.comment-metadata{
 		font-size : smaller;
 		float : right;
@@ -37,7 +46,7 @@
 		display : block;
 		overflow : hidden;
 		.comment-body{
-			
+			padding : 15px 20px;
 			overflow : hidden;
 		}
 	}
@@ -75,5 +84,24 @@
     	display: inline-block;
     	width: 40%;
 	}
+	code.allowed-tag{
+		width: 100%;
+	    display: block;
+	    border: 1px solid darken($lightblue,10%);
+	    background-color: $lightblue;
+	    padding: 10px;
+	}
+	input#submit{
+		background-color: $blue;
+		padding : 10px 15px;
+		max-height : 60px;
+		&:hover,&:focus{
+			background-color: darken($blue,5%);
+		}
+	}
+	p{
+		padding : 8px 8px 6px;
+	}
+
 
 }

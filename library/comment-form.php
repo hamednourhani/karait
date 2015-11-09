@@ -40,7 +40,7 @@ $args = array(
   'comment_notes_after' => '<p class="form-allowed-tags">' .
     sprintf(
       __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s','karait' ),
-      ' <code>' . allowed_tags() . '</code>'
+      ' <code class="allowed-tag">' . allowed_tags() . '</code>'
     ) . '</p>',
 
   'fields' => apply_filters( 'comment_form_default_fields', array(

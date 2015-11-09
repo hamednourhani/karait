@@ -2,24 +2,14 @@
 
 
 
-<?php if(is_category() || is_tag() || is_tax()){ 
-		$display = false; 
-		// Get only image url
-		$params = array(
-		  'term_id' => null,
-		  'size' => 'banner'
-		);
-		$archive_banner = category_image_src( $params , $display );
-
-		if($archive_banner){ 
-			echo '<div class="banner-inner"><img class="page-banner" src="'.$archive_banner.'"/></div>';
-		} else { ?>
-			<div class="single-cat-title">
-				<section class="layout">
-					<h1><?php single_cat_title('',true); ?></h1>
-				</section>
-			</div>
-		<?php } ?>		
+<?php if(is_category() || is_tag() || is_tax()){ ?>
+		
+		<div class="single-cat-title">
+			<section class="layout">
+				<h1><?php single_cat_title('',true); ?></h1>
+			</section>
+		</div>
+				
 <?php } elseif(is_search()) { ?>
 		<div class="single-cat-title">
 			<section class="layout">
