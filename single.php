@@ -38,10 +38,10 @@
 									<?php the_content(); ?>
 									<?php get_template_part('library/post','meta'); ?>
 									
-									<ul>
+									<!-- <ul>
 										<li><?php previous_post_link('%link')?></li>
 										<li><?php next_post_link('%link') ?></li>
-									</ul>
+									</ul> -->
 									
 									<!-- comments template -->
 									

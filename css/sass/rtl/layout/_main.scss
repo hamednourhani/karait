@@ -22,11 +22,20 @@
 			margin-top: 15px;
 	    	margin-bottom: 15px;
 		}
+		ul{
+			list-style : disc;
+			margin-left : auto;
+			margin-right : 20px;
+		}
+		ul{
+			margin-left : auto;
+			margin-right : 20px;
+		}
 		.featured-image{
 			display : inline-block;
 			float : right;
 			margin :{
-				left :  10px;
+				left :  25px;
 				bottom : 10px;
 				top : 1.5em;
 			}

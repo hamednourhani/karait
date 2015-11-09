@@ -21,6 +21,7 @@ body {
 	p{
 		text-align : justify;
 		color : $grey3;
+		margin : 0px;
 	}
 	form{
 		text-align:left;
@@ -61,6 +62,10 @@ dl, menu, ol, ul,dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
+ol{
+	list-style-type : persian;
+}
+
 .onScreen{
  	@include single-transition(opacity 2s ease-in-out);
  	opacity : 1;

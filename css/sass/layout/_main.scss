@@ -52,10 +52,22 @@ body{
 				padding : 5px;
 				text-align: justify;
 			}
+			ul{
+				list-style : disc;
+				margin-left : 20px;
+			}
+			ol{
+				
+				margin-left : 20px;
+			}
 			div.post-meta{
 				ul.post-meta-list{
-					li a{
-						color : $orang;
+					list-style : none;
+					li {
+						list-style : none;
+						a{
+							color : $orang;
+						}
 					}
 				}
 				border-bottom : 1px solid $grey2;
