@@ -37,6 +37,12 @@ get_header();
 									<header class="article-title">
 										<a href="<?php the_permalink(); ?>">
 											<h3><?php the_title(); ?></h3>
+											<?php 
+												$en_name = get_post_meta(get_the_ID(),'_karait_en_name',1 );
+											 	if( $en_name !== ''){ 
+													echo '<span class="en-name">'.$en_name.'</span>';
+												}
+											?>
 										</a>
 										<?php if( get_post_meta(get_the_ID(),'_karait_title_button',1 ) !== 'no'){ 
 												$button_name = get_post_meta(get_the_ID(),'_karait_button_name',1 );

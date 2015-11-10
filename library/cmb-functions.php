@@ -194,6 +194,14 @@ function karait_register_page_banner_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
+		'name'       => __( 'English Name', 'karait' ),
+		'desc'       => __( 'Enter English name', 'karait' ),
+		'id'         => $prefix . 'en_name',
+		'type'       => 'text',
+	
+	) );
+
+	$cmb_demo->add_field( array(
 		'name'       => __( 'Button Name', 'karait' ),
 		'desc'       => __( 'Enter Button name', 'karait' ),
 		'id'         => $prefix . 'button_name',

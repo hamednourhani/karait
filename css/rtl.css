@@ -5,10 +5,6 @@
   src: url('fonts/Weblogma_Yekan.eot?1445920942');
   src: url('fonts/Weblogma_Yekan.eot?&1445920942#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1445920942') format('truetype'), url('fonts/Weblogma_Yekan.woff?1445920942') format('woff');
   font-weight: "Weblogma_Yekan.svg"; }
-@font-face {
-  font-family: "BKoodakBold";
-  src: url('fonts/BKoodakBold.eot?1445920942');
-  src: url('fonts/BKoodakBold.eot?&1445920942#iefix') format('embedded-opentype'), url('fonts/BKoodakBold.ttf?1445920942') format('truetype'), url('fonts/BKoodakBold.woff?1445920942') format('woff'); }
 /******************************************************************
 Site Name:
 Author:
@@ -172,7 +168,7 @@ p {
 /* base style */
 /* line 2, sass/rtl/base/_base.scss */
 body {
-  font-family: "Weblogma_Yekan", "BKoodakBold";
+  font-family: "Weblogma_Yekan";
   direction: rtl;
   font-size: 100%;
   line-height: 180%; }
@@ -649,10 +645,18 @@ nav.main-menu {
     margin-bottom: 10px;
     margin-top: 1.5em; }
   /* line 47, sass/rtl/layout/_main.scss */
+  .primary article.hentry .article-title span.en-name {
+    font-size: 72%;
+    display: inline-block;
+    padding: 0px 10px;
+    margin: 5px 10px;
+    border-right: 1px solid #E6E7E7;
+    color: #bcbcbc; }
+  /* line 55, sass/rtl/layout/_main.scss */
   .primary article.hentry .article-title a.title-button {
     float: left; }
 
-/* line 55, sass/rtl/layout/_main.scss */
+/* line 63, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -662,7 +666,7 @@ nav.main-menu {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 55, sass/rtl/layout/_main.scss */
+    /* line 63, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.20339%;
       float: right;
@@ -671,7 +675,7 @@ nav.main-menu {
 
 /*---------------Headers------------------------*/
 /*---------------Froms--------------------------*/
-/* line 78, sass/rtl/layout/_main.scss */
+/* line 86, sass/rtl/layout/_main.scss */
 form input, form select, form input[type=submit], form button {
   display: inline-block;
   float: right;
@@ -680,28 +684,28 @@ form input, form select, form input[type=submit], form button {
   max-height: 32px;
   font-size: 90%;
   max-width: 100%; }
-/* line 87, sass/rtl/layout/_main.scss */
+/* line 95, sass/rtl/layout/_main.scss */
 form.domain-search {
   direction: ltr; }
-  /* line 89, sass/rtl/layout/_main.scss */
+  /* line 97, sass/rtl/layout/_main.scss */
   form.domain-search input, form.domain-search select, form.domain-search input[type=submit], form.domain-search button {
     float: left; }
-  /* line 92, sass/rtl/layout/_main.scss */
+  /* line 100, sass/rtl/layout/_main.scss */
   form.domain-search .input-large {
     width: 200px; }
 
 /*---------------------fields-----------------*/
-/* line 98, sass/rtl/layout/_main.scss */
+/* line 106, sass/rtl/layout/_main.scss */
 a.ult-content-box-anchor {
   display: block; }
-  /* line 100, sass/rtl/layout/_main.scss */
+  /* line 108, sass/rtl/layout/_main.scss */
   a.ult-content-box-anchor:hover {
     opacity: 0.85; }
 
-/* line 104, sass/rtl/layout/_main.scss */
+/* line 112, sass/rtl/layout/_main.scss */
 .icon-wrapper {
   background: url('../images/back-line.png?1447059888') repeat-x 0 center; }
-  /* line 106, sass/rtl/layout/_main.scss */
+  /* line 114, sass/rtl/layout/_main.scss */
   .icon-wrapper img {
     border-right: 1px solid #E6E7E7;
     border-left: 1px solid #E6E7E7; }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Karait.com\n"
-"POT-Creation-Date: 2015-11-10 13:50+0330\n"
-"PO-Revision-Date: 2015-11-10 13:51+0330\n"
+"POT-Creation-Date: 2015-11-10 14:33+0330\n"
+"PO-Revision-Date: 2015-11-10 14:34+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <itstarir@gmail.com>\n"
 "Language: fa_IR\n"
@@ -203,62 +203,70 @@ msgid "show Title Button or Not?"
 msgstr "دکمه هدر نمایش داده شود یا خیر؟"
 
 #: library/cmb-functions.php:197
+msgid "English Name"
+msgstr "عنوان انگلیسی"
+
+#: library/cmb-functions.php:198
+msgid "Enter English name"
+msgstr "عنوان انگلیسی این صفحه را در صورت نیاز وارد نمایید"
+
+#: library/cmb-functions.php:205
 msgid "Button Name"
 msgstr "نام دکمه"
 
-#: library/cmb-functions.php:198
+#: library/cmb-functions.php:206
 msgid "Enter Button name"
 msgstr "نام دکمه را وارد نمایید"
 
-#: library/cmb-functions.php:205
+#: library/cmb-functions.php:213
 msgid "Button Url"
 msgstr "آدرس دکمه"
 
-#: library/cmb-functions.php:206
+#: library/cmb-functions.php:214
 msgid "Enter Button Url"
 msgstr "آدرس دکمه را به صورت کامل وارد نمایید همراه پروتکل (http - https)"
 
-#: library/cmb-functions.php:222
+#: library/cmb-functions.php:230
 msgid "Sub Pages Layout"
 msgstr "چیدمان زیر صفحه ها"
 
-#: library/cmb-functions.php:230
+#: library/cmb-functions.php:238
 msgid "Layout sub pages"
 msgstr "چبدمان صفحات  زیر مجموعه "
 
-#: library/cmb-functions.php:232
+#: library/cmb-functions.php:240
 msgid "sub page {#}"
 msgstr "زیر صفحه {#}"
 
-#: library/cmb-functions.php:233
+#: library/cmb-functions.php:241
 msgid "Add sub page"
 msgstr "افزودن زیر صفحه"
 
-#: library/cmb-functions.php:234
+#: library/cmb-functions.php:242
 msgid "Remove sub page"
 msgstr "حذف زیر صفحه"
 
-#: library/cmb-functions.php:245
+#: library/cmb-functions.php:253
 msgid "List Name"
 msgstr "نام تب (زیر صفحه)"
 
-#: library/cmb-functions.php:246
+#: library/cmb-functions.php:254
 msgid "The name of sub page in List "
 msgstr "نام این زیر صفحه را برای نمایش در تب وارد نمایید"
 
-#: library/cmb-functions.php:280
+#: library/cmb-functions.php:288
 msgid "Sub Page"
 msgstr "زیر صفحه"
 
-#: library/cmb-functions.php:281
+#: library/cmb-functions.php:289
 msgid "Select The sub page"
 msgstr "یک زیر صفحه را انتخاب نمایید"
 
-#: library/cmb-functions.php:290
+#: library/cmb-functions.php:298
 msgid "Sub Page Icon"
 msgstr "آیکون زیر صفحه"
 
-#: library/cmb-functions.php:291
+#: library/cmb-functions.php:299
 msgid "Upload an the SUb page icon"
 msgstr "یک آیکون برای زیر صفحه بارگذاری نمایید"
 

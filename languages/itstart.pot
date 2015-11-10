@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: karait 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2015-11-10 10:17:54+00:00\n"
+"POT-Creation-Date: 2015-11-10 10:52:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -613,62 +613,70 @@ msgid "show Title Button or Not?"
 msgstr ""
 
 #: library/cmb-functions.php:197
-msgid "Button Name"
+msgid "English Name"
 msgstr ""
 
 #: library/cmb-functions.php:198
-msgid "Enter Button name"
+msgid "Enter English name"
 msgstr ""
 
 #: library/cmb-functions.php:205
-msgid "Button Url"
+msgid "Button Name"
 msgstr ""
 
 #: library/cmb-functions.php:206
+msgid "Enter Button name"
+msgstr ""
+
+#: library/cmb-functions.php:213
+msgid "Button Url"
+msgstr ""
+
+#: library/cmb-functions.php:214
 msgid "Enter Button Url"
 msgstr ""
 
-#: library/cmb-functions.php:222
+#: library/cmb-functions.php:230
 msgid "Sub Pages Layout"
 msgstr ""
 
-#: library/cmb-functions.php:230
+#: library/cmb-functions.php:238
 msgid "Layout sub pages"
 msgstr ""
 
-#: library/cmb-functions.php:232
+#: library/cmb-functions.php:240
 msgid "sub page {#}"
 msgstr ""
 
-#: library/cmb-functions.php:233
+#: library/cmb-functions.php:241
 msgid "Add sub page"
 msgstr ""
 
-#: library/cmb-functions.php:234
+#: library/cmb-functions.php:242
 msgid "Remove sub page"
 msgstr ""
 
-#: library/cmb-functions.php:245
+#: library/cmb-functions.php:253
 msgid "List Name"
 msgstr ""
 
-#: library/cmb-functions.php:246
+#: library/cmb-functions.php:254
 msgid "The name of sub page in List "
 msgstr ""
 
-#: library/cmb-functions.php:280
+#: library/cmb-functions.php:288
 msgid "Sub Page"
 msgstr ""
 
-#: library/cmb-functions.php:281
+#: library/cmb-functions.php:289
 msgid "Select The sub page"
 msgstr ""
 
-#: library/cmb-functions.php:290
+#: library/cmb-functions.php:298
 msgid "Sub Page Icon"
 msgstr ""
 
-#: library/cmb-functions.php:291
+#: library/cmb-functions.php:299
 msgid "Upload an the SUb page icon"
 msgstr ""
 

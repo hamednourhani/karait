@@ -44,6 +44,14 @@
 			}
 		}
 		.article-title{
+			span.en-name{
+				font-size : 72%;
+				display: inline-block;
+				padding : 0px 10px;
+				margin : 5px 10px;
+				border-right : 1px solid $grey2;
+				color : $grey2-5;
+			}
 			a.title-button{
 				float : left;
 			}
