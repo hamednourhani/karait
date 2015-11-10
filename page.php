@@ -22,6 +22,12 @@
 											<a href="<?php the_permalink(); ?>">
 												<h3><?php the_title(); ?></h3>
 											</a>
+											<?php if( get_post_meta(get_the_ID(),'_karait_title_button',1 ) == 'no'){ 
+														$button_name = get_post_meta(get_the_ID(),'_karait_button_name',1 );
+														$button_url = get_post_meta(get_the_ID(),'_karait_button_url',1 );	
+														echo '<a class="title-button" href="'.$button_url.'">'.$button_name.'</a>';
+													}
+												?>
 										</header>
 									<?php } ?>
 									<main class="article-body">

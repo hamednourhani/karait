@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Karait.com\n"
-"POT-Creation-Date: 2015-11-09 18:12+0330\n"
-"PO-Revision-Date: 2015-11-09 18:13+0330\n"
+"POT-Creation-Date: 2015-11-10 13:50+0330\n"
+"PO-Revision-Date: 2015-11-10 13:51+0330\n"
 "Last-Translator: \n"
 "Language-Team: iTstar <itstarir@gmail.com>\n"
 "Language: fa_IR\n"
@@ -186,13 +186,81 @@ msgstr "عنوان صفحه"
 msgid "show Page Title or Not?"
 msgstr "عنوان صفحه نمایش داده شود؟"
 
-#: library/cmb-functions.php:174
+#: library/cmb-functions.php:174 library/cmb-functions.php:188
 msgid "Yes"
 msgstr "بله"
 
-#: library/cmb-functions.php:175
+#: library/cmb-functions.php:175 library/cmb-functions.php:189
 msgid "No"
 msgstr "خیر"
+
+#: library/cmb-functions.php:183
+msgid "Title Button"
+msgstr "دکمه هدر"
+
+#: library/cmb-functions.php:184
+msgid "show Title Button or Not?"
+msgstr "دکمه هدر نمایش داده شود یا خیر؟"
+
+#: library/cmb-functions.php:197
+msgid "Button Name"
+msgstr "نام دکمه"
+
+#: library/cmb-functions.php:198
+msgid "Enter Button name"
+msgstr "نام دکمه را وارد نمایید"
+
+#: library/cmb-functions.php:205
+msgid "Button Url"
+msgstr "آدرس دکمه"
+
+#: library/cmb-functions.php:206
+msgid "Enter Button Url"
+msgstr "آدرس دکمه را به صورت کامل وارد نمایید همراه پروتکل (http - https)"
+
+#: library/cmb-functions.php:222
+msgid "Sub Pages Layout"
+msgstr "چیدمان زیر صفحه ها"
+
+#: library/cmb-functions.php:230
+msgid "Layout sub pages"
+msgstr "چبدمان صفحات  زیر مجموعه "
+
+#: library/cmb-functions.php:232
+msgid "sub page {#}"
+msgstr "زیر صفحه {#}"
+
+#: library/cmb-functions.php:233
+msgid "Add sub page"
+msgstr "افزودن زیر صفحه"
+
+#: library/cmb-functions.php:234
+msgid "Remove sub page"
+msgstr "حذف زیر صفحه"
+
+#: library/cmb-functions.php:245
+msgid "List Name"
+msgstr "نام تب (زیر صفحه)"
+
+#: library/cmb-functions.php:246
+msgid "The name of sub page in List "
+msgstr "نام این زیر صفحه را برای نمایش در تب وارد نمایید"
+
+#: library/cmb-functions.php:280
+msgid "Sub Page"
+msgstr "زیر صفحه"
+
+#: library/cmb-functions.php:281
+msgid "Select The sub page"
+msgstr "یک زیر صفحه را انتخاب نمایید"
+
+#: library/cmb-functions.php:290
+msgid "Sub Page Icon"
+msgstr "آیکون زیر صفحه"
+
+#: library/cmb-functions.php:291
+msgid "Upload an the SUb page icon"
+msgstr "یک آیکون برای زیر صفحه بارگذاری نمایید"
 
 #: library/comment-form.php:8
 msgid ""
@@ -279,23 +347,23 @@ msgstr ""
 msgid "Page %s"
 msgstr "صفحه %s"
 
-#: library/karait.php:272
+#: library/karait.php:274
 msgid "The Main Menu"
 msgstr "منوی اصلی"
 
-#: library/karait.php:273
+#: library/karait.php:275
 msgid "The Top Menu"
 msgstr "منوی فوقانی"
 
-#: library/karait.php:304
+#: library/karait.php:306
 msgid "No Related Posts Yet!"
 msgstr "هنوز مطلب مرتبطی منتشر نشده است"
 
-#: library/karait.php:349
+#: library/karait.php:351
 msgid "Read "
 msgstr "خواندن"
 
-#: library/karait.php:349
+#: library/karait.php:351
 msgid "Read more &raquo;"
 msgstr "ادامه مطلب &raquo;"
 

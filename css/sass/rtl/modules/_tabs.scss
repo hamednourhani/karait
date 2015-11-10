@@ -1,0 +1,51 @@
+.subpage-tabs{
+
+ 	font-family : $web_yekan;
+ 	background : none;
+ 	direction : rtl;
+ 	border : 0px;
+ 	.ui-widget-content {
+    	border: 0px;
+    }
+ 	.ui-tabs-nav{
+ 		background : none;
+ 		@include border-radius(0px);
+ 		border : 0px;
+ 		border-bottom : 1px solid $grey2 !important;
+ 		span.subpage-icon-wrapper{
+ 			display: block;
+ 			text-align: center;
+ 			img{
+ 				max-width: 100px;
+ 			}
+
+ 		}
+ 		span.subpage-name{
+ 			display: block;
+ 			text-align: center;
+ 			color : $black1;
+
+ 		}
+ 	}
+ 	.ui-state-default,
+ 	.ui-corner-top,
+ 	.ui-tabs-active,
+ 	.ui-state-active{
+ 		float : right !important;
+ 		background : none;
+ 		@include border-radius(0px);
+ 		border : 0px;
+ 		 outline: none;
+ 		&:hover,&:focus{
+ 			outline: none !important;
+ 		}
+ 	}
+ 	.ui-tabs-active,
+ 	.ui-state-active{
+ 		border : 1px solid $grey2;
+ 		border-bottom : 2px solid $white !important;
+ 	}
+ 	.subpage-link{
+ 		outline : none !important;
+ 	}
+}

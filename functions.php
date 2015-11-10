@@ -272,14 +272,14 @@ function karait_search_form( $form ) {
 
   if(ICL_LANGUAGE_CODE == 'en' || ICL_LANGUAGE_CODE == 'it'){
       $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-      <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+      <div><label class="screen-reader-text" for="s">' . __( 'Search for:','karait' ) . '</label>
       <input type="text" value="' . get_search_query() . '" name="s" id="s" />
       <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
       </div>
       </form>';
   } else {
       $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-      <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
+      <div><label class="screen-reader-text" for="s">' . __( 'Search for:','karait'  ) . '</label>
       <input type="text" value="' . get_search_query() . '" name="s" id="s" />
       </div>
       </form>';

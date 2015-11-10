@@ -488,9 +488,10 @@ nav.main-menu {
     nav.main-menu {
       display: block;
       background-color: #E6E7E7; } }
-  /* line 173, sass/rtl/layout/_header.scss */
+  /* line 177, sass/rtl/layout/_header.scss */
   nav.main-menu.scroll-to-fixed-fixed {
-    margin-top: 0px; }
+    margin-top: 0px;
+    border: 0px; }
   /* line 181, sass/rtl/layout/_header.scss */
   nav.main-menu ul.main-nav {
     margin: 0px;
@@ -626,29 +627,32 @@ nav.main-menu {
       float: left;
       margin-left: 0;
       margin-right: auto; } }
-  /* line 21, sass/rtl/layout/_main.scss */
-  .primary .article-body h1, .primary .article-body h2, .primary .article-body h3, .primary .article-body h4, .primary .article-body h5, .primary .article-body h6 {
+  /* line 22, sass/rtl/layout/_main.scss */
+  .primary article.hentry .article-body h1, .primary article.hentry .article-body h2, .primary article.hentry .article-body h3, .primary article.hentry .article-body h4, .primary article.hentry .article-body h5, .primary article.hentry .article-body h6 {
     margin-top: 15px;
     margin-bottom: 15px; }
-  /* line 25, sass/rtl/layout/_main.scss */
-  .primary .article-body ul {
+  /* line 26, sass/rtl/layout/_main.scss */
+  .primary article.hentry .article-body ul {
     list-style: disc;
     margin-left: auto !important;
     margin-right: 20px;
     padding-left: 0px; }
-  /* line 31, sass/rtl/layout/_main.scss */
-  .primary .article-body ul {
+  /* line 32, sass/rtl/layout/_main.scss */
+  .primary article.hentry .article-body ul {
     margin-left: auto;
     margin-right: 20px; }
-  /* line 35, sass/rtl/layout/_main.scss */
-  .primary .article-body .featured-image {
+  /* line 36, sass/rtl/layout/_main.scss */
+  .primary article.hentry .article-body .featured-image {
     display: inline-block;
     float: right;
     margin-left: 25px;
     margin-bottom: 10px;
     margin-top: 1.5em; }
+  /* line 47, sass/rtl/layout/_main.scss */
+  .primary article.hentry .article-title a.title-button {
+    float: left; }
 
-/* line 48, sass/rtl/layout/_main.scss */
+/* line 55, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -658,7 +662,7 @@ nav.main-menu {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 48, sass/rtl/layout/_main.scss */
+    /* line 55, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.20339%;
       float: right;
@@ -667,7 +671,7 @@ nav.main-menu {
 
 /*---------------Headers------------------------*/
 /*---------------Froms--------------------------*/
-/* line 71, sass/rtl/layout/_main.scss */
+/* line 78, sass/rtl/layout/_main.scss */
 form input, form select, form input[type=submit], form button {
   display: inline-block;
   float: right;
@@ -676,28 +680,28 @@ form input, form select, form input[type=submit], form button {
   max-height: 32px;
   font-size: 90%;
   max-width: 100%; }
-/* line 80, sass/rtl/layout/_main.scss */
+/* line 87, sass/rtl/layout/_main.scss */
 form.domain-search {
   direction: ltr; }
-  /* line 82, sass/rtl/layout/_main.scss */
+  /* line 89, sass/rtl/layout/_main.scss */
   form.domain-search input, form.domain-search select, form.domain-search input[type=submit], form.domain-search button {
     float: left; }
-  /* line 85, sass/rtl/layout/_main.scss */
+  /* line 92, sass/rtl/layout/_main.scss */
   form.domain-search .input-large {
     width: 200px; }
 
 /*---------------------fields-----------------*/
-/* line 91, sass/rtl/layout/_main.scss */
+/* line 98, sass/rtl/layout/_main.scss */
 a.ult-content-box-anchor {
   display: block; }
-  /* line 93, sass/rtl/layout/_main.scss */
+  /* line 100, sass/rtl/layout/_main.scss */
   a.ult-content-box-anchor:hover {
     opacity: 0.85; }
 
-/* line 97, sass/rtl/layout/_main.scss */
+/* line 104, sass/rtl/layout/_main.scss */
 .icon-wrapper {
   background: url('../images/back-line.png?1447059888') repeat-x 0 center; }
-  /* line 99, sass/rtl/layout/_main.scss */
+  /* line 106, sass/rtl/layout/_main.scss */
   .icon-wrapper img {
     border-right: 1px solid #E6E7E7;
     border-left: 1px solid #E6E7E7; }
@@ -836,6 +840,65 @@ input#s {
 
 /* table style */
 /* other style */
+/* line 1, sass/rtl/modules/_tabs.scss */
+.subpage-tabs {
+  font-family: "Weblogma_Yekan";
+  background: none;
+  direction: rtl;
+  border: 0px; }
+  /* line 7, sass/rtl/modules/_tabs.scss */
+  .subpage-tabs .ui-widget-content {
+    border: 0px; }
+  /* line 10, sass/rtl/modules/_tabs.scss */
+  .subpage-tabs .ui-tabs-nav {
+    background: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid #E6E7E7 !important; }
+    /* line 15, sass/rtl/modules/_tabs.scss */
+    .subpage-tabs .ui-tabs-nav span.subpage-icon-wrapper {
+      display: block;
+      text-align: center; }
+      /* line 18, sass/rtl/modules/_tabs.scss */
+      .subpage-tabs .ui-tabs-nav span.subpage-icon-wrapper img {
+        max-width: 100px; }
+    /* line 23, sass/rtl/modules/_tabs.scss */
+    .subpage-tabs .ui-tabs-nav span.subpage-name {
+      display: block;
+      text-align: center;
+      color: #111; }
+  /* line 30, sass/rtl/modules/_tabs.scss */
+  .subpage-tabs .ui-state-default,
+  .subpage-tabs .ui-corner-top,
+  .subpage-tabs .ui-tabs-active,
+  .subpage-tabs .ui-state-active {
+    float: right !important;
+    background: none;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+    outline: none; }
+    /* line 39, sass/rtl/modules/_tabs.scss */
+    .subpage-tabs .ui-state-default:hover, .subpage-tabs .ui-state-default:focus,
+    .subpage-tabs .ui-corner-top:hover,
+    .subpage-tabs .ui-corner-top:focus,
+    .subpage-tabs .ui-tabs-active:hover,
+    .subpage-tabs .ui-tabs-active:focus,
+    .subpage-tabs .ui-state-active:hover,
+    .subpage-tabs .ui-state-active:focus {
+      outline: none !important; }
+  /* line 43, sass/rtl/modules/_tabs.scss */
+  .subpage-tabs .ui-tabs-active,
+  .subpage-tabs .ui-state-active {
+    border: 1px solid #E6E7E7;
+    border-bottom: 2px solid #FFFFFF !important; }
+  /* line 48, sass/rtl/modules/_tabs.scss */
+  .subpage-tabs .subpage-link {
+    outline: none !important; }
+
 /* line 4, sass/rtl/modules/_comments.scss */
 .comment-area .comment-metadata {
   float: left; }

@@ -1,3 +1,9 @@
+/* fonts */
+@font-face {
+  font-family: "open-sans";
+  src: url('fonts/OpenSans-Regular.eot?1445920942');
+  src: url('fonts/OpenSans-Regular.eot?&1445920942#iefix') format('embedded-opentype'), url('fonts/OpenSans-Regular.ttf?1445920942') format('truetype'), url('fonts/OpenSans-Regular.woff?1445920942') format('woff');
+  font-weight: "OpenSans-Regular.svg"; }
 /* normalize style */
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -1157,24 +1163,45 @@ body {
           /* line 68, sass/layout/_main.scss */
           .primary article.hentry .article-body div.post-meta ul.post-meta-list li a {
             color: #FF910F; }
-  /* line 78, sass/layout/_main.scss */
-  .primary article.hentry .article-title h3 {
-    margin: 0px;
-    padding: 15px 0px;
+  /* line 77, sass/layout/_main.scss */
+  .primary article.hentry .article-title {
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2; }
-  /* line 87, sass/layout/_main.scss */
-  .primary article.hentry .article-title.blog h3 {
-    padding: 15px 0px 5px;
-    border-top: 0px; }
-  /* line 95, sass/layout/_main.scss */
-  .primary article.hentry .article-title .post-date span {
-    font-size: 90%; }
-  /* line 98, sass/layout/_main.scss */
-  .primary article.hentry .article-title .post-date span.orang-meta {
-    color: #FF910F; }
+    /* line 82, sass/layout/_main.scss */
+    .primary article.hentry .article-title h3 {
+      display: inline-block;
+      margin: 0px;
+      padding: 15px 0px; }
+    /* line 88, sass/layout/_main.scss */
+    .primary article.hentry .article-title a.title-button {
+      -moz-transition: all 0.3s ease-in-out 0s;
+      -o-transition: all 0.3s ease-in-out 0s;
+      -webkit-transition: all 0.3s ease-in-out;
+      -webkit-transition-delay: 0s;
+      transition: all 0.3s ease-in-out 0s;
+      display: inline-block;
+      float: right;
+      padding: 7px 10px;
+      margin-top: 5px;
+      background-color: #FF910F;
+      color: #FFFFFF; }
+      /* line 96, sass/layout/_main.scss */
+      .primary article.hentry .article-title a.title-button:hover {
+        background-color: #87BD05; }
+    /* line 100, sass/layout/_main.scss */
+    .primary article.hentry .article-title.blog {
+      border-top: 0px; }
+      /* line 104, sass/layout/_main.scss */
+      .primary article.hentry .article-title.blog h3 {
+        padding: 15px 0px 5px; }
+    /* line 110, sass/layout/_main.scss */
+    .primary article.hentry .article-title .post-date span {
+      font-size: 90%; }
+    /* line 113, sass/layout/_main.scss */
+    .primary article.hentry .article-title .post-date span.orang-meta {
+      color: #FF910F; }
 
-/* line 106, sass/layout/_main.scss */
+/* line 121, sass/layout/_main.scss */
 .without-sidebar .primary {
   width: 100%;
   float: left;
@@ -1182,7 +1209,7 @@ body {
   display: inline;
   margin: auto; }
 
-/* line 115, sass/layout/_main.scss */
+/* line 130, sass/layout/_main.scss */
 .secondary {
   width: 100%;
   float: left;
@@ -1192,7 +1219,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 115, sass/layout/_main.scss */
+    /* line 130, sass/layout/_main.scss */
     .secondary {
       width: 32.20339%;
       float: right;

@@ -178,8 +178,122 @@ function karait_register_page_banner_metabox() {
 		'default' => 'yes',
 	
 	) );
+	
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Title Button', 'karait' ),
+		'desc'       => __( 'show Title Button or Not?', 'karait' ),
+		'id'         => $prefix . 'title_button',
+		'type'       => 'radio_inline',
+		'options'          => array(
+			'yes' => __( 'Yes', 'karait' ),
+			'no' => __( 'No', 'karait' ),
+			
+		),
+		'default' => 'no',
+	
+	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Button Name', 'karait' ),
+		'desc'       => __( 'Enter Button name', 'karait' ),
+		'id'         => $prefix . 'button_name',
+		'type'       => 'text',
+	
+	) );
+
+	$cmb_demo->add_field( array(
+		'name'       => __( 'Button Url', 'karait' ),
+		'desc'       => __( 'Enter Button Url', 'karait' ),
+		'id'         => $prefix . 'button_url',
+		'type'       => 'text_url',
+	
+	) );
+	
+	
+}
+add_action( 'cmb2_init', 'karait_select_subpage_metabox' );
+function karait_select_subpage_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_karait_group_';
+	
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'sub',
+		'title'        => __( 'Sub Pages Layout', 'karait' ),
+		'object_types' => array( 'page'),
+	) );
+
+	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'sub_pages',
+		'type'        => 'group',
+		'description' => __( 'Layout sub pages', 'karait' ),
+		'options'     => array(
+			'group_title'   => __( 'sub page {#}', 'karait' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add sub page', 'karait' ),
+			'remove_button' => __( 'Remove sub page', 'karait' ),
+			'sortable'      => true, // beta
+		),
+	) );
 
 	
+	
+	
+ 	
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'List Name', 'karait' ),
+		'desc'    => __( 'The name of sub page in List ', 'karait' ),
+		'id'      => 'list_name',
+		'type'    => 'text',
+		
+			
+	) );
+
+	
+	
+	
+		$post_id = ($_GET['post'])?($_GET['post']):"";
+	
+	$args = array(
+	    'child_of'     => $post_id,
+	    'sort_order'   => 'ASC',
+	    'sort_column'  => 'post_title',
+	    'post_type' => 'page',
+		'post_status' => 'publish',
+		'hierarchical' => 1,
+		'parent' => $post_id,
+	);
+
+	 $sub_pages_list = get_pages($args);
+
+	 $sub_array = array();
+	 $sub_array['none'] = '--';
+	foreach ( $sub_pages_list as $page ) : setup_postdata( $page );
+			$sub_array[$page->ID] = $page->post_title;
+ 	endforeach; 
+
+
+
+
+	$cmb_group->add_group_field($group_field_id , array(
+		'name'    => __( 'Sub Page', 'karait' ),
+		'desc'    => __( 'Select The sub page', 'karait' ),
+		'id'      => 'sub_id',
+		'type'    => 'select',
+		'options' =>  $sub_array,
+		'default' => 'none',
+			
+	) );
+
+	$cmb_group->add_group_field($group_field_id, array(
+		'name'       => __( 'Sub Page Icon', 'karait' ),
+		'desc'       => __( 'Upload an the SUb page icon', 'karait' ),
+		'id'         => 'image',
+		'type'       => 'file',
+	
+	) );
+
 	
 }
 

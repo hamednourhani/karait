@@ -17,28 +17,35 @@
 		top :20px;
 		bottom : 20px;
 	}
-	.article-body{
-		h1,h2,h3,h4,h5,h6{
-			margin-top: 15px;
-	    	margin-bottom: 15px;
+	article.hentry{
+		.article-body{
+			h1,h2,h3,h4,h5,h6{
+				margin-top: 15px;
+		    	margin-bottom: 15px;
+			}
+			ul{
+				list-style : disc;
+				margin-left : auto !important;
+				margin-right : 20px;
+				padding-left : 0px;
+			}
+			ul{
+				margin-left : auto;
+				margin-right : 20px;
+			}
+			.featured-image{
+				display : inline-block;
+				float : right;
+				margin :{
+					left :  25px;
+					bottom : 10px;
+					top : 1.5em;
+				}
+			}
 		}
-		ul{
-			list-style : disc;
-			margin-left : auto !important;
-			margin-right : 20px;
-			padding-left : 0px;
-		}
-		ul{
-			margin-left : auto;
-			margin-right : 20px;
-		}
-		.featured-image{
-			display : inline-block;
-			float : right;
-			margin :{
-				left :  25px;
-				bottom : 10px;
-				top : 1.5em;
+		.article-title{
+			a.title-button{
+				float : left;
 			}
 		}
 	}
