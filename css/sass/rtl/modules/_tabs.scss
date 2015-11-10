@@ -63,7 +63,7 @@
 				float: right;
 				
 				
-				border-bottom : 1px solid $grey2;
+				// border-bottom : 1px solid $grey2;
 				padding : 5px 5px;
 				&>a{
 				 	padding :5px 10px;
@@ -90,7 +90,7 @@
 		}
 	}
 	.vc_tta-panels-container{
-		
+		border-top : 1px solid $grey2;
 		
 		.vc_tta-panels{
 			background: none !important;
@@ -147,6 +147,7 @@
 		width: 20%;
 		float: right;
 		margin-right: 0px !important;
+		
 		ul.vc_tta-tabs-list{
 			margin-right: 0px !important;
 			width : 100%;
@@ -159,6 +160,7 @@
 				text-align: right;
 				width: 100%;
 				border-left : 1px solid $grey2;
+				border-bottom : 0px;
 				
 				&.vc_active{
 					border : 1px solid $grey2;
@@ -172,7 +174,7 @@
 	.vc_tta-panels-container{
 		width: 80%;
 		float: right;
-		
+		border : 0px;
 		.vc_tta-panels{
 			background: none !important;
 			border-color : white;
