@@ -47,5 +47,137 @@
  	}
  	.subpage-link{
  		outline : none !important;
+ 		display: block;
  	}
+}
+
+	.vc_tta-tabs-container{
+		
+		ul.vc_tta-tabs-list{
+			// margin-right: 0px !important;
+			// width : 100%;
+			
+			// padding-top: 8px;
+			// padding-bottom : 8px;
+			li.vc_tta-tab{
+				float: right;
+				
+				
+				border-bottom : 1px solid $grey2;
+				padding : 5px 5px;
+				&>a{
+				 	padding :5px 10px;
+				 	background : none;
+				 	border : 0px solid;
+				 	color : $black1;
+    				display: inline-block;
+    				&:hover{
+    					background: none !important;
+    				}
+
+				 	
+				 }
+				&.vc_active{
+					border : 1px solid $grey2;
+					border-bottom: 2px solid $white;
+					a{
+						background: none !important;
+						border : 0px;
+						border-bottom : 1px solid $red !important; 
+					}
+				}
+			}
+		}
+	}
+	.vc_tta-panels-container{
+		
+		
+		.vc_tta-panels{
+			background: none !important;
+			border-color : white;
+			border : 0px;
+
+		}
+	}
+	.vc_tta-panel-body{
+		border : 0px !important;
+		background: none !important;
+	}
+	.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::before, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::after {
+    	border: 0px !important;
+    	background: none !important;
+	}
+	.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels {
+    	border: 0px !important;
+    	background: none !important;
+	}
+	.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels .vc_tta-panel-body {
+    	border : 0px !important;
+    	background : none !important;
+	}
+	.ui-widget-content{
+		border : 0px !important;
+    	background : none !important;
+	}
+	.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::before, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::after{
+		border : 0px !important;
+    	background : none !important;
+    	border-color : $white !important;
+	}
+	@media (min-width: 768px){
+		.vc_tta-panels,.vc_tta-panels::before,.vc_tta-panels::after {
+		    border : 0px !important;
+	    	background : none !important;
+	    	border-color : $white !important;
+		}
+		.vc_tta-panels{
+			 border : 0px !important;
+	    	background : none !important;
+	    	border-color : $white !important;
+		}
+	}
+	.vc_tta-panels{
+			 border : 0px !important;
+	    	background : none !important;
+	    	border-color : $white !important;
+		}
+
+.subber-tab{
+	.vc_tta-tabs-container{
+		width: 20%;
+		float: right;
+		margin-right: 0px !important;
+		ul.vc_tta-tabs-list{
+			margin-right: 0px !important;
+			width : 100%;
+			
+			padding-top: 8px;
+			padding-bottom : 8px;
+			li.vc_tta-tab{
+				
+				margin : 0px;
+				text-align: right;
+				width: 100%;
+				border-left : 1px solid $grey2;
+				
+				&.vc_active{
+					border : 1px solid $grey2;
+					border-left: 2px solid $white;
+					
+				}
+
+			}
+		}
+	}
+	.vc_tta-panels-container{
+		width: 80%;
+		float: right;
+		
+		.vc_tta-panels{
+			background: none !important;
+			border-color : white;
+			border : 0px;
+
+		}
+	}
 }

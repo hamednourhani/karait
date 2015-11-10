@@ -486,8 +486,7 @@ nav.main-menu {
       background-color: #E6E7E7; } }
   /* line 177, sass/rtl/layout/_header.scss */
   nav.main-menu.scroll-to-fixed-fixed {
-    margin-top: 0px;
-    border: 0px; }
+    margin-top: 0px; }
   /* line 181, sass/rtl/layout/_header.scss */
   nav.main-menu ul.main-nav {
     margin: 0px;
@@ -901,7 +900,119 @@ input#s {
     border-bottom: 2px solid #FFFFFF !important; }
   /* line 48, sass/rtl/modules/_tabs.scss */
   .subpage-tabs .subpage-link {
-    outline: none !important; }
+    outline: none !important;
+    display: block; }
+
+/* line 62, sass/rtl/modules/_tabs.scss */
+.vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab {
+  float: right;
+  border-bottom: 1px solid #E6E7E7;
+  padding: 5px 5px; }
+  /* line 68, sass/rtl/modules/_tabs.scss */
+  .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab > a {
+    padding: 5px 10px;
+    background: none;
+    border: 0px solid;
+    color: #111;
+    display: inline-block; }
+    /* line 74, sass/rtl/modules/_tabs.scss */
+    .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab > a:hover {
+      background: none !important; }
+  /* line 80, sass/rtl/modules/_tabs.scss */
+  .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab.vc_active {
+    border: 1px solid #E6E7E7;
+    border-bottom: 2px solid #FFFFFF; }
+    /* line 83, sass/rtl/modules/_tabs.scss */
+    .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab.vc_active a {
+      background: none !important;
+      border: 0px;
+      border-bottom: 1px solid #FF3300 !important; }
+
+/* line 95, sass/rtl/modules/_tabs.scss */
+.vc_tta-panels-container .vc_tta-panels {
+  background: none !important;
+  border-color: white;
+  border: 0px; }
+
+/* line 102, sass/rtl/modules/_tabs.scss */
+.vc_tta-panel-body {
+  border: 0px !important;
+  background: none !important; }
+
+/* line 106, sass/rtl/modules/_tabs.scss */
+.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::before, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::after {
+  border: 0px !important;
+  background: none !important; }
+
+/* line 110, sass/rtl/modules/_tabs.scss */
+.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels {
+  border: 0px !important;
+  background: none !important; }
+
+/* line 114, sass/rtl/modules/_tabs.scss */
+.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels .vc_tta-panel-body {
+  border: 0px !important;
+  background: none !important; }
+
+/* line 118, sass/rtl/modules/_tabs.scss */
+.ui-widget-content {
+  border: 0px !important;
+  background: none !important; }
+
+/* line 122, sass/rtl/modules/_tabs.scss */
+.vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::before, .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels::after {
+  border: 0px !important;
+  background: none !important;
+  border-color: #FFFFFF !important; }
+
+@media (min-width: 768px) {
+  /* line 128, sass/rtl/modules/_tabs.scss */
+  .vc_tta-panels, .vc_tta-panels::before, .vc_tta-panels::after {
+    border: 0px !important;
+    background: none !important;
+    border-color: #FFFFFF !important; }
+
+  /* line 133, sass/rtl/modules/_tabs.scss */
+  .vc_tta-panels {
+    border: 0px !important;
+    background: none !important;
+    border-color: #FFFFFF !important; } }
+/* line 139, sass/rtl/modules/_tabs.scss */
+.vc_tta-panels {
+  border: 0px !important;
+  background: none !important;
+  border-color: #FFFFFF !important; }
+
+/* line 146, sass/rtl/modules/_tabs.scss */
+.subber-tab .vc_tta-tabs-container {
+  width: 20%;
+  float: right;
+  margin-right: 0px !important; }
+  /* line 150, sass/rtl/modules/_tabs.scss */
+  .subber-tab .vc_tta-tabs-container ul.vc_tta-tabs-list {
+    margin-right: 0px !important;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+    /* line 156, sass/rtl/modules/_tabs.scss */
+    .subber-tab .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab {
+      margin: 0px;
+      text-align: right;
+      width: 100%;
+      border-left: 1px solid #E6E7E7; }
+      /* line 163, sass/rtl/modules/_tabs.scss */
+      .subber-tab .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab.vc_active {
+        border: 1px solid #E6E7E7;
+        border-left: 2px solid #FFFFFF; }
+/* line 172, sass/rtl/modules/_tabs.scss */
+.subber-tab .vc_tta-panels-container {
+  width: 80%;
+  float: right; }
+  /* line 176, sass/rtl/modules/_tabs.scss */
+  .subber-tab .vc_tta-panels-container .vc_tta-panels {
+    background: none !important;
+    border-color: white;
+    border: 0px; }
 
 /* line 4, sass/rtl/modules/_comments.scss */
 .comment-area .comment-metadata {

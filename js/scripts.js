@@ -16,6 +16,10 @@ jQuery(document).ready(function($){
 	
 	
 	$('#subpage-tabs').tabs();
+
+	$('#selectElementId').change(function(){
+         $(this).closest('form').trigger('submit');
+     });
    
 });	
 		
