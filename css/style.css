@@ -560,18 +560,18 @@ th {
 .fullwidth {
   width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline; }
 
 /* line 20, sass/base/_variables.scss */
 .oneSecond {
-  width: 49.15254%;
+  width: 49.23077%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline; }
   /* line 22, sass/base/_variables.scss */
   .oneSecond:nth-child(2n) {
-    width: 49.15254%;
+    width: 49.23077%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
@@ -579,13 +579,13 @@ th {
 
 /* line 28, sass/base/_variables.scss */
 .oneThird {
-  width: 32.20339%;
+  width: 32.30769%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline; }
   /* line 30, sass/base/_variables.scss */
   .oneThird:nth-child(3n) {
-    width: 32.20339%;
+    width: 32.30769%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
@@ -593,13 +593,13 @@ th {
 
 /* line 36, sass/base/_variables.scss */
 .oneFourth {
-  width: 23.72881%;
+  width: 23.84615%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline; }
   /* line 38, sass/base/_variables.scss */
   .oneFourth:nth-child(4n) {
-    width: 23.72881%;
+    width: 23.84615%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
@@ -607,9 +607,9 @@ th {
 
 /* line 43, sass/base/_variables.scss */
 .Fifth {
-  width: 40.67797%;
+  width: 40.76923%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline; }
 
 /* line 47, sass/base/_variables.scss */
@@ -1090,8 +1090,8 @@ img.wp-smiley,
 /* line 3, sass/layout/_main.scss */
 .layout {
   *zoom: 1;
-  max-width: 61em;
-  _width: 61em;
+  max-width: 67em;
+  _width: 67em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
@@ -1121,14 +1121,14 @@ body {
 .primary {
   width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline; }
   @media (min-width: 45em) {
     /* line 35, sass/layout/_main.scss */
     .primary {
-      width: 66.10169%;
+      width: 66.15385%;
       float: left;
-      margin-right: 1.69492%; } }
+      margin-right: 1.53846%; } }
   /* line 42, sass/layout/_main.scss */
   .primary article.hentry .featured-image img {
     max-width: 100%;
@@ -1138,7 +1138,7 @@ body {
   .primary article.hentry .article-body {
     width: 100%;
     float: left;
-    margin-right: 1.69492%;
+    margin-right: 1.53846%;
     display: inline; }
     /* line 51, sass/layout/_main.scss */
     .primary article.hentry .article-body p {
@@ -1205,7 +1205,7 @@ body {
 .without-sidebar .primary {
   width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline;
   margin: auto; }
 
@@ -1213,7 +1213,7 @@ body {
 .secondary {
   width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 1.53846%;
   display: inline;
   display: block;
   padding-top: 20px;
@@ -1221,7 +1221,7 @@ body {
   @media (min-width: 45em) {
     /* line 130, sass/layout/_main.scss */
     .secondary {
-      width: 32.20339%;
+      width: 32.30769%;
       float: right;
       margin-right: 0; } }
 

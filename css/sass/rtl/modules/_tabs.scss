@@ -4,6 +4,9 @@
  	background : none;
  	direction : rtl;
  	border : 0px;
+ 	.subpage-content{
+ 		padding : 25px 2px;
+ 	}
  	.ui-widget-content {
     	border: 0px;
     }
@@ -144,9 +147,10 @@
 
 .subber-tab{
 	.vc_tta-tabs-container{
-		width: 20%;
+		width: 18%;
 		float: right;
 		margin-right: 0px !important;
+		font-size: 90%;
 		
 		ul.vc_tta-tabs-list{
 			margin-right: 0px !important;
@@ -172,7 +176,7 @@
 		}
 	}
 	.vc_tta-panels-container{
-		width: 80%;
+		width: 82%;
 		float: right;
 		border : 0px;
 		.vc_tta-panels{

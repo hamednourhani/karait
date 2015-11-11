@@ -1,1 +1,116 @@
 /* table style */
+.price-table-container{
+	.vc_col-xs-1,.vc_col-sm-1, .vc_col-md-1, .vc_col-lg-1,
+	   .vc_col-xs-2,.vc_col-sm-2,.vc_col-md-2,.vc_col-lg-2,
+	       .vc_col-xs-3, .vc_col-sm-3,.vc_col-md-3, .vc_col-lg-3,
+	        .vc_col-xs-4, .vc_col-sm-4, .vc_col-md-4, .vc_col-lg-4, 
+	        .vc_col-xs-5, .vc_col-sm-5, .vc_col-md-5, .vc_col-lg-5,
+	         .vc_col-xs-6, .vc_col-sm-6, .vc_col-md-6, .vc_col-lg-6,
+	          .vc_col-xs-7, .vc_col-sm-7, .vc_col-md-7, .vc_col-lg-7, 
+	          .vc_col-xs-8, .vc_col-sm-8, .vc_col-md-8, .vc_col-lg-8, 
+	          .vc_col-xs-9, .vc_col-sm-9, .vc_col-md-9, .vc_col-lg-9, 
+	          .vc_col-xs-10, .vc_col-sm-10, .vc_col-md-10, .vc_col-lg-10,
+	           .vc_col-xs-11, .vc_col-sm-11, .vc_col-md-11, .vc_col-lg-11,
+	            .vc_col-xs-12, .vc_col-sm-12, .vc_col-md-12, .vc_col-lg-12{
+	            	padding-right : 5px;
+	            	padding-left : 5px;
+	            }
+
+}
+table.custom-price-table{
+	width : 100%;
+	height: 100% !important;
+	max-width: 100%;
+	display: block;
+	font-size : 90%;
+	td{
+		padding : 10px;
+		display: block;
+		width: 100%;
+		max-width: 100%;
+	}
+	select,option{
+		max-width: 100%;
+		font-family : $web_yekan;
+	}
+	tbody{
+		display: block;
+		width : 100%;
+		max-width: 100%;
+		text-align : center;
+		background-color: $grey1;
+		color : $black2;
+
+		tr{
+			display: block;
+			width: 100%;
+			border : 1px solid darken($grey1,5%);
+			border-top : 0px;
+			td{
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				padding : 10px !important;
+
+			}
+		}
+	}
+	tr.price-table-header{
+		text-align: center;
+		background-color: $table-green2;
+		color : $white;
+		border : 0px;
+		font-size : 110%;
+		font-weight : normal;
+		td{
+			text-align: center !important;
+			color : $white;
+			padding : 5px 10px;
+			p,h4{
+				text-align: center !important;
+				color : $white;
+			}
+			h4{
+				font-weight: 400 !important;
+			}
+		}
+	}
+	tr.price-table-subheader{
+		text-align: center;
+		background-color: $table-green;
+		color : $white;
+		border : 0px;
+		font-size: 120%;
+		td{
+			text-align: center !important;
+			color : $white ;
+			p{
+				text-align: center !important;
+				color : $white;
+			}
+		}
+		span.price{
+			font-size: 220%;
+			font-weight: bold;
+		}
+	}
+	tr.button-container{
+		text-align : center;
+		td{
+			text-align: center;
+			a.price-table-button{
+				@include single-transition(all, 0.3s, ease-in-out);
+				background-color: $green;
+				color : $white;
+				padding : 5px 35px;
+				width : 80%;
+				display: inline-block;
+				margin : auto;
+				&:hover{
+					background-color: $orang;
+				}
+			}
+		}
+	}
+
+}

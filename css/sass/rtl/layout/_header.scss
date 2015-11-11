@@ -176,7 +176,7 @@ nav.main-menu{
 	border-bottom : 4px solid $green2;
 	&.scroll-to-fixed-fixed{
 		margin-top : 0px;
-		// border : 0px;
+		border : 1px solid darken($grey2,10%);
 	}
 	ul.main-nav{
 		margin : 0px;
