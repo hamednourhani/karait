@@ -2,8 +2,8 @@
 /* fonts */
 @font-face {
   font-family: "Weblogma_Yekan";
-  src: url('fonts/Weblogma_Yekan.eot?1445920942');
-  src: url('fonts/Weblogma_Yekan.eot?&1445920942#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1445920942') format('truetype'), url('fonts/Weblogma_Yekan.woff?1445920942') format('woff');
+  src: url('fonts/Weblogma_Yekan.eot?1447180481');
+  src: url('fonts/Weblogma_Yekan.eot?&1447180481#iefix') format('embedded-opentype'), url('fonts/Weblogma_Yekan.ttf?1447180481') format('truetype'), url('fonts/Weblogma_Yekan.woff?1447180481') format('woff');
   font-weight: "Weblogma_Yekan.svg"; }
 /******************************************************************
 Site Name:
@@ -73,7 +73,7 @@ p {
   font-feature-settings: "liga", "dlig"; }
 
 /* ------------susy-------- */
-/* line 14, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/language/susyone/_grid.scss */
+/* line 14, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susyone/_grid.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -602,7 +602,7 @@ nav.main-menu {
   margin-left: auto;
   margin-right: auto;
   position: relative; }
-  /* line 38, ../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   .layout:after {
     content: "";
     display: table;
@@ -704,7 +704,7 @@ a.ult-content-box-anchor {
 
 /* line 112, sass/rtl/layout/_main.scss */
 .icon-wrapper {
-  background: url('../images/back-line.png?1447059888') repeat-x 0 center; }
+  background: url('../images/back-line.png?1447180483') repeat-x 0 center; }
   /* line 114, sass/rtl/layout/_main.scss */
   .icon-wrapper img {
     border-right: 1px solid #E6E7E7;
@@ -791,21 +791,21 @@ div.related-companies {
         background-position: 0 -66px; }
     /* line 72, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.facebook-link {
-      background-image: url('../images/facebook.png?1445943424'); }
+      background-image: url('../images/facebook.png?1447180483'); }
     /* line 76, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.twitter-link {
-      background-image: url('../images/twitter.png?1445943393');
+      background-image: url('../images/twitter.png?1447180483');
       background-position: 0 -3px; }
       /* line 79, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.twitter-link:hover {
         background-position: 0 -67px; }
     /* line 84, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.gplus-link {
-      background-image: url('../images/gplus.png?1445943387');
+      background-image: url('../images/gplus.png?1447180483');
       background-position: 0 1px; }
     /* line 89, sass/rtl/layout/_footer.scss */
     .site-footer .social-links a.linkedin-link {
-      background-image: url('../images/linkedin.png?1445943397'); }
+      background-image: url('../images/linkedin.png?1447180483'); }
       /* line 91, sass/rtl/layout/_footer.scss */
       .site-footer .social-links a.linkedin-link:hover {
         background-position: 0 -68px; }
@@ -957,6 +957,9 @@ table.custom-price-table {
         /* line 109, sass/rtl/modules/_tables.scss */
         table.custom-price-table tr.button-container td a.price-table-button:hover {
           background-color: #FF910F; }
+        /* line 112, sass/rtl/modules/_tables.scss */
+        table.custom-price-table tr.button-container td a.price-table-button.orang-button {
+          background-color: #FF910F; }
 
 /* other style */
 /* line 1, sass/rtl/modules/_tabs.scss */
@@ -1105,34 +1108,46 @@ table.custom-price-table {
   border-color: #FFFFFF !important; }
 
 /* line 149, sass/rtl/modules/_tabs.scss */
+.featured-third li.vc_tta-tab:nth-of-type(3) {
+  background-color: #FF3300 !important;
+  border-bottom: 0px !important;
+  margin-bottom: -3px; }
+  /* line 153, sass/rtl/modules/_tabs.scss */
+  .featured-third li.vc_tta-tab:nth-of-type(3).vc_active {
+    margin-bottom: 0px; }
+  /* line 156, sass/rtl/modules/_tabs.scss */
+  .featured-third li.vc_tta-tab:nth-of-type(3) a {
+    color: #FFFFFF !important; }
+
+/* line 164, sass/rtl/modules/_tabs.scss */
 .subber-tab .vc_tta-tabs-container {
   width: 18%;
   float: right;
   margin-right: 0px !important;
   font-size: 90%; }
-  /* line 155, sass/rtl/modules/_tabs.scss */
+  /* line 170, sass/rtl/modules/_tabs.scss */
   .subber-tab .vc_tta-tabs-container ul.vc_tta-tabs-list {
     margin-right: 0px !important;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px; }
-    /* line 161, sass/rtl/modules/_tabs.scss */
+    /* line 176, sass/rtl/modules/_tabs.scss */
     .subber-tab .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab {
       margin: 0px;
       text-align: right;
       width: 100%;
       border-left: 1px solid #E6E7E7;
       border-bottom: 0px; }
-      /* line 169, sass/rtl/modules/_tabs.scss */
+      /* line 184, sass/rtl/modules/_tabs.scss */
       .subber-tab .vc_tta-tabs-container ul.vc_tta-tabs-list li.vc_tta-tab.vc_active {
         border: 1px solid #E6E7E7;
         border-left: 2px solid #FFFFFF; }
-/* line 178, sass/rtl/modules/_tabs.scss */
+/* line 193, sass/rtl/modules/_tabs.scss */
 .subber-tab .vc_tta-panels-container {
   width: 82%;
   float: right;
   border: 0px; }
-  /* line 182, sass/rtl/modules/_tabs.scss */
+  /* line 197, sass/rtl/modules/_tabs.scss */
   .subber-tab .vc_tta-panels-container .vc_tta-panels {
     background: none !important;
     border-color: white;

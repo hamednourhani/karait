@@ -145,6 +145,21 @@
 	    	border-color : $white !important;
 		}
 
+		.featured-third{
+			li.vc_tta-tab:nth-of-type(3){
+				background-color: $red !important;
+				border-bottom : 0px !important;
+				margin-bottom : -3px;
+				&.vc_active{
+					margin-bottom : 0px;
+				}
+				a{
+					color : $white !important;
+				}
+
+			}
+		}
+
 .subber-tab{
 	.vc_tta-tabs-container{
 		width: 18%;
