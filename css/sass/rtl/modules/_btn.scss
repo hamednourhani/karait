@@ -20,3 +20,14 @@ input[type=submit],button{
         }
     }
 }
+a.button-orange{
+    background-color: $orang;
+    color : $white;
+    padding : 5px 20px;
+    display: inline-block;
+    max-width : 100%;
+    text-align: center;
+    &:hover{
+        background-color: $red;
+    }
+}
