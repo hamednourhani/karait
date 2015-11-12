@@ -84,7 +84,7 @@
 						</a>
 					</div>
 					<div class="header-left-area">
-						<div class="contact-info-links"><span><?php echo '23087'.' 21 '.'(98+)';?></span><a class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
+						<div class="contact-info-links"><span><?php echo '23087'.' 21 '.'(98+)';?></span><a href="http://www.karait.com/wp/?page_id=44" class="contact-button"><?php echo __('Contact Us','karait');?></a></div>
 						<div class="livezilla-links">
 							 <!-- LiveZilla Chat Button Link Code (ALWAYS PLACE IN BODY ELEMENT) -->
 							 	<div class="livee" style="text-align:center;width:120px;">
