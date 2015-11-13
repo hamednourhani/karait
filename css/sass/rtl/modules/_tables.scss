@@ -117,3 +117,25 @@ table.custom-price-table{
 	}
 
 }
+table.table.table-hover{
+	width : 100%;
+	tr{
+		@include single-transition(all, 0.2s, ease-in-out);
+		border-bottom : 1px solid $grey2;
+		&:hover,&:focus{
+			background-color: $grey1;
+		}
+	}
+	td{
+		padding : 5px;
+		text-align : center;
+		font-size : 90%;
+		img{
+			margin-top : auto;
+			margin-bottom : auto;
+		}
+		a{
+			color : $orang;
+		}
+	}
+}

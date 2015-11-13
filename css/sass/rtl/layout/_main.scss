@@ -43,7 +43,10 @@
 				margin :{
 					left :  25px;
 					bottom : 10px;
-					top : 1.5em;
+					top : 0px;
+				}
+				img{
+					margin-top: 2px;
 				}
 			}
 		}
@@ -136,6 +139,22 @@ a.ult-content-box-anchor{
 		border : {
 			right : 1px solid $grey2;
 			left : 1px solid $grey2;
+		}
+	}
+}
+/*--------------pagination------------------------*/
+nav.pagination{
+	text-align : center;
+	a.page-numbers,span.page-numbers{
+		@include single-transition(all, 0.2s, ease-in-out);
+
+		display: inline-block;
+		padding : 2px 12px;
+		border : 2px solid $grey2;
+		background-color: $orang;
+		color : $white;
+		&.current,&:hover{
+			background-color: $green;
 		}
 	}
 }

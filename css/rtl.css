@@ -646,8 +646,11 @@ nav.main-menu {
     float: right;
     margin-left: 25px;
     margin-bottom: 10px;
-    margin-top: 1.5em; }
-  /* line 51, sass/rtl/layout/_main.scss */
+    margin-top: 0px; }
+    /* line 48, sass/rtl/layout/_main.scss */
+    .primary article.hentry .article-body .featured-image img {
+      margin-top: 2px; }
+  /* line 54, sass/rtl/layout/_main.scss */
   .primary article.hentry .article-title span.en-name {
     font-size: 72%;
     display: inline-block;
@@ -655,11 +658,11 @@ nav.main-menu {
     margin: 5px 10px;
     border-right: 1px solid #E6E7E7;
     color: #bcbcbc; }
-  /* line 59, sass/rtl/layout/_main.scss */
+  /* line 62, sass/rtl/layout/_main.scss */
   .primary article.hentry .article-title a.title-button {
     float: left; }
 
-/* line 67, sass/rtl/layout/_main.scss */
+/* line 70, sass/rtl/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -669,7 +672,7 @@ nav.main-menu {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 67, sass/rtl/layout/_main.scss */
+    /* line 70, sass/rtl/layout/_main.scss */
     .secondary {
       width: 32.30769%;
       float: right;
@@ -678,13 +681,13 @@ nav.main-menu {
 
 /*---------------Headers------------------------*/
 /*---------------Froms--------------------------*/
-/* line 89, sass/rtl/layout/_main.scss */
+/* line 92, sass/rtl/layout/_main.scss */
 .form-container {
   display: block;
   overflow: hidden;
   width: 100%; }
 
-/* line 95, sass/rtl/layout/_main.scss */
+/* line 98, sass/rtl/layout/_main.scss */
 form input, form select, form input[type=submit], form button {
   display: inline-block;
   float: right;
@@ -693,43 +696,63 @@ form input, form select, form input[type=submit], form button {
   max-height: 32px;
   font-size: 90%;
   max-width: 100%; }
-/* line 104, sass/rtl/layout/_main.scss */
+/* line 107, sass/rtl/layout/_main.scss */
 form.domain-search {
   direction: ltr; }
-  /* line 106, sass/rtl/layout/_main.scss */
+  /* line 109, sass/rtl/layout/_main.scss */
   form.domain-search input, form.domain-search select, form.domain-search input[type=submit], form.domain-search button {
     float: left; }
-  /* line 109, sass/rtl/layout/_main.scss */
+  /* line 112, sass/rtl/layout/_main.scss */
   form.domain-search .input-large {
     width: 200px; }
-/* line 113, sass/rtl/layout/_main.scss */
+/* line 116, sass/rtl/layout/_main.scss */
 form.domain-search-rtl {
   text-align: right; }
-  /* line 115, sass/rtl/layout/_main.scss */
+  /* line 118, sass/rtl/layout/_main.scss */
   form.domain-search-rtl input, form.domain-search-rtl select, form.domain-search-rtl input[type=submit], form.domain-search-rtl button {
     float: right; }
-/* line 119, sass/rtl/layout/_main.scss */
+/* line 122, sass/rtl/layout/_main.scss */
 form .contact-map {
   height: 500px; }
-  /* line 121, sass/rtl/layout/_main.scss */
+  /* line 124, sass/rtl/layout/_main.scss */
   form .contact-map .wpb_map_wraper {
     height: 500px; }
 
 /*---------------------fields-----------------*/
-/* line 127, sass/rtl/layout/_main.scss */
+/* line 130, sass/rtl/layout/_main.scss */
 a.ult-content-box-anchor {
   display: block; }
-  /* line 129, sass/rtl/layout/_main.scss */
+  /* line 132, sass/rtl/layout/_main.scss */
   a.ult-content-box-anchor:hover {
     opacity: 0.85; }
 
-/* line 133, sass/rtl/layout/_main.scss */
+/* line 136, sass/rtl/layout/_main.scss */
 .icon-wrapper {
   background: url('../images/back-line.png?1447180483') repeat-x 0 center; }
-  /* line 135, sass/rtl/layout/_main.scss */
+  /* line 138, sass/rtl/layout/_main.scss */
   .icon-wrapper img {
     border-right: 1px solid #E6E7E7;
     border-left: 1px solid #E6E7E7; }
+
+/*--------------pagination------------------------*/
+/* line 146, sass/rtl/layout/_main.scss */
+nav.pagination {
+  text-align: center; }
+  /* line 148, sass/rtl/layout/_main.scss */
+  nav.pagination a.page-numbers, nav.pagination span.page-numbers {
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition: all 0.2s ease-in-out 0s;
+    display: inline-block;
+    padding: 2px 12px;
+    border: 2px solid #E6E7E7;
+    background-color: #FF910F;
+    color: #FFFFFF; }
+    /* line 156, sass/rtl/layout/_main.scss */
+    nav.pagination a.page-numbers.current, nav.pagination a.page-numbers:hover, nav.pagination span.page-numbers.current, nav.pagination span.page-numbers:hover {
+      background-color: #87BD05; }
 
 /* line 1, sass/rtl/layout/_footer.scss */
 .footer-widget-area {
@@ -993,6 +1016,33 @@ table.custom-price-table {
         /* line 112, sass/rtl/modules/_tables.scss */
         table.custom-price-table tr.button-container td a.price-table-button.orang-button {
           background-color: #FF910F; }
+
+/* line 120, sass/rtl/modules/_tables.scss */
+table.table.table-hover {
+  width: 100%; }
+  /* line 122, sass/rtl/modules/_tables.scss */
+  table.table.table-hover tr {
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition: all 0.2s ease-in-out 0s;
+    border-bottom: 1px solid #E6E7E7; }
+    /* line 125, sass/rtl/modules/_tables.scss */
+    table.table.table-hover tr:hover, table.table.table-hover tr:focus {
+      background-color: #F2F2F2; }
+  /* line 129, sass/rtl/modules/_tables.scss */
+  table.table.table-hover td {
+    padding: 5px;
+    text-align: center;
+    font-size: 90%; }
+    /* line 133, sass/rtl/modules/_tables.scss */
+    table.table.table-hover td img {
+      margin-top: auto;
+      margin-bottom: auto; }
+    /* line 137, sass/rtl/modules/_tables.scss */
+    table.table.table-hover td a {
+      color: #FF910F; }
 
 /* other style */
 /* line 1, sass/rtl/modules/_tabs.scss */
