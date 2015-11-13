@@ -126,6 +126,37 @@ form{
 		}
 	}
 }
+/*--------------------carousel----------------*/
+.companies-carousel{
+	.slick-slider{
+		border : 1px solid $grey2-5;
+		@include border-radius(5px);
+		margin-bottom : 0px;
+		
+	}
+	.ult-item-wrap,
+	.slick-slide,
+	.slick-active{
+		outline: none;
+	}
+	.wpb_single_image{
+		margin-top : 8px;
+		margin-bottom : 8px;
+		img{
+			max-width : 100px;
+			max-height : 52px;
+		}
+	}
+	.slick-prev{
+		right : 5px;
+	}
+	.slick-next{
+		left : 5px;
+	}
+	.slick-arrow{
+		@include border-radius(15px);
+	}
+}
 /*---------------------fields-----------------*/
 a.ult-content-box-anchor{
 	display : block;

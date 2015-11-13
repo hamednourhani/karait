@@ -718,27 +718,60 @@ form .contact-map {
   form .contact-map .wpb_map_wraper {
     height: 500px; }
 
+/*--------------------carousel----------------*/
+/* line 131, sass/rtl/layout/_main.scss */
+.companies-carousel .slick-slider {
+  border: 1px solid #bcbcbc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 0px; }
+/* line 137, sass/rtl/layout/_main.scss */
+.companies-carousel .ult-item-wrap,
+.companies-carousel .slick-slide,
+.companies-carousel .slick-active {
+  outline: none; }
+/* line 142, sass/rtl/layout/_main.scss */
+.companies-carousel .wpb_single_image {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+  /* line 145, sass/rtl/layout/_main.scss */
+  .companies-carousel .wpb_single_image img {
+    max-width: 100px;
+    max-height: 52px; }
+/* line 150, sass/rtl/layout/_main.scss */
+.companies-carousel .slick-prev {
+  right: 5px; }
+/* line 153, sass/rtl/layout/_main.scss */
+.companies-carousel .slick-next {
+  left: 5px; }
+/* line 156, sass/rtl/layout/_main.scss */
+.companies-carousel .slick-arrow {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px; }
+
 /*---------------------fields-----------------*/
-/* line 130, sass/rtl/layout/_main.scss */
+/* line 161, sass/rtl/layout/_main.scss */
 a.ult-content-box-anchor {
   display: block; }
-  /* line 132, sass/rtl/layout/_main.scss */
+  /* line 163, sass/rtl/layout/_main.scss */
   a.ult-content-box-anchor:hover {
     opacity: 0.85; }
 
-/* line 136, sass/rtl/layout/_main.scss */
+/* line 167, sass/rtl/layout/_main.scss */
 .icon-wrapper {
   background: url('../images/back-line.png?1447180483') repeat-x 0 center; }
-  /* line 138, sass/rtl/layout/_main.scss */
+  /* line 169, sass/rtl/layout/_main.scss */
   .icon-wrapper img {
     border-right: 1px solid #E6E7E7;
     border-left: 1px solid #E6E7E7; }
 
 /*--------------pagination------------------------*/
-/* line 146, sass/rtl/layout/_main.scss */
+/* line 177, sass/rtl/layout/_main.scss */
 nav.pagination {
   text-align: center; }
-  /* line 148, sass/rtl/layout/_main.scss */
+  /* line 179, sass/rtl/layout/_main.scss */
   nav.pagination a.page-numbers, nav.pagination span.page-numbers {
     -moz-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
@@ -750,7 +783,7 @@ nav.pagination {
     border: 2px solid #E6E7E7;
     background-color: #FF910F;
     color: #FFFFFF; }
-    /* line 156, sass/rtl/layout/_main.scss */
+    /* line 187, sass/rtl/layout/_main.scss */
     nav.pagination a.page-numbers.current, nav.pagination a.page-numbers:hover, nav.pagination span.page-numbers.current, nav.pagination span.page-numbers:hover {
       background-color: #87BD05; }
 
