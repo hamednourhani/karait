@@ -85,6 +85,11 @@ body{
 				padding : 15px 0px;
 				
 			}
+			&.blog{
+				h3{
+					display: block;
+				}
+			}
 			a.title-button{
 				@include single-transition(all, 0.3s, ease-in-out);
 				display: inline-block;
