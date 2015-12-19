@@ -1153,30 +1153,33 @@ body {
     .primary article.hentry .article-body ol {
       margin-left: 20px; }
     /* line 63, sass/layout/_main.scss */
+    .primary article.hentry .article-body a {
+      color: #FF910F; }
+    /* line 66, sass/layout/_main.scss */
     .primary article.hentry .article-body div.post-meta {
       border-bottom: 1px solid #E6E7E7; }
-      /* line 64, sass/layout/_main.scss */
+      /* line 67, sass/layout/_main.scss */
       .primary article.hentry .article-body div.post-meta ul.post-meta-list {
         list-style: none; }
-        /* line 66, sass/layout/_main.scss */
+        /* line 69, sass/layout/_main.scss */
         .primary article.hentry .article-body div.post-meta ul.post-meta-list li {
           list-style: none; }
-          /* line 68, sass/layout/_main.scss */
+          /* line 71, sass/layout/_main.scss */
           .primary article.hentry .article-body div.post-meta ul.post-meta-list li a {
             color: #FF910F; }
-  /* line 77, sass/layout/_main.scss */
+  /* line 80, sass/layout/_main.scss */
   .primary article.hentry .article-title {
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2; }
-    /* line 82, sass/layout/_main.scss */
+    /* line 85, sass/layout/_main.scss */
     .primary article.hentry .article-title h3 {
       display: inline-block;
       margin: 0px;
       padding: 15px 0px; }
-    /* line 89, sass/layout/_main.scss */
+    /* line 92, sass/layout/_main.scss */
     .primary article.hentry .article-title.blog h3 {
       display: block; }
-    /* line 93, sass/layout/_main.scss */
+    /* line 96, sass/layout/_main.scss */
     .primary article.hentry .article-title a.title-button {
       -moz-transition: all 0.3s ease-in-out 0s;
       -o-transition: all 0.3s ease-in-out 0s;
@@ -1189,23 +1192,23 @@ body {
       margin-top: 5px;
       background-color: #FF910F;
       color: #FFFFFF; }
-      /* line 101, sass/layout/_main.scss */
+      /* line 104, sass/layout/_main.scss */
       .primary article.hentry .article-title a.title-button:hover {
         background-color: #87BD05; }
-    /* line 105, sass/layout/_main.scss */
+    /* line 108, sass/layout/_main.scss */
     .primary article.hentry .article-title.blog {
       border-top: 0px; }
-      /* line 109, sass/layout/_main.scss */
+      /* line 112, sass/layout/_main.scss */
       .primary article.hentry .article-title.blog h3 {
         padding: 15px 0px 5px; }
-    /* line 115, sass/layout/_main.scss */
+    /* line 118, sass/layout/_main.scss */
     .primary article.hentry .article-title .post-date span {
       font-size: 90%; }
-    /* line 118, sass/layout/_main.scss */
+    /* line 121, sass/layout/_main.scss */
     .primary article.hentry .article-title .post-date span.orang-meta {
       color: #FF910F; }
 
-/* line 126, sass/layout/_main.scss */
+/* line 129, sass/layout/_main.scss */
 .without-sidebar .primary {
   width: 100%;
   float: left;
@@ -1213,7 +1216,7 @@ body {
   display: inline;
   margin: auto; }
 
-/* line 135, sass/layout/_main.scss */
+/* line 138, sass/layout/_main.scss */
 .secondary {
   width: 100%;
   float: left;
@@ -1223,7 +1226,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (min-width: 45em) {
-    /* line 135, sass/layout/_main.scss */
+    /* line 138, sass/layout/_main.scss */
     .secondary {
       width: 32.30769%;
       float: right;
